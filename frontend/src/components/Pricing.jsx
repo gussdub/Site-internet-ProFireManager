@@ -24,19 +24,19 @@ const Pricing = () => {
     {
       name: '0 à 30 pompiers',
       basePrice: 12,
-      example: (count) => `${(calculatePrice(12) * count).toFixed(0)}$/${billingCycle === 'monthly' ? 'mois' : 'an'} (${count} pompiers)`,
+      example: (count) => `${(calculatePrice(12) * count).toFixed(0)}$/${billingCycle === 'monthly' ? 'mois' : 'mois facturé annuellement'} (${count} pompiers)`,
       popular: false
     },
     {
       name: '31 à 50 pompiers',
       basePrice: 20,
-      example: (count) => `${(calculatePrice(20) * count).toFixed(0)}$/${billingCycle === 'monthly' ? 'mois' : 'an'} (${count} pompiers)`,
+      example: (count) => `${(calculatePrice(20) * count).toFixed(0)}$/${billingCycle === 'monthly' ? 'mois' : 'mois facturé annuellement'} (${count} pompiers)`,
       popular: true
     },
     {
       name: '51+ pompiers',
       basePrice: 27,
-      example: (count) => `${(calculatePrice(27) * count).toFixed(0)}$/${billingCycle === 'monthly' ? 'mois' : 'an'} (${count} pompiers)`,
+      example: (count) => `${(calculatePrice(27) * count).toFixed(0)}$/${billingCycle === 'monthly' ? 'mois' : 'mois facturé annuellement'} (${count} pompiers)`,
       popular: false
     }
   ];
