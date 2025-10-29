@@ -7,11 +7,11 @@ const Features = () => {
     {
       icon: Calendar,
       title: 'Gestion Intelligente des Horaires',
-      description: 'Attribution automatique des gardes basée sur les compétences, le grade et la disponibilité. Calendrier interactif avec vue mensuelle et codes couleur.',
+      description: 'Attribution automatique des gardes basée sur les compétences, le grade et la disponibilité. Gestion complète des temps pleins et temps partiel. Calendrier interactif avec vue mensuelle et codes couleur.',
       benefits: [
         'Planification automatisée',
+        'Gestion temps plein/partiel',
         'Équité de distribution',
-        'Gestion des disponibilités',
         'Export et impression'
       ]
     },
@@ -28,24 +28,24 @@ const Features = () => {
     },
     {
       icon: Shield,
-      title: 'Gestion des EPI',
-      description: 'Suivi centralisé de tous les équipements de protection individuelle avec dates d\'expiration, état d\'usure et demandes de remplacement.',
+      title: 'Gestion des EPI - NFPA 1851',
+      description: 'Suivi centralisé conforme NFPA 1851. Inspection de routine directement par les pompiers dans l\'application. Demandes de remplacement simplifiées.',
       benefits: [
         'Inventaire complet',
-        'Alertes d\'expiration',
-        'Déclaration d\'usure',
-        'Traçabilité totale'
+        'Inspection de routine dans l\'app',
+        'Demande de remplacement',
+        'Conformité NFPA 1851'
       ]
     },
     {
       icon: GraduationCap,
-      title: 'Gestion des Formations',
-      description: 'Suivi des certifications et formations avec alertes de renouvellement automatiques. Historique complet par employé.',
+      title: 'Gestion des Formations - NFPA 1500',
+      description: 'Suivi des certifications conforme NFPA 1500 avec alertes de renouvellement automatiques. Inscription directe aux formations par l\'application.',
       benefits: [
         'Suivi des certifications',
+        'Inscription directe aux formations',
         'Alertes de renouvellement',
-        'Compétences TPI, sauveteur',
-        'Rapports de conformité'
+        'Conformité NFPA 1500'
       ]
     }
   ];
