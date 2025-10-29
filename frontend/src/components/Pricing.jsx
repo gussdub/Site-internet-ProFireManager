@@ -103,7 +103,7 @@ const Pricing = () => {
         <div className="max-w-4xl mx-auto">
           <div className="bg-gray-50 rounded-2xl p-8 border-2 border-gray-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              ✨ Tous les Modules Inclus
+              Tous les Modules Inclus
             </h3>
             <div className="grid md:grid-cols-2 gap-4">
               {includedFeatures.map((feature, index) => (
