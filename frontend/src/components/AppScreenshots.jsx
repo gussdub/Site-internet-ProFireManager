@@ -81,18 +81,8 @@ const AppScreenshots = () => {
               </button>
             </div>
 
-            {/* Description */}
-            <div className="p-8 bg-gradient-to-r from-gray-50 to-red-50">
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                {screenshots[currentSlide].title}
-              </h3>
-              <p className="text-gray-700 text-lg">
-                {screenshots[currentSlide].description}
-              </p>
-            </div>
-
             {/* Dots Navigation */}
-            <div className="flex justify-center gap-2 pb-6">
+            <div className="flex justify-center gap-2 py-6">
               {screenshots.map((_, index) => (
                 <button
                   key={index}
