@@ -65,7 +65,7 @@ const CTA = () => {
           {/* Trust Elements */}
           <div className="mt-12 flex flex-col items-center">
             <p className="text-sm text-gray-400 mb-4">
-              Aucune carte de crédit requise • Configuration en 1-2 semaines • Support dédié
+              Configuration en 1-2 semaines • Support dédié • Solution québécoise
             </p>
           </div>
         </div>
