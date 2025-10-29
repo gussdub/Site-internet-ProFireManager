@@ -32,3 +32,9 @@
         transform: rotate(360deg);
     }
 }
+
+/* Hide Emergent badge */
+div[style*="position: fixed"][style*="bottom"][style*="right"],
+div[style*="position:fixed"][style*="bottom"][style*="right"] {
+    display: none !important;
+}
