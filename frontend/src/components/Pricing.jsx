@@ -118,14 +118,14 @@ const Pricing = () => {
                     <span className="text-5xl font-bold text-[#D9072B]">
                       {calculatePrice(tier.basePrice)}$
                     </span>
-                    <span className="text-gray-600">/pompier/{billingCycle === 'monthly' ? 'mois' : 'an'}</span>
+                    <span className="text-gray-600">/pompier/mois</span>
                   </div>
                   <p className="text-sm text-gray-500 mt-2">
                     {tier.example(index === 0 ? 30 : index === 1 ? 40 : 50)}
                   </p>
                   {billingCycle === 'annual' && (
                     <p className="text-sm text-green-600 mt-1 font-medium">
-                      Économie annuelle incluse
+                      Facturé annuellement - Économie de 10%
                     </p>
                   )}
                 </div>
