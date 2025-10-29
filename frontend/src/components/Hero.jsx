@@ -100,8 +100,8 @@ const Hero = () => {
             <p className="text-sm text-gray-500 mb-4">Développé spécifiquement pour les casernes québécoises</p>
             <div className="flex items-center gap-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-[#D9072B]">14 jours</div>
-                <div className="text-sm text-gray-600">Essai gratuit</div>
+                <div className="text-3xl font-bold text-[#D9072B]">30 min</div>
+                <div className="text-sm text-gray-600">Démo gratuite</div>
               </div>
               <div className="w-px h-12 bg-gray-300"></div>
               <div className="text-center">
