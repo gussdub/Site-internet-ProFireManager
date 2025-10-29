@@ -8,22 +8,22 @@ const AppScreenshots = () => {
     {
       title: 'Gestion des Formations',
       description: 'Inscription directe aux formations, suivi des certifications et planification en un clic.',
-      image: 'https://customer-assets.emergentagent.com/job_profiremanager-web/artifacts/oqkloqcf_image-colle%CC%81e.png'
+      image: '/assets/screenshots/formations.png'
     },
     {
       title: 'Inventaire EPI - NFPA 1851',
       description: 'Suivi complet de tous les équipements avec inspection de routine et demandes de remplacement.',
-      image: 'https://customer-assets.emergentagent.com/job_profiremanager-web/artifacts/h4q048iv_image-colle%CC%81e.png'
+      image: '/assets/screenshots/epi.png'
     },
     {
       title: 'Planning des Gardes',
       description: 'Attribution automatique intelligente et vue d\'ensemble claire de la planification.',
-      image: 'https://customer-assets.emergentagent.com/job_profiremanager-web/artifacts/l6pyq81a_image-colle%CC%81e.png'
+      image: '/assets/screenshots/planning.png'
     },
     {
       title: 'Gestion des Disponibilités',
       description: 'Calendrier intuitif pour gérer les disponibilités et indisponibilités de chaque pompier.',
-      image: 'https://customer-assets.emergentagent.com/job_profiremanager-web/artifacts/1yw4ydrf_image-colle%CC%81e.png'
+      image: '/assets/screenshots/disponibilites.png'
     }
   ];
 
