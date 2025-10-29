@@ -6,11 +6,6 @@ const AppScreenshots = () => {
 
   const screenshots = [
     {
-      title: 'Profil Personnel & Gestion des EPI',
-      description: 'Chaque pompier peut gérer ses informations personnelles et consulter ses équipements de protection.',
-      image: 'https://customer-assets.emergentagent.com/job_profiremanager-web/artifacts/ddkjh83a_image-colle%CC%81e.png'
-    },
-    {
       title: 'Gestion des Formations',
       description: 'Inscription directe aux formations, suivi des certifications et planification en un clic.',
       image: 'https://customer-assets.emergentagent.com/job_profiremanager-web/artifacts/oqkloqcf_image-colle%CC%81e.png'
