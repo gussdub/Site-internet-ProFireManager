@@ -208,7 +208,7 @@ const Contact = () => {
               </div>
 
               {/* Quick Stats */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid md:grid-cols-2 gap-4">
                 <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
                   <div className="text-3xl font-bold text-[#D9072B] mb-2">&lt; 24h</div>
                   <div className="text-sm text-gray-600">Temps de réponse</div>
@@ -218,8 +218,8 @@ const Contact = () => {
                   <div className="text-sm text-gray-600">Démo gratuite</div>
                 </div>
                 <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
-                  <div className="text-3xl font-bold text-[#D9072B] mb-2">14 jours</div>
-                  <div className="text-sm text-gray-600">Essai gratuit</div>
+                  <div className="text-3xl font-bold text-[#D9072B] mb-2">1-2 sem</div>
+                  <div className="text-sm text-gray-600">Configuration</div>
                 </div>
                 <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
                   <div className="text-3xl font-bold text-[#D9072B] mb-2">100%</div>
