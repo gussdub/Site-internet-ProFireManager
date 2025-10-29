@@ -37,12 +37,12 @@ const CTA = () => {
           {/* Benefits */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl font-bold text-white mb-2">14 jours</div>
-              <div className="text-gray-300">Essai gratuit complet</div>
+              <div className="text-3xl font-bold text-white mb-2">30 min</div>
+              <div className="text-gray-300">Démonstration gratuite</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl font-bold text-white mb-2">0$</div>
-              <div className="text-gray-300">Aucun engagement</div>
+              <div className="text-3xl font-bold text-white mb-2">1-2 sem</div>
+              <div className="text-gray-300">Configuration rapide</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="text-3xl font-bold text-white mb-2">60 jours</div>
