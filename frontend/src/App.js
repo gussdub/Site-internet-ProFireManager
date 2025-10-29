@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
+import AppScreenshots from './components/AppScreenshots';
 import Benefits from './components/Benefits';
 import Pricing from './components/Pricing';
 import CTA from './components/CTA';
@@ -16,6 +17,7 @@ function App() {
       <Header />
       <Hero />
       <Features />
+      <AppScreenshots />
       <Benefits />
       <Pricing />
       <CTA />
