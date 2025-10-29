@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Check } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 
 const Pricing = () => {
+  const [billingCycle, setBillingCycle] = useState('monthly'); // 'monthly' or 'annual'
+  
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -11,23 +13,30 @@ const Pricing = () => {
     }
   };
 
+  const calculatePrice = (basePrice) => {
+    if (billingCycle === 'annual') {
+      return (basePrice * 0.9).toFixed(0); // 10% discount
+    }
+    return basePrice;
+  };
+
   const pricingTiers = [
     {
       name: '0 à 30 pompiers',
-      price: '12',
-      example: '360$/mois (30 pompiers)',
+      basePrice: 12,
+      example: (count) => `${(calculatePrice(12) * count).toFixed(0)}$/${billingCycle === 'monthly' ? 'mois' : 'an'} (${count} pompiers)`,
       popular: false
     },
     {
       name: '31 à 50 pompiers',
-      price: '20',
-      example: '800$/mois (40 pompiers)',
+      basePrice: 20,
+      example: (count) => `${(calculatePrice(20) * count).toFixed(0)}$/${billingCycle === 'monthly' ? 'mois' : 'an'} (${count} pompiers)`,
       popular: true
     },
     {
       name: '51+ pompiers',
-      price: '27',
-      example: '1,350$/mois (50 pompiers)',
+      basePrice: 27,
+      example: (count) => `${(calculatePrice(27) * count).toFixed(0)}$/${billingCycle === 'monthly' ? 'mois' : 'an'} (${count} pompiers)`,
       popular: false
     }
   ];
@@ -36,8 +45,8 @@ const Pricing = () => {
     'Gestion des gardes avec attribution automatique',
     'Planification intelligente et calendrier',
     'Gestion complète du personnel',
-    'Module EPI (Équipements de Protection)',
-    'Module Prévention (import CSV, grilles)',
+    'Module EPI conforme NFPA 1851',
+    'Module Formations conforme NFPA 1500',
     'Tableaux de bord et rapports avancés',
     'Multi-tenant et gestion des rôles',
     'Support par email',
@@ -48,13 +57,40 @@ const Pricing = () => {
     <section id="pricing" className="py-24 bg-white">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Tarification Simple et Transparente
           </h2>
-          <p className="text-xl text-gray-600">
-            Tous les modules inclus, sans frais cachés. Payez uniquement pour le nombre de pompiers actifs.
+          <p className="text-xl text-gray-600 mb-8">
+            Payez uniquement pour le nombre de pompiers actifs.
           </p>
+          
+          {/* Billing Toggle */}
+          <div className="inline-flex items-center bg-gray-100 rounded-lg p-1 mb-8">
+            <button
+              onClick={() => setBillingCycle('monthly')}
+              className={`px-6 py-2 rounded-md font-medium transition-all ${
+                billingCycle === 'monthly'
+                  ? 'bg-white text-gray-900 shadow-sm'
+                  : 'text-gray-600'
+              }`}
+            >
+              Mensuel
+            </button>
+            <button
+              onClick={() => setBillingCycle('annual')}
+              className={`px-6 py-2 rounded-md font-medium transition-all relative ${
+                billingCycle === 'annual'
+                  ? 'bg-white text-gray-900 shadow-sm'
+                  : 'text-gray-600'
+              }`}
+            >
+              Annuel
+              <span className="absolute -top-2 -right-2 bg-[#D9072B] text-white text-xs px-2 py-0.5 rounded-full">
+                -10%
+              </span>
+            </button>
+          </div>
         </div>
 
         {/* Pricing Cards */}
@@ -79,10 +115,19 @@ const Pricing = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{tier.name}</h3>
                 <div className="mb-6">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-bold text-[#D9072B]">{tier.price}$</span>
-                    <span className="text-gray-600">/pompier/mois</span>
+                    <span className="text-5xl font-bold text-[#D9072B]">
+                      {calculatePrice(tier.basePrice)}$
+                    </span>
+                    <span className="text-gray-600">/pompier/{billingCycle === 'monthly' ? 'mois' : 'an'}</span>
                   </div>
-                  <p className="text-sm text-gray-500 mt-2">{tier.example}</p>
+                  <p className="text-sm text-gray-500 mt-2">
+                    {tier.example(index === 0 ? 30 : index === 1 ? 40 : 50)}
+                  </p>
+                  {billingCycle === 'annual' && (
+                    <p className="text-sm text-green-600 mt-1 font-medium">
+                      Économie annuelle incluse
+                    </p>
+                  )}
                 </div>
                 <Button
                   onClick={scrollToContact}
@@ -115,9 +160,6 @@ const Pricing = () => {
                 </div>
               ))}
             </div>
-            <p className="text-center text-lg font-semibold text-gray-900 mt-8">
-              Pas de frais cachés, pas de modules supplémentaires payants !
-            </p>
           </div>
         </div>
 
@@ -131,9 +173,6 @@ const Pricing = () => {
               <div className="space-y-3 mb-6">
                 <p className="text-xl text-gray-700">
                   <strong>-30% sur les 3 premiers mois</strong>
-                </p>
-                <p className="text-xl text-gray-700">
-                  <strong>Migration de données OFFERTE</strong> (économie de 1,500$ à 3,500$)
                 </p>
                 <p className="text-xl text-gray-700">
                   <strong>Formation initiale de 2h OFFERTE</strong> (valeur 400$)
