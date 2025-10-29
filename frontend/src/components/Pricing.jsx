@@ -126,17 +126,17 @@ const Pricing = () => {
           <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl p-8 border-2 border-[#D9072B]">
             <div className="text-center">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                🎁 Offre de Lancement
+                Offre de Lancement
               </h3>
               <div className="space-y-3 mb-6">
                 <p className="text-xl text-gray-700">
-                  ✨ <strong>-30% sur les 3 premiers mois</strong>
+                  <strong>-30% sur les 3 premiers mois</strong>
                 </p>
                 <p className="text-xl text-gray-700">
-                  ✨ <strong>Migration de données OFFERTE</strong> (économie de 1,500$ à 3,500$)
+                  <strong>Migration de données OFFERTE</strong> (économie de 1,500$ à 3,500$)
                 </p>
                 <p className="text-xl text-gray-700">
-                  ✨ <strong>Formation initiale de 2h OFFERTE</strong> (valeur 400$)
+                  <strong>Formation initiale de 2h OFFERTE</strong> (valeur 400$)
                 </p>
               </div>
               <p className="text-sm text-gray-600 mb-6">
