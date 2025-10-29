@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import DocumentationModal from './modals/DocumentationModal';
+import FAQModal from './modals/FAQModal';
+import TutorialsModal from './modals/TutorialsModal';
+import SupportModal from './modals/SupportModal';
+import PrivacyModal from './modals/PrivacyModal';
+import TermsModal from './modals/TermsModal';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [activeModal, setActiveModal] = useState(null);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -12,118 +19,154 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
-      <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
-          {/* Brand */}
-          <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <img
-                src="https://customer-assets.emergentagent.com/job_profiremanager-web/artifacts/snf5lra9_image%20sans%20fond%2011.png"
-                alt="ProFireManager"
-                className="h-10 w-auto"
-              />
+    <>
+      <footer className="bg-gray-900 text-white pt-16 pb-8">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-12 mb-12">
+            {/* Brand */}
+            <div className="md:col-span-2">
+              <div className="flex items-center gap-3 mb-4">
+                <img
+                  src="/assets/logos/logo-footer.png"
+                  alt="ProFireManager"
+                  className="h-10 w-auto"
+                />
+              </div>
+              <p className="text-gray-400 mb-6 max-w-md">
+                Solution québécoise de gestion pour services d'incendie. Optimisez la planification, le personnel et les équipements de votre caserne.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 text-gray-400">
+                  <Mail className="w-5 h-5 text-[#D9072B]" />
+                  <a href="mailto:guillaume.dubeau@profiremanager.ca" className="hover:text-white transition-colors">
+                    guillaume.dubeau@profiremanager.ca
+                  </a>
+                </div>
+                <div className="flex items-center gap-3 text-gray-400">
+                  <Phone className="w-5 h-5 text-[#D9072B]" />
+                  <a href="tel:+14503303648" className="hover:text-white transition-colors">
+                    +1 450 330 3648
+                  </a>
+                </div>
+                <div className="flex items-center gap-3 text-gray-400">
+                  <MapPin className="w-5 h-5 text-[#D9072B]" />
+                  <span>Granby, QC J2H 0A3, Canada</span>
+                </div>
+              </div>
             </div>
-            <p className="text-gray-400 mb-6 max-w-md">
-              Solution québécoise de gestion pour services d'incendie. Optimisez la planification, le personnel et les équipements de votre caserne.
-            </p>
-            <div className="space-y-3">
-              <div className="flex items-center gap-3 text-gray-400">
-                <Mail className="w-5 h-5 text-[#D9072B]" />
-                <a href="mailto:[email protected]" className="hover:text-white transition-colors">
-                  [email protected]
-                </a>
-              </div>
-              <div className="flex items-center gap-3 text-gray-400">
-                <Phone className="w-5 h-5 text-[#D9072B]" />
-                <a href="tel:+14503303648" className="hover:text-white transition-colors">
-                  +1 450 330 3648
-                </a>
-              </div>
-              <div className="flex items-center gap-3 text-gray-400">
-                <MapPin className="w-5 h-5 text-[#D9072B]" />
-                <span>Québec, Canada</span>
-              </div>
+
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-lg font-bold mb-4">Navigation</h3>
+              <ul className="space-y-3">
+                <li>
+                  <button
+                    onClick={() => scrollToSection('features')}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Fonctionnalités
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => scrollToSection('benefits')}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Avantages
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => scrollToSection('pricing')}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Tarification
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => scrollToSection('contact')}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Contact
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            {/* Support */}
+            <div>
+              <h3 className="text-lg font-bold mb-4">Support</h3>
+              <ul className="space-y-3">
+                <li>
+                  <button
+                    onClick={() => setActiveModal('documentation')}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Documentation
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => setActiveModal('faq')}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    FAQ
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => setActiveModal('tutorials')}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Tutoriels
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => setActiveModal('support')}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Support Technique
+                  </button>
+                </li>
+              </ul>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-bold mb-4">Navigation</h3>
-            <ul className="space-y-3">
-              <li>
+          {/* Bottom Bar */}
+          <div className="pt-8 border-t border-gray-800">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <p className="text-gray-400 text-sm">
+                &copy; {currentYear} ProFireManager Inc. Tous droits réservés.
+              </p>
+              <div className="flex gap-6 text-sm">
                 <button
-                  onClick={() => scrollToSection('features')}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  onClick={() => setActiveModal('privacy')}
+                  className="text-gray-400 hover:text-white transition-colors cursor-pointer"
                 >
-                  Fonctionnalités
+                  Politique de confidentialité
                 </button>
-              </li>
-              <li>
                 <button
-                  onClick={() => scrollToSection('benefits')}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  onClick={() => setActiveModal('terms')}
+                  className="text-gray-400 hover:text-white transition-colors cursor-pointer"
                 >
-                  Avantages
+                  Conditions d'utilisation
                 </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection('pricing')}
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Tarification
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection('contact')}
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Contact
-                </button>
-              </li>
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h3 className="text-lg font-bold mb-4">Support</h3>
-            <ul className="space-y-3">
-              <li>
-                <span className="text-gray-400">Documentation</span>
-              </li>
-              <li>
-                <span className="text-gray-400">FAQ</span>
-              </li>
-              <li>
-                <span className="text-gray-400">Tutoriels</span>
-              </li>
-              <li>
-                <span className="text-gray-400">Support Technique</span>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
+      </footer>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm">
-              &copy; {currentYear} ProFireManager. Tous droits réservés.
-            </p>
-            <div className="flex gap-6 text-sm">
-              <span className="text-gray-400 hover:text-white transition-colors cursor-pointer">
-                Politique de confidentialité
-              </span>
-              <span className="text-gray-400 hover:text-white transition-colors cursor-pointer">
-                Conditions d'utilisation
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+      {/* Modals */}
+      <DocumentationModal isOpen={activeModal === 'documentation'} onClose={() => setActiveModal(null)} />
+      <FAQModal isOpen={activeModal === 'faq'} onClose={() => setActiveModal(null)} />
+      <TutorialsModal isOpen={activeModal === 'tutorials'} onClose={() => setActiveModal(null)} />
+      <SupportModal isOpen={activeModal === 'support'} onClose={() => setActiveModal(null)} />
+      <PrivacyModal isOpen={activeModal === 'privacy'} onClose={() => setActiveModal(null)} />
+      <TermsModal isOpen={activeModal === 'terms'} onClose={() => setActiveModal(null)} />
+    </>
   );
 };
 
