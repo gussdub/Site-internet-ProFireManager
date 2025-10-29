@@ -113,3 +113,25 @@ code {
         border-bottom-color: inherit;
     }
 }
+
+/* Hide Emergent badge - Multiple selectors for robustness */
+div[style*="position: fixed"][style*="bottom"][style*="right"],
+div[style*="position:fixed"][style*="bottom"][style*="right"],
+div[class*="emergent"],
+div[class*="Emergent"],
+a[href*="emergent"],
+a[href*="Emergent"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Additional selectors for watermark removal */
+[style*="z-index"][style*="9999"],
+[style*="z-index: 9999"],
+div:has(> a[href*="emergent"]),
+div:has(> a[href*="Emergent"]) {
+    display: none !important;
+    visibility: hidden !important;
+}
