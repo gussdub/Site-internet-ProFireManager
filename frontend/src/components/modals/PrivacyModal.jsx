@@ -184,7 +184,7 @@ const PrivacyModal = ({ isOpen, onClose }) => {
                   <strong>ProFireManager Inc.</strong><br />
                   351 rue Jean-Louis Boudreau<br />
                   Granby, QC J2H 0A3, Canada<br />
-                  Email: <a href="mailto:guillaume.dubeau@profiremanager.ca" className="text-[#D9072B] hover:underline">guillaume.dubeau@profiremanager.ca</a><br />
+                  Email: <a href="mailto:info@profiremanager.ca" className="text-[#D9072B] hover:underline">info@profiremanager.ca</a><br />
                   Tél: +1 450 330 3648
                 </p>
               </div>
