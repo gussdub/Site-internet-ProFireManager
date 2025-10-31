@@ -110,7 +110,7 @@ const FAQModal = ({ isOpen, onClose }) => {
           <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 mt-8">
             <h3 className="text-xl font-bold text-gray-900 mb-2">Vous ne trouvez pas votre réponse ?</h3>
             <p className="text-gray-700 mb-4">
-              Notre équipe de support est là pour vous aider. Contactez-nous à guillaume.dubeau@profiremanager.ca ou appelez-nous au +1 450 330 3648.
+              Notre équipe de support est là pour vous aider. Contactez-nous à info@profiremanager.ca ou appelez-nous au +1 450 330 3648.
             </p>
           </div>
         </div>
