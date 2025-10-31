@@ -33,7 +33,7 @@ const TermsModal = ({ isOpen, onClose }) => {
                   <strong>ProFireManager Inc.</strong><br />
                   351 rue Jean-Louis Boudreau<br />
                   Granby, QC J2H 0A3, Canada<br />
-                  Email: guillaume.dubeau@profiremanager.ca
+                  Email: info@profiremanager.ca
                 </p>
               </div>
             </section>
