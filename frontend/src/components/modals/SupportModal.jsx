@@ -30,8 +30,8 @@ const SupportModal = ({ isOpen, onClose }) => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Support par Email</h3>
               <p className="text-gray-700 mb-4">Réponse sous 24h pour tous les abonnements</p>
-              <a href="mailto:guillaume.dubeau@profiremanager.ca" className="text-[#D9072B] font-semibold hover:underline">
-                guillaume.dubeau@profiremanager.ca
+              <a href="mailto:info@profiremanager.ca" className="text-[#D9072B] font-semibold hover:underline">
+                info@profiremanager.ca
               </a>
             </div>
 
