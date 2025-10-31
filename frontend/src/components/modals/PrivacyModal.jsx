@@ -153,7 +153,7 @@ const PrivacyModal = ({ isOpen, onClose }) => {
                 </li>
               </ul>
               <p className="text-gray-700 mt-4">
-                Pour exercer ces droits, contactez-nous à : <a href="mailto:guillaume.dubeau@profiremanager.ca" className="text-[#D9072B] hover:underline">guillaume.dubeau@profiremanager.ca</a>
+                Pour exercer ces droits, contactez-nous à : <a href="mailto:info@profiremanager.ca" className="text-[#D9072B] hover:underline">info@profiremanager.ca</a>
               </p>
             </section>
 
