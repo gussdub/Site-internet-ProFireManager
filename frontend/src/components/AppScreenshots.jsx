@@ -1,30 +1,18 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../i18n/translations';
 
 const AppScreenshots = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const { language } = useLanguage();
+  const screenshotsData = t(language, 'screenshots');
 
   const screenshots = [
-    {
-      title: 'Gestion des Formations',
-      description: 'Inscription directe aux formations, suivi des certifications et planification en un clic.',
-      image: '/assets/screenshots/formations.png'
-    },
-    {
-      title: 'Inventaire EPI - NFPA 1851',
-      description: 'Suivi complet de tous les équipements avec inspection de routine et demandes de remplacement.',
-      image: '/assets/screenshots/epi.png'
-    },
-    {
-      title: 'Planning des Gardes',
-      description: 'Attribution automatique intelligente et vue d\'ensemble claire de la planification.',
-      image: '/assets/screenshots/planning.png'
-    },
-    {
-      title: 'Gestion des Disponibilités',
-      description: 'Calendrier intuitif pour gérer les disponibilités et indisponibilités de chaque pompier.',
-      image: '/assets/screenshots/disponibilites.png'
-    }
+    { image: '/assets/screenshots/formations.png' },
+    { image: '/assets/screenshots/epi.png' },
+    { image: '/assets/screenshots/planning.png' },
+    { image: '/assets/screenshots/disponibilites.png' }
   ];
 
   const nextSlide = () => {
@@ -41,10 +29,10 @@ const AppScreenshots = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Aperçu de l'Application
+            {screenshotsData.title}
           </h2>
           <p className="text-xl text-gray-600">
-            Découvrez l'interface intuitive de ProFireManager à travers ces captures d'écran réelles.
+            {screenshotsData.subtitle}
           </p>
         </div>
 
@@ -55,7 +43,7 @@ const AppScreenshots = () => {
             <div className="relative aspect-video bg-gray-100">
               <img
                 src={screenshots[currentSlide].image}
-                alt={screenshots[currentSlide].title}
+                alt={screenshotsData.items[currentSlide].title}
                 className="w-full h-full object-contain"
               />
               
@@ -63,14 +51,14 @@ const AppScreenshots = () => {
               <button
                 onClick={prevSlide}
                 className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all hover:scale-110"
-                aria-label="Précédent"
+                aria-label={language === 'fr' ? 'Précédent' : 'Previous'}
               >
                 <ChevronLeft className="w-6 h-6 text-gray-900" />
               </button>
               <button
                 onClick={nextSlide}
                 className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg transition-all hover:scale-110"
-                aria-label="Suivant"
+                aria-label={language === 'fr' ? 'Suivant' : 'Next'}
               >
                 <ChevronRight className="w-6 h-6 text-gray-900" />
               </button>
@@ -79,10 +67,10 @@ const AppScreenshots = () => {
             {/* Description */}
             <div className="p-8 bg-gradient-to-r from-gray-50 to-red-50">
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                {screenshots[currentSlide].title}
+                {screenshotsData.items[currentSlide].title}
               </h3>
               <p className="text-gray-700 text-lg">
-                {screenshots[currentSlide].description}
+                {screenshotsData.items[currentSlide].desc}
               </p>
             </div>
 
@@ -97,14 +85,14 @@ const AppScreenshots = () => {
                       ? 'bg-[#D9072B] w-8'
                       : 'bg-gray-300 hover:bg-gray-400'
                   }`}
-                  aria-label={`Aller à la capture ${index + 1}`}
+                  aria-label={`${language === 'fr' ? 'Aller à la capture' : 'Go to screenshot'} ${index + 1}`}
                 />
               ))}
             </div>
           </div>
 
           {/* Thumbnail Grid */}
-          <div className="grid grid-cols-5 gap-4 mt-8">
+          <div className="grid grid-cols-4 gap-4 mt-8">
             {screenshots.map((screenshot, index) => (
               <button
                 key={index}
@@ -117,7 +105,7 @@ const AppScreenshots = () => {
               >
                 <img
                   src={screenshot.image}
-                  alt={screenshot.title}
+                  alt={screenshotsData.items[index].title}
                   className="w-full h-full object-cover"
                 />
               </button>

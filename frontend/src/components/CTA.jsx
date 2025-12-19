@@ -1,8 +1,13 @@
 import React from 'react';
 import { Button } from './ui/button';
 import { ArrowRight } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../i18n/translations';
 
 const CTA = () => {
+  const { language } = useLanguage();
+  const ctaData = t(language, 'cta');
+
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -26,28 +31,22 @@ const CTA = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Heading */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Prêt à Transformer Votre Gestion ?
+            {ctaData.title}
           </h2>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
-            Rejoignez les services d'incendie québécois qui ont déjà optimisé leur gestion avec ProFireManager.
+            {ctaData.subtitle}
           </p>
 
           {/* Benefits */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl font-bold text-white mb-2">30 min</div>
-              <div className="text-gray-300">Démonstration gratuite</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl font-bold text-white mb-2">1-2 sem</div>
-              <div className="text-gray-300">Configuration rapide</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl font-bold text-white mb-2">60 jours</div>
-              <div className="text-gray-300">Garantie satisfait ou remboursé</div>
-            </div>
+            {ctaData.benefits.map((benefit, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="text-3xl font-bold text-white mb-2">{benefit.value}</div>
+                <div className="text-gray-300">{benefit.label}</div>
+              </div>
+            ))}
           </div>
 
           {/* CTA Button */}
@@ -57,7 +56,7 @@ const CTA = () => {
               className="bg-[#D9072B] hover:bg-[#B00623] text-white px-10 py-7 text-xl font-bold rounded-lg shadow-2xl hover:shadow-[#D9072B]/50 transition-all hover:scale-105"
               size="lg"
             >
-              Démarrer votre essai gratuit
+              {ctaData.btn}
               <ArrowRight className="ml-2 w-6 h-6" />
             </Button>
           </div>
@@ -65,7 +64,7 @@ const CTA = () => {
           {/* Trust Elements */}
           <div className="mt-12 flex flex-col items-center">
             <p className="text-sm text-gray-400 mb-4">
-              Configuration en 1-2 semaines • Support dédié • Solution québécoise
+              {ctaData.trust}
             </p>
           </div>
         </div>
