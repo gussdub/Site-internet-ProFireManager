@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route, Navigate, useParams, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useParams } from 'react-router-dom';
 import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -8,13 +8,15 @@ import HomePage from './pages/HomePage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import TermsPage from './pages/TermsPage';
 import SupportPage from './pages/SupportPage';
+import DocumentationPage from './pages/DocumentationPage';
+import FAQPage from './pages/FAQPage';
+import TutorialsPage from './pages/TutorialsPage';
 import { Toaster } from './components/ui/sonner';
 
 // Route wrapper to sync URL language with context
 const LanguageRouteWrapper = ({ children }) => {
   const { lang } = useParams();
   const { language, changeLanguage } = useLanguage();
-  const navigate = useNavigate();
 
   useEffect(() => {
     if (lang && lang !== language) {
@@ -45,18 +47,18 @@ function AppContent() {
           <Route path="/fr/politique-de-confidentialite" element={<LanguageRouteWrapper><PrivacyPolicyPage /></LanguageRouteWrapper>} />
           <Route path="/fr/conditions-utilisation" element={<LanguageRouteWrapper><TermsPage /></LanguageRouteWrapper>} />
           <Route path="/fr/support-technique" element={<LanguageRouteWrapper><SupportPage /></LanguageRouteWrapper>} />
-          <Route path="/fr/documentation" element={<LanguageRouteWrapper><SupportPage /></LanguageRouteWrapper>} />
-          <Route path="/fr/faq" element={<LanguageRouteWrapper><SupportPage /></LanguageRouteWrapper>} />
-          <Route path="/fr/tutoriels" element={<LanguageRouteWrapper><SupportPage /></LanguageRouteWrapper>} />
+          <Route path="/fr/documentation" element={<LanguageRouteWrapper><DocumentationPage /></LanguageRouteWrapper>} />
+          <Route path="/fr/faq" element={<LanguageRouteWrapper><FAQPage /></LanguageRouteWrapper>} />
+          <Route path="/fr/tutoriels" element={<LanguageRouteWrapper><TutorialsPage /></LanguageRouteWrapper>} />
           
           {/* English routes */}
           <Route path="/en" element={<LanguageRouteWrapper><HomePage /></LanguageRouteWrapper>} />
           <Route path="/en/privacy-policy" element={<LanguageRouteWrapper><PrivacyPolicyPage /></LanguageRouteWrapper>} />
           <Route path="/en/terms-of-service" element={<LanguageRouteWrapper><TermsPage /></LanguageRouteWrapper>} />
           <Route path="/en/technical-support" element={<LanguageRouteWrapper><SupportPage /></LanguageRouteWrapper>} />
-          <Route path="/en/documentation" element={<LanguageRouteWrapper><SupportPage /></LanguageRouteWrapper>} />
-          <Route path="/en/faq" element={<LanguageRouteWrapper><SupportPage /></LanguageRouteWrapper>} />
-          <Route path="/en/tutorials" element={<LanguageRouteWrapper><SupportPage /></LanguageRouteWrapper>} />
+          <Route path="/en/documentation" element={<LanguageRouteWrapper><DocumentationPage /></LanguageRouteWrapper>} />
+          <Route path="/en/faq" element={<LanguageRouteWrapper><FAQPage /></LanguageRouteWrapper>} />
+          <Route path="/en/tutorials" element={<LanguageRouteWrapper><TutorialsPage /></LanguageRouteWrapper>} />
           
           {/* Catch all */}
           <Route path="*" element={<Navigate to="/" replace />} />
