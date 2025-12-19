@@ -122,11 +122,14 @@ frontend:
     file: "frontend/src/components/*.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Updated all main page components (Hero, Features, Benefits, Pricing, CTA, Contact, AppScreenshots) to use useLanguage hook and translations"
+      - working: true
+        agent: "testing"
+        comment: "TESTED: Homepage displays correct bilingual content - French version shows 'Optimisez la gestion de votre service d'incendie', English version shows 'Optimize the management of your fire department'. Navigation menu items display in correct language."
 
   - task: "Privacy Policy Page (bilingual)"
     implemented: true
