@@ -32,6 +32,160 @@ export const translations = {
         supportLabel: 'Support'
       }
     },
+
+    // Features
+    features: {
+      title: 'Fonctionnalités Complètes',
+      subtitle: 'Tout ce dont vous avez besoin pour gérer efficacement votre service d\'incendie, centralisé dans une seule plateforme.',
+      items: [
+        {
+          title: 'Gestion Intelligente des Horaires',
+          description: 'Attribution automatique des gardes basée sur les compétences, le grade et la disponibilité. Gestion complète des temps pleins et temps partiel. Calendrier interactif avec vue mensuelle et codes couleur.',
+          benefits: [
+            'Planification automatisée',
+            'Gestion temps plein/partiel',
+            'Équité de distribution',
+            'Export et impression'
+          ]
+        },
+        {
+          title: 'Remplacements Automatisés',
+          description: 'Système intelligent de remplacement qui trouve automatiquement le meilleur candidat selon les compétences requises et l\'équité des heures.',
+          benefits: [
+            'Matching intelligent',
+            'Notifications automatiques',
+            'Historique complet',
+            'Respect des contraintes'
+          ]
+        },
+        {
+          title: 'Gestion des EPI - NFPA 1851',
+          description: 'Suivi centralisé conforme NFPA 1851. Inspection de routine directement par les pompiers dans l\'application. Demandes de remplacement simplifiées.',
+          benefits: [
+            'Inventaire complet',
+            'Inspection de routine dans l\'app',
+            'Demande de remplacement',
+            'Conformité NFPA 1851'
+          ]
+        },
+        {
+          title: 'Gestion des Formations - NFPA 1500',
+          description: 'Suivi des certifications conforme NFPA 1500 avec alertes de renouvellement automatiques. Inscription directe aux formations par l\'application.',
+          benefits: [
+            'Suivi des certifications',
+            'Inscription directe aux formations',
+            'Alertes de renouvellement',
+            'Conformité NFPA 1500'
+          ]
+        }
+      ],
+      additionalTitle: 'Module Prévention (Optionnel)',
+      additionalDesc: 'Module complémentaire avec import CSV, grilles d\'inspection conformes au Code de sécurité du Québec, gestion des préventionnistes et tableaux de bord avancés.',
+      additionalTags: ['Import CSV', 'Grilles d\'inspection', 'Gestion préventionnistes', 'Tableaux de bord']
+    },
+
+    // Benefits
+    benefits: {
+      title: 'Pourquoi Choisir ProFireManager ?',
+      subtitle: 'Des résultats mesurables et un retour sur investissement rapide pour votre service d\'incendie.',
+      items: [
+        { title: 'Gain de Temps', desc: 'Réduction de 80% du temps de planification', stat: '6h30', label: 'économisées/semaine' },
+        { title: 'Amélioration', desc: 'Vision globale en temps réel', stat: '100%', label: 'traçabilité' },
+        { title: 'Équité', desc: 'Distribution équitable automatique', stat: '0', label: 'conflit' },
+        { title: 'Optimisation', desc: 'Réduction des heures supplémentaires', stat: '-25%', label: 'heures sup.' },
+        { title: 'Accessibilité', desc: 'Interface responsive 24/7', stat: '24/7', label: 'disponible' },
+        { title: 'Conformité', desc: 'Code de sécurité du Québec', stat: '100%', label: 'conforme' }
+      ],
+      roiTitle: 'ROI Positif dès la Première Année',
+      roiSubtitle: 'Économie annuelle moyenne pour une caserne de 30 pompiers',
+      roiStats: [
+        { value: '8h', label: 'Temps admin économisé/semaine' },
+        { value: '14 560$', label: 'Économie annuelle estimée' },
+        { value: '3 660$', label: 'Coût annuel (15 pompiers)' }
+      ]
+    },
+
+    // Pricing
+    pricing: {
+      title: 'Tarification Simple et Transparente',
+      subtitle: 'Payez uniquement pour le nombre de pompiers actifs.',
+      monthly: 'Mensuel',
+      annual: 'Annuel',
+      discount: '-10%',
+      perFirefighter: '/pompier/mois',
+      popular: 'Le plus populaire',
+      tiers: [
+        { name: '0 à 30 pompiers', count: 30 },
+        { name: '31 à 50 pompiers', count: 40 },
+        { name: '51+ pompiers', count: 50 }
+      ],
+      billedAnnually: 'facturé annuellement',
+      annualSavings: 'Facturé annuellement - Économie de 10%',
+      startNow: 'Commencer maintenant',
+      includedTitle: 'Tous les Modules Inclus',
+      includedItems: [
+        'Gestion des gardes avec attribution automatique',
+        'Planification intelligente et calendrier',
+        'Gestion complète du personnel',
+        'Module EPI conforme NFPA 1851',
+        'Module Formations conforme NFPA 1500',
+        'Tableaux de bord et rapports avancés',
+        'Multi-tenant et gestion des rôles',
+        'Support par email',
+        'Mises à jour automatiques'
+      ],
+      offerTitle: 'Offre de Lancement',
+      offerItems: [
+        '-30% sur les 3 premiers mois',
+        'Formation initiale de 2h OFFERTE (valeur 400$)'
+      ],
+      offerValidity: 'Offre valable pour toute souscription avant le 31 mars 2026',
+      offerBtn: 'Profiter de l\'offre maintenant'
+    },
+
+    // CTA
+    cta: {
+      title: 'Prêt à Transformer Votre Gestion ?',
+      subtitle: 'Rejoignez les services d\'incendie québécois qui ont déjà optimisé leur gestion avec ProFireManager.',
+      benefits: [
+        { value: '30 min', label: 'Démonstration gratuite' },
+        { value: '1-2 sem', label: 'Configuration rapide' },
+        { value: '60 jours', label: 'Garantie satisfait ou remboursé' }
+      ],
+      btn: 'Démarrer votre essai gratuit',
+      trust: 'Configuration en 1-2 semaines • Support dédié • Solution québécoise'
+    },
+
+    // Contact
+    contact: {
+      title: 'Contactez-Nous',
+      subtitle: 'Réservez votre démo gratuite ou posez-nous vos questions. Notre équipe vous répondra rapidement.',
+      formTitle: 'Demander une Démonstration',
+      name: 'Nom complet',
+      organization: 'Organisation',
+      email: 'Email',
+      phone: 'Téléphone',
+      firefighters: 'Nombre de pompiers',
+      message: 'Message',
+      messagePlaceholder: 'Parlez-nous de vos besoins...',
+      send: 'Envoyer la demande',
+      infoTitle: 'Informations de Contact',
+      emailSupport: 'Support par Email',
+      emailDesc: 'Réponse sous 24h',
+      phoneSupport: 'Support Téléphonique',
+      phoneDesc: 'Lun-Ven : 8h-18h EST',
+      hours: 'Heures d\'Ouverture',
+      hoursWeekdays: 'Lundi - Vendredi',
+      hoursWeekdaysTime: '8h00 - 18h00 (EST)',
+      hoursWeekend: 'Samedi - Dimanche',
+      hoursWeekendTime: 'Fermé (Email uniquement)',
+      stats: [
+        { value: '< 24h', label: 'Temps de réponse' },
+        { value: '30 min', label: 'Démo gratuite' },
+        { value: '1-2 sem', label: 'Configuration' },
+        { value: '100%', label: 'Québécois' }
+      ]
+    },
     
     // Footer
     footer: {
@@ -45,6 +199,18 @@ export const translations = {
       privacy: 'Politique de confidentialité',
       terms: 'Conditions d\'utilisation',
       rights: 'Tous droits réservés.'
+    },
+
+    // Screenshots
+    screenshots: {
+      title: 'Aperçu de l\'Application',
+      subtitle: 'Découvrez l\'interface intuitive de ProFireManager à travers ces captures d\'écran réelles.',
+      items: [
+        { title: 'Gestion des Formations', desc: 'Inscription directe aux formations, suivi des certifications et planification en un clic.' },
+        { title: 'Inventaire EPI - NFPA 1851', desc: 'Suivi complet de tous les équipements avec inspection de routine et demandes de remplacement.' },
+        { title: 'Planning des Gardes', desc: 'Attribution automatique intelligente et vue d\'ensemble claire de la planification.' },
+        { title: 'Gestion des Disponibilités', desc: 'Calendrier intuitif pour gérer les disponibilités et indisponibilités de chaque pompier.' }
+      ]
     }
   },
   
@@ -81,6 +247,160 @@ export const translations = {
         supportLabel: 'Support'
       }
     },
+
+    // Features
+    features: {
+      title: 'Complete Features',
+      subtitle: 'Everything you need to effectively manage your fire department, centralized in one platform.',
+      items: [
+        {
+          title: 'Intelligent Schedule Management',
+          description: 'Automatic shift assignment based on skills, rank and availability. Complete full-time and part-time management. Interactive calendar with monthly view and color codes.',
+          benefits: [
+            'Automated planning',
+            'Full-time/part-time management',
+            'Fair distribution',
+            'Export and print'
+          ]
+        },
+        {
+          title: 'Automated Replacements',
+          description: 'Intelligent replacement system that automatically finds the best candidate based on required skills and hour equity.',
+          benefits: [
+            'Smart matching',
+            'Automatic notifications',
+            'Complete history',
+            'Constraint compliance'
+          ]
+        },
+        {
+          title: 'PPE Management - NFPA 1851',
+          description: 'Centralized tracking compliant with NFPA 1851. Routine inspection directly by firefighters in the app. Simplified replacement requests.',
+          benefits: [
+            'Complete inventory',
+            'Routine inspection in app',
+            'Replacement request',
+            'NFPA 1851 compliance'
+          ]
+        },
+        {
+          title: 'Training Management - NFPA 1500',
+          description: 'Certification tracking compliant with NFPA 1500 with automatic renewal alerts. Direct enrollment in training through the app.',
+          benefits: [
+            'Certification tracking',
+            'Direct training enrollment',
+            'Renewal alerts',
+            'NFPA 1500 compliance'
+          ]
+        }
+      ],
+      additionalTitle: 'Prevention Module (Optional)',
+      additionalDesc: 'Complementary module with CSV import, inspection grids compliant with Quebec Safety Code, fire prevention officer management and advanced dashboards.',
+      additionalTags: ['CSV Import', 'Inspection Grids', 'Officer Management', 'Dashboards']
+    },
+
+    // Benefits
+    benefits: {
+      title: 'Why Choose ProFireManager?',
+      subtitle: 'Measurable results and rapid return on investment for your fire department.',
+      items: [
+        { title: 'Time Savings', desc: '80% reduction in planning time', stat: '6h30', label: 'saved/week' },
+        { title: 'Improvement', desc: 'Real-time global vision', stat: '100%', label: 'traceability' },
+        { title: 'Equity', desc: 'Automatic fair distribution', stat: '0', label: 'conflict' },
+        { title: 'Optimization', desc: 'Overtime reduction', stat: '-25%', label: 'overtime' },
+        { title: 'Accessibility', desc: '24/7 responsive interface', stat: '24/7', label: 'available' },
+        { title: 'Compliance', desc: 'Quebec Safety Code', stat: '100%', label: 'compliant' }
+      ],
+      roiTitle: 'Positive ROI from First Year',
+      roiSubtitle: 'Average annual savings for a 30-firefighter station',
+      roiStats: [
+        { value: '8h', label: 'Admin time saved/week' },
+        { value: '$14,560', label: 'Estimated annual savings' },
+        { value: '$3,660', label: 'Annual cost (15 firefighters)' }
+      ]
+    },
+
+    // Pricing
+    pricing: {
+      title: 'Simple and Transparent Pricing',
+      subtitle: 'Pay only for the number of active firefighters.',
+      monthly: 'Monthly',
+      annual: 'Annual',
+      discount: '-10%',
+      perFirefighter: '/firefighter/month',
+      popular: 'Most Popular',
+      tiers: [
+        { name: '0 to 30 firefighters', count: 30 },
+        { name: '31 to 50 firefighters', count: 40 },
+        { name: '51+ firefighters', count: 50 }
+      ],
+      billedAnnually: 'billed annually',
+      annualSavings: 'Billed annually - 10% savings',
+      startNow: 'Start Now',
+      includedTitle: 'All Modules Included',
+      includedItems: [
+        'Shift management with automatic assignment',
+        'Smart planning and calendar',
+        'Complete personnel management',
+        'PPE Module - NFPA 1851 compliant',
+        'Training Module - NFPA 1500 compliant',
+        'Advanced dashboards and reports',
+        'Multi-tenant and role management',
+        'Email support',
+        'Automatic updates'
+      ],
+      offerTitle: 'Launch Offer',
+      offerItems: [
+        '-30% on first 3 months',
+        '2h initial training INCLUDED ($400 value)'
+      ],
+      offerValidity: 'Offer valid for any subscription before March 31, 2026',
+      offerBtn: 'Take Advantage of the Offer'
+    },
+
+    // CTA
+    cta: {
+      title: 'Ready to Transform Your Management?',
+      subtitle: 'Join Quebec fire departments that have already optimized their management with ProFireManager.',
+      benefits: [
+        { value: '30 min', label: 'Free demo' },
+        { value: '1-2 wks', label: 'Quick setup' },
+        { value: '60 days', label: 'Money-back guarantee' }
+      ],
+      btn: 'Start Your Free Trial',
+      trust: 'Setup in 1-2 weeks • Dedicated support • Quebec solution'
+    },
+
+    // Contact
+    contact: {
+      title: 'Contact Us',
+      subtitle: 'Book your free demo or ask us your questions. Our team will respond quickly.',
+      formTitle: 'Request a Demo',
+      name: 'Full Name',
+      organization: 'Organization',
+      email: 'Email',
+      phone: 'Phone',
+      firefighters: 'Number of firefighters',
+      message: 'Message',
+      messagePlaceholder: 'Tell us about your needs...',
+      send: 'Send Request',
+      infoTitle: 'Contact Information',
+      emailSupport: 'Email Support',
+      emailDesc: 'Response within 24h',
+      phoneSupport: 'Phone Support',
+      phoneDesc: 'Mon-Fri: 8am-6pm EST',
+      hours: 'Business Hours',
+      hoursWeekdays: 'Monday - Friday',
+      hoursWeekdaysTime: '8:00am - 6:00pm (EST)',
+      hoursWeekend: 'Saturday - Sunday',
+      hoursWeekendTime: 'Closed (Email only)',
+      stats: [
+        { value: '< 24h', label: 'Response time' },
+        { value: '30 min', label: 'Free demo' },
+        { value: '1-2 wks', label: 'Setup' },
+        { value: '100%', label: 'Quebec-based' }
+      ]
+    },
     
     // Footer
     footer: {
@@ -94,6 +414,18 @@ export const translations = {
       privacy: 'Privacy Policy',
       terms: 'Terms of Service',
       rights: 'All rights reserved.'
+    },
+
+    // Screenshots
+    screenshots: {
+      title: 'Application Overview',
+      subtitle: 'Discover ProFireManager\'s intuitive interface through these real screenshots.',
+      items: [
+        { title: 'Training Management', desc: 'Direct training enrollment, certification tracking and one-click planning.' },
+        { title: 'PPE Inventory - NFPA 1851', desc: 'Complete tracking of all equipment with routine inspection and replacement requests.' },
+        { title: 'Shift Planning', desc: 'Intelligent automatic assignment and clear overview of planning.' },
+        { title: 'Availability Management', desc: 'Intuitive calendar to manage each firefighter\'s availability and unavailability.' }
+      ]
     }
   }
 };
