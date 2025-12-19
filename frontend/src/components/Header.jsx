@@ -119,7 +119,8 @@ const Header = () => {
               Demander une démo
             </Button>
           </nav>
-        )}\n      </div>
+        )}
+      </div>
     </header>
   );
 };
