@@ -270,11 +270,14 @@ backend:
     file: "backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Implemented POST endpoint to submit contact requests. Stores in MongoDB with fields: name, organization, email, phone, firefighters, message, language, status"
+      - working: true
+        agent: "testing"
+        comment: "TESTED: POST /api/contact endpoint working perfectly. Successfully created contacts with all fields and required-only fields. Returns proper response structure with id, status='new', created_at timestamp. Data integrity verified - all submitted fields stored correctly in MongoDB. Default language 'fr' applied when not specified."
 
   - task: "Contact form API - GET /api/contact"
     implemented: true
@@ -282,11 +285,14 @@ backend:
     file: "backend/server.py"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Implemented GET endpoint to retrieve all contact requests (admin endpoint)"
+      - working: true
+        agent: "testing"
+        comment: "TESTED: GET /api/contact and GET /api/contact/{id} endpoints working correctly. Successfully retrieved all contacts (4 total including 2 test contacts). Individual contact retrieval by ID works properly. Returns 404 for non-existent contact IDs as expected. Response format matches ContactRequest model structure."
 
   - task: "Contact form API - PATCH status"
     implemented: true
@@ -294,11 +300,14 @@ backend:
     file: "backend/server.py"
     stuck_count: 0
     priority: "low"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Implemented PATCH endpoint to update contact request status (new, contacted, demo_scheduled, closed)"
+      - working: true
+        agent: "testing"
+        comment: "TESTED: PATCH /api/contact/{id}/status endpoint working correctly. Successfully updated contact status from 'new' to 'contacted'. Proper validation - returns 400 for invalid status values, returns 404 for non-existent contact IDs. Status changes persist in database as verified by subsequent GET requests."
 
 metadata:
   created_by: "main_agent"
