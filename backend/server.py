@@ -91,6 +91,70 @@ async def get_status_checks():
     
     return status_checks
 
+
+# Contact Form Endpoints
+@api_router.post("/contact", response_model=ContactRequest)
+async def submit_contact_request(input: ContactRequestCreate):
+    """Submit a new contact/demo request"""
+    contact_dict = input.model_dump()
+    contact_obj = ContactRequest(**contact_dict)
+    
+    # Convert to dict and serialize datetime to ISO string for MongoDB
+    doc = contact_obj.model_dump()
+    doc['created_at'] = doc['created_at'].isoformat()
+    
+    await db.contact_requests.insert_one(doc)
+    
+    logger.info(f"New contact request from {input.name} ({input.email}) - Organization: {input.organization}")
+    
+    return contact_obj
+
+
+@api_router.get("/contact", response_model=List[ContactRequest])
+async def get_contact_requests():
+    """Get all contact requests (admin endpoint)"""
+    contact_requests = await db.contact_requests.find({}, {"_id": 0}).to_list(1000)
+    
+    # Convert ISO string timestamps back to datetime objects
+    for request in contact_requests:
+        if isinstance(request.get('created_at'), str):
+            request['created_at'] = datetime.fromisoformat(request['created_at'])
+    
+    return contact_requests
+
+
+@api_router.get("/contact/{contact_id}", response_model=ContactRequest)
+async def get_contact_request(contact_id: str):
+    """Get a specific contact request by ID"""
+    contact = await db.contact_requests.find_one({"id": contact_id}, {"_id": 0})
+    
+    if not contact:
+        raise HTTPException(status_code=404, detail="Contact request not found")
+    
+    if isinstance(contact.get('created_at'), str):
+        contact['created_at'] = datetime.fromisoformat(contact['created_at'])
+    
+    return contact
+
+
+@api_router.patch("/contact/{contact_id}/status")
+async def update_contact_status(contact_id: str, status: str):
+    """Update the status of a contact request"""
+    valid_statuses = ["new", "contacted", "demo_scheduled", "closed"]
+    if status not in valid_statuses:
+        raise HTTPException(status_code=400, detail=f"Invalid status. Must be one of: {valid_statuses}")
+    
+    result = await db.contact_requests.update_one(
+        {"id": contact_id},
+        {"$set": {"status": status}}
+    )
+    
+    if result.matched_count == 0:
+        raise HTTPException(status_code=404, detail="Contact request not found")
+    
+    return {"message": "Status updated successfully", "status": status}
+
+
 # Include the router in the main app
 app.include_router(api_router)
 
