@@ -1,30 +1,78 @@
-import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import AppScreenshots from './components/AppScreenshots';
-import Benefits from './components/Benefits';
-import Pricing from './components/Pricing';
-import CTA from './components/CTA';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import { Toaster } from './components/ui/sonner';
+import React, { useEffect } from 'react';
 import './App.css';
+import { BrowserRouter, Routes, Route, Navigate, useParams, useNavigate } from 'react-router-dom';
+import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsPage from './pages/TermsPage';
+import SupportPage from './pages/SupportPage';
+import { Toaster } from './components/ui/sonner';
+
+// Route wrapper to sync URL language with context
+const LanguageRouteWrapper = ({ children }) => {
+  const { lang } = useParams();
+  const { language, changeLanguage } = useLanguage();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (lang && lang !== language) {
+      changeLanguage(lang);
+    }
+  }, [lang, language, changeLanguage]);
+
+  return children;
+};
+
+// Redirect root to appropriate language
+const RootRedirect = () => {
+  const { language } = useLanguage();
+  return <Navigate to={`/${language}/`} replace />;
+};
+
+function AppContent() {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          {/* Root redirect */}
+          <Route path="/" element={<RootRedirect />} />
+          
+          {/* French routes */}
+          <Route path="/fr" element={<LanguageRouteWrapper><HomePage /></LanguageRouteWrapper>} />
+          <Route path="/fr/politique-de-confidentialite" element={<LanguageRouteWrapper><PrivacyPolicyPage /></LanguageRouteWrapper>} />
+          <Route path="/fr/conditions-utilisation" element={<LanguageRouteWrapper><TermsPage /></LanguageRouteWrapper>} />
+          <Route path="/fr/support-technique" element={<LanguageRouteWrapper><SupportPage /></LanguageRouteWrapper>} />
+          <Route path="/fr/documentation" element={<LanguageRouteWrapper><SupportPage /></LanguageRouteWrapper>} />
+          <Route path="/fr/faq" element={<LanguageRouteWrapper><SupportPage /></LanguageRouteWrapper>} />
+          <Route path="/fr/tutoriels" element={<LanguageRouteWrapper><SupportPage /></LanguageRouteWrapper>} />
+          
+          {/* English routes */}
+          <Route path="/en" element={<LanguageRouteWrapper><HomePage /></LanguageRouteWrapper>} />
+          <Route path="/en/privacy-policy" element={<LanguageRouteWrapper><PrivacyPolicyPage /></LanguageRouteWrapper>} />
+          <Route path="/en/terms-of-service" element={<LanguageRouteWrapper><TermsPage /></LanguageRouteWrapper>} />
+          <Route path="/en/technical-support" element={<LanguageRouteWrapper><SupportPage /></LanguageRouteWrapper>} />
+          <Route path="/en/documentation" element={<LanguageRouteWrapper><SupportPage /></LanguageRouteWrapper>} />
+          <Route path="/en/faq" element={<LanguageRouteWrapper><SupportPage /></LanguageRouteWrapper>} />
+          <Route path="/en/tutorials" element={<LanguageRouteWrapper><SupportPage /></LanguageRouteWrapper>} />
+          
+          {/* Catch all */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+        <Footer />
+        <Toaster />
+      </BrowserRouter>
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Hero />
-      <Features />
-      <AppScreenshots />
-      <Benefits />
-      <Pricing />
-      <CTA />
-      <Contact />
-      <Footer />
-      <Toaster />
-    </div>
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   );
 }
 
