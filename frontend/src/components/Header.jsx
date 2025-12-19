@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 import LanguageSwitcher from './LanguageSwitcher';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../i18n/translations';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,32 +49,32 @@ const Header = () => {
               onClick={() => scrollToSection('features')}
               className="text-gray-700 hover:text-[#D9072B] transition-colors font-medium"
             >
-              Fonctionnalités
+              {t(language, 'nav.features')}
             </button>
             <button
               onClick={() => scrollToSection('benefits')}
               className="text-gray-700 hover:text-[#D9072B] transition-colors font-medium"
             >
-              Avantages
+              {t(language, 'nav.benefits')}
             </button>
             <button
               onClick={() => scrollToSection('pricing')}
               className="text-gray-700 hover:text-[#D9072B] transition-colors font-medium"
             >
-              Tarification
+              {t(language, 'nav.pricing')}
             </button>
             <button
               onClick={() => scrollToSection('contact')}
               className="text-gray-700 hover:text-[#D9072B] transition-colors font-medium"
             >
-              Contact
+              {t(language, 'nav.contact')}
             </button>
             <LanguageSwitcher />
             <Button
               onClick={() => scrollToSection('contact')}
               className="bg-[#D9072B] hover:bg-[#B00623] text-white px-6"
             >
-              Demander une démo
+              {t(language, 'nav.requestDemo')}
             </Button>
           </nav>
 
@@ -91,32 +94,32 @@ const Header = () => {
               onClick={() => scrollToSection('features')}
               className="text-left text-gray-700 hover:text-[#D9072B] transition-colors font-medium"
             >
-              Fonctionnalités
+              {t(language, 'nav.features')}
             </button>
             <button
               onClick={() => scrollToSection('benefits')}
               className="text-left text-gray-700 hover:text-[#D9072B] transition-colors font-medium"
             >
-              Avantages
+              {t(language, 'nav.benefits')}
             </button>
             <button
               onClick={() => scrollToSection('pricing')}
               className="text-left text-gray-700 hover:text-[#D9072B] transition-colors font-medium"
             >
-              Tarification
+              {t(language, 'nav.pricing')}
             </button>
             <button
               onClick={() => scrollToSection('contact')}
               className="text-left text-gray-700 hover:text-[#D9072B] transition-colors font-medium"
             >
-              Contact
+              {t(language, 'nav.contact')}
             </button>
             <LanguageSwitcher />
             <Button
               onClick={() => scrollToSection('contact')}
               className="bg-[#D9072B] hover:bg-[#B00623] text-white w-full"
             >
-              Demander une démo
+              {t(language, 'nav.requestDemo')}
             </Button>
           </nav>
         )}
