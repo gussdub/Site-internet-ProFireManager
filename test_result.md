@@ -137,11 +137,14 @@ frontend:
     file: "frontend/src/pages/PrivacyPolicyPage.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Full bilingual content with FR and EN versions"
+      - working: true
+        agent: "testing"
+        comment: "TESTED: Privacy policy pages work correctly - /fr/politique-de-confidentialite shows 'Politique de Confidentialité', /en/privacy-policy shows 'Privacy Policy'. Language context maintained."
 
   - task: "Terms of Service Page (bilingual)"
     implemented: true
@@ -149,11 +152,14 @@ frontend:
     file: "frontend/src/pages/TermsPage.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Complete bilingual content with 8 sections including contact info"
+      - working: true
+        agent: "testing"
+        comment: "TESTED: Terms pages work correctly - /fr/conditions-utilisation shows 'Conditions d'Utilisation', /en/terms-of-service shows 'Terms of Service'. Content properly localized."
 
   - task: "Support Page (bilingual)"
     implemented: true
@@ -161,11 +167,14 @@ frontend:
     file: "frontend/src/pages/SupportPage.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Enhanced with contact methods, hours, services, and response times"
+      - working: true
+        agent: "testing"
+        comment: "TESTED: Support pages work correctly - /fr/support-technique shows 'Support Technique', /en/technical-support shows 'Technical Support'. All content properly translated."
 
   - task: "Documentation Page (bilingual)"
     implemented: true
