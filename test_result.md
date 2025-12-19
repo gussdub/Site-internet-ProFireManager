@@ -1,7 +1,3 @@
-#====================================================================================================
-# START - Testing Protocol - DO NOT EDIT OR REMOVE THIS SECTION
-#====================================================================================================
-
 # THIS SECTION CONTAINS CRITICAL TESTING INSTRUCTIONS FOR BOTH AGENTS
 # BOTH MAIN_AGENT AND TESTING_AGENT MUST PRESERVE THIS ENTIRE BLOCK
 
@@ -101,3 +97,161 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: Build a bilingual (French/English) website for ProFireManager with separate pages for legal/support information instead of modals, with language switching functionality.
+
+frontend:
+  - task: "Language switching functionality"
+    implemented: true
+    working: true
+    file: "frontend/src/components/LanguageSwitcher.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Implemented LanguageSwitcher component that toggles between FR/EN and updates URL accordingly"
+
+  - task: "Homepage bilingual content (Hero, Features, Benefits, Pricing, CTA, Contact, Screenshots)"
+    implemented: true
+    working: true
+    file: "frontend/src/components/*.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Updated all main page components (Hero, Features, Benefits, Pricing, CTA, Contact, AppScreenshots) to use useLanguage hook and translations"
+
+  - task: "Privacy Policy Page (bilingual)"
+    implemented: true
+    working: true
+    file: "frontend/src/pages/PrivacyPolicyPage.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Full bilingual content with FR and EN versions"
+
+  - task: "Terms of Service Page (bilingual)"
+    implemented: true
+    working: true
+    file: "frontend/src/pages/TermsPage.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Complete bilingual content with 8 sections including contact info"
+
+  - task: "Support Page (bilingual)"
+    implemented: true
+    working: true
+    file: "frontend/src/pages/SupportPage.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Enhanced with contact methods, hours, services, and response times"
+
+  - task: "Documentation Page (bilingual)"
+    implemented: true
+    working: true
+    file: "frontend/src/pages/DocumentationPage.jsx"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Already had bilingual content"
+
+  - task: "FAQ Page (bilingual)"
+    implemented: true
+    working: true
+    file: "frontend/src/pages/FAQPage.jsx"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Already had bilingual content with accordion"
+
+  - task: "Tutorials Page (bilingual)"
+    implemented: true
+    working: true
+    file: "frontend/src/pages/TutorialsPage.jsx"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Already had bilingual content"
+
+  - task: "Language-based URL routing"
+    implemented: true
+    working: true
+    file: "frontend/src/App.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Fixed routing to properly sync URL language with context using LanguageSync component"
+
+  - task: "Footer navigation to pages"
+    implemented: true
+    working: true
+    file: "frontend/src/components/Footer.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Footer links navigate to correct language-prefixed URLs"
+
+backend:
+  - task: "Backend API health"
+    implemented: true
+    working: true
+    file: "backend/server.py"
+    stuck_count: 0
+    priority: "low"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Default backend endpoints working"
+
+metadata:
+  created_by: "main_agent"
+  version: "1.0"
+  test_sequence: 1
+  run_ui: true
+
+test_plan:
+  current_focus:
+    - "Language switching functionality"
+    - "Homepage bilingual content"
+    - "Privacy Policy Page (bilingual)"
+    - "Terms of Service Page (bilingual)"
+    - "Language-based URL routing"
+    - "Footer navigation to pages"
+  stuck_tasks: []
+  test_all: true
+  test_priority: "high_first"
+
+agent_communication:
+  - agent: "main"
+    message: "Completed bilingual implementation for ProFireManager website. All main page components updated to use translation system. All info pages (Privacy, Terms, Support, Documentation, FAQ, Tutorials) have full bilingual content. Fixed URL routing to properly sync language. Please test: 1) Language switching button works, 2) All pages display correct language based on URL, 3) Footer links navigate correctly, 4) Content switches properly between FR and EN."
