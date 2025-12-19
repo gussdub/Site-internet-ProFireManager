@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
-import { Mail, Phone, Clock } from 'lucide-react';
+import { Mail, Phone, Clock, Loader2 } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../i18n/translations';
@@ -11,30 +11,70 @@ const Contact = () => {
   const { toast } = useToast();
   const { language } = useLanguage();
   const contactData = t(language, 'contact');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [formData, setFormData] = useState({
     name: '',
     organization: '',
     email: '',
     phone: '',
-    pompiers: '',
+    firefighters: '',
     message: ''
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    toast({
-      title: language === 'fr' ? "Message envoyé !" : "Message sent!",
-      description: language === 'fr' ? "Nous vous contacterons dans les 24 heures." : "We will contact you within 24 hours.",
-    });
-    setFormData({
-      name: '',
-      organization: '',
-      email: '',
-      phone: '',
-      pompiers: '',
-      message: ''
-    });
+    setIsSubmitting(true);
+
+    try {
+      const apiUrl = process.env.REACT_APP_BACKEND_URL || '';
+      const response = await fetch(`${apiUrl}/api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          organization: formData.organization,
+          email: formData.email,
+          phone: formData.phone || null,
+          firefighters: formData.firefighters || null,
+          message: formData.message || null,
+          language: language
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
+
+      toast({
+        title: language === 'fr' ? "Message envoyé !" : "Message sent!",
+        description: language === 'fr' 
+          ? "Nous vous contacterons dans les 24 heures." 
+          : "We will contact you within 24 hours.",
+      });
+
+      setFormData({
+        name: '',
+        organization: '',
+        email: '',
+        phone: '',
+        firefighters: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: language === 'fr' ? "Erreur" : "Error",
+        description: language === 'fr' 
+          ? "Une erreur s'est produite. Veuillez réessayer." 
+          : "An error occurred. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -78,6 +118,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="Jean Tremblay"
                     className="w-full"
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -94,6 +135,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder={language === 'fr' ? "Caserne de Saint-Jean" : "Saint-Jean Fire Station"}
                     className="w-full"
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -110,6 +152,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="[email protected]"
                     className="w-full"
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -125,21 +168,23 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="+1 450 330 3648"
                     className="w-full"
+                    disabled={isSubmitting}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="pompiers" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="firefighters" className="block text-sm font-medium text-gray-700 mb-2">
                     {contactData.firefighters}
                   </label>
                   <Input
-                    id="pompiers"
-                    name="pompiers"
+                    id="firefighters"
+                    name="firefighters"
                     type="number"
-                    value={formData.pompiers}
+                    value={formData.firefighters}
                     onChange={handleChange}
                     placeholder="30"
                     className="w-full"
+                    disabled={isSubmitting}
                   />
                 </div>
 
@@ -155,14 +200,23 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder={contactData.messagePlaceholder}
                     className="w-full"
+                    disabled={isSubmitting}
                   />
                 </div>
 
                 <Button
                   type="submit"
                   className="w-full bg-[#D9072B] hover:bg-[#B00623] text-white py-6 text-lg font-semibold"
+                  disabled={isSubmitting}
                 >
-                  {contactData.send}
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                      {language === 'fr' ? 'Envoi en cours...' : 'Sending...'}
+                    </>
+                  ) : (
+                    contactData.send
+                  )}
                 </Button>
               </form>
             </div>
