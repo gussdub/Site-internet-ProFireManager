@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,7 +41,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             <button
               onClick={() => scrollToSection('features')}
               className="text-gray-700 hover:text-[#D9072B] transition-colors font-medium"
@@ -65,6 +66,7 @@ const Header = () => {
             >
               Contact
             </button>
+            <LanguageSwitcher />
             <Button
               onClick={() => scrollToSection('contact')}
               className="bg-[#D9072B] hover:bg-[#B00623] text-white px-6"
@@ -109,6 +111,7 @@ const Header = () => {
             >
               Contact
             </button>
+            <LanguageSwitcher />
             <Button
               onClick={() => scrollToSection('contact')}
               className="bg-[#D9072B] hover:bg-[#B00623] text-white w-full"
@@ -116,8 +119,7 @@ const Header = () => {
               Demander une démo
             </Button>
           </nav>
-        )}
-      </div>
+        )}\n      </div>
     </header>
   );
 };
