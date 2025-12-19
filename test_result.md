@@ -264,6 +264,42 @@ backend:
         agent: "main"
         comment: "Default backend endpoints working"
 
+  - task: "Contact form API - POST /api/contact"
+    implemented: true
+    working: true
+    file: "backend/server.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Implemented POST endpoint to submit contact requests. Stores in MongoDB with fields: name, organization, email, phone, firefighters, message, language, status"
+
+  - task: "Contact form API - GET /api/contact"
+    implemented: true
+    working: true
+    file: "backend/server.py"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Implemented GET endpoint to retrieve all contact requests (admin endpoint)"
+
+  - task: "Contact form API - PATCH status"
+    implemented: true
+    working: true
+    file: "backend/server.py"
+    stuck_count: 0
+    priority: "low"
+    needs_retesting: true
+    status_history:
+      - working: true
+        agent: "main"
+        comment: "Implemented PATCH endpoint to update contact request status (new, contacted, demo_scheduled, closed)"
+
 metadata:
   created_by: "main_agent"
   version: "1.0"
