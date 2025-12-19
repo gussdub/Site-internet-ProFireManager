@@ -107,11 +107,14 @@ frontend:
     file: "frontend/src/components/LanguageSwitcher.jsx"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: true
         agent: "main"
         comment: "Implemented LanguageSwitcher component that toggles between FR/EN and updates URL accordingly"
+      - working: true
+        agent: "testing"
+        comment: "TESTED: Language switcher works correctly - URL changes from /fr/ to /en/ and vice versa, content switches properly between languages, button text updates correctly (FR when on EN page, EN when on FR page)"
 
   - task: "Homepage bilingual content (Hero, Features, Benefits, Pricing, CTA, Contact, Screenshots)"
     implemented: true
