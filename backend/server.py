@@ -82,6 +82,87 @@ async def get_status_checks():
     
     return status_checks
 
+
+@api_router.post("/contact")
+async def send_contact_request(request: ContactRequest):
+    """Send contact form submission via email"""
+    try:
+        # Build email content
+        subject = f"Nouvelle demande de démo - {request.organization}"
+        
+        html_content = f"""
+        <html>
+        <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+            <div style="background-color: #D9072B; color: white; padding: 20px; text-align: center;">
+                <h1 style="margin: 0;">ProFireManager</h1>
+                <p style="margin: 5px 0 0 0;">Nouvelle demande de démonstration</p>
+            </div>
+            
+            <div style="padding: 20px; background-color: #f9f9f9;">
+                <h2 style="color: #333; border-bottom: 2px solid #D9072B; padding-bottom: 10px;">Informations du contact</h2>
+                
+                <table style="width: 100%; border-collapse: collapse;">
+                    <tr>
+                        <td style="padding: 10px 0; font-weight: bold; color: #666; width: 150px;">Nom:</td>
+                        <td style="padding: 10px 0; color: #333;">{request.name}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px 0; font-weight: bold; color: #666;">Organisation:</td>
+                        <td style="padding: 10px 0; color: #333;">{request.organization}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px 0; font-weight: bold; color: #666;">Email:</td>
+                        <td style="padding: 10px 0; color: #333;"><a href="mailto:{request.email}" style="color: #D9072B;">{request.email}</a></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px 0; font-weight: bold; color: #666;">Téléphone:</td>
+                        <td style="padding: 10px 0; color: #333;">{request.phone or 'Non fourni'}</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px 0; font-weight: bold; color: #666;">Nombre de pompiers:</td>
+                        <td style="padding: 10px 0; color: #333;">{request.firefighters or 'Non spécifié'}</td>
+                    </tr>
+                </table>
+                
+                <h3 style="color: #333; border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-top: 20px;">Message</h3>
+                <p style="color: #333; line-height: 1.6; background-color: white; padding: 15px; border-radius: 5px;">
+                    {request.message or 'Aucun message'}
+                </p>
+            </div>
+            
+            <div style="padding: 15px; background-color: #333; color: #999; text-align: center; font-size: 12px;">
+                <p style="margin: 0;">Ce message a été envoyé depuis le formulaire de contact de profiremanager.ca</p>
+            </div>
+        </body>
+        </html>
+        """
+        
+        params = {
+            "from": SENDER_EMAIL,
+            "to": [RECIPIENT_EMAIL],
+            "subject": subject,
+            "html": html_content,
+            "reply_to": request.email
+        }
+        
+        # Send email asynchronously
+        email_response = await asyncio.to_thread(resend.Emails.send, params)
+        
+        logger.info(f"Contact email sent successfully: {email_response}")
+        
+        return {
+            "status": "success",
+            "message": "Votre demande a été envoyée avec succès" if request.language == "fr" else "Your request has been sent successfully"
+        }
+        
+    except Exception as e:
+        logger.error(f"Failed to send contact email: {str(e)}")
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Échec de l'envoi: {str(e)}" if request.language == "fr" else f"Failed to send: {str(e)}"
+        )
+
+
 # Include the router in the main app
 app.include_router(api_router)
 
