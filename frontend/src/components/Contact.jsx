@@ -195,9 +195,17 @@ const Contact = () => {
 
                 <Button
                   type="submit"
-                  className="w-full bg-[#D9072B] hover:bg-[#B00623] text-white py-6 text-lg font-semibold"
+                  disabled={isLoading}
+                  className="w-full bg-[#D9072B] hover:bg-[#B00623] text-white py-6 text-lg font-semibold disabled:opacity-50"
                 >
-                  {contactData.send}
+                  {isLoading ? (
+                    <>
+                      <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                      {language === 'fr' ? 'Envoi en cours...' : 'Sending...'}
+                    </>
+                  ) : (
+                    contactData.send
+                  )}
                 </Button>
               </form>
             </div>
