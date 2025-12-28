@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
-import { Mail, Phone, Clock } from 'lucide-react';
+import { Mail, Phone, Clock, Loader2 } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../i18n/translations';
@@ -11,6 +11,7 @@ const Contact = () => {
   const { toast } = useToast();
   const { language } = useLanguage();
   const contactData = t(language, 'contact');
+  const [isLoading, setIsLoading] = useState(false);
   
   const [formData, setFormData] = useState({
     name: '',
@@ -21,20 +22,54 @@ const Contact = () => {
     message: ''
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    toast({
-      title: language === 'fr' ? "Message envoyé !" : "Message sent!",
-      description: language === 'fr' ? "Nous vous contacterons dans les 24 heures." : "We will contact you within 24 hours.",
-    });
-    setFormData({
-      name: '',
-      organization: '',
-      email: '',
-      phone: '',
-      pompiers: '',
-      message: ''
-    });
+    setIsLoading(true);
+    
+    try {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          organization: formData.organization,
+          email: formData.email,
+          phone: formData.phone || null,
+          firefighters: formData.pompiers || null,
+          message: formData.message || null,
+          language: language
+        }),
+      });
+      
+      if (!response.ok) {
+        throw new Error('Failed to send');
+      }
+      
+      toast({
+        title: language === 'fr' ? "Message envoyé !" : "Message sent!",
+        description: language === 'fr' ? "Nous vous contacterons dans les 24 heures." : "We will contact you within 24 hours.",
+      });
+      
+      setFormData({
+        name: '',
+        organization: '',
+        email: '',
+        phone: '',
+        pompiers: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Contact form error:', error);
+      toast({
+        title: language === 'fr' ? "Erreur" : "Error",
+        description: language === 'fr' ? "Échec de l'envoi. Veuillez réessayer." : "Failed to send. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e) => {
