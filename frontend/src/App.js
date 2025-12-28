@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route, Navigate, useParams } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -15,14 +15,17 @@ import { Toaster } from './components/ui/sonner';
 
 // Route wrapper to sync URL language with context
 const LanguageRouteWrapper = ({ children }) => {
-  const { lang } = useParams();
+  const location = useLocation();
   const { language, changeLanguage } = useLanguage();
+  
+  // Extract language from URL path
+  const urlLang = location.pathname.startsWith('/en') ? 'en' : 'fr';
 
   useEffect(() => {
-    if (lang && lang !== language) {
-      changeLanguage(lang);
+    if (urlLang !== language) {
+      changeLanguage(urlLang);
     }
-  }, [lang, language, changeLanguage]);
+  }, [urlLang, language, changeLanguage]);
 
   return children;
 };
