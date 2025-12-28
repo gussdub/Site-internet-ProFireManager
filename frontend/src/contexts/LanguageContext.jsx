@@ -19,9 +19,9 @@ export const LanguageProvider = ({ children }) => {
     if (savedLanguage) {
       setLanguage(savedLanguage);
     } else {
-      // Detect browser language
+      // Detect browser language - Default to French for this Quebec-based site
       const browserLang = navigator.language || navigator.userLanguage;
-      const detectedLang = browserLang.startsWith('fr') ? 'fr' : 'en';
+      const detectedLang = browserLang.startsWith('en') ? 'en' : 'fr';
       setLanguage(detectedLang);
       localStorage.setItem('language', detectedLang);
     }
