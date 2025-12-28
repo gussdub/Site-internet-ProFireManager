@@ -4,9 +4,14 @@ import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Mail, Phone, Clock } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../i18n/translations';
 
 const Contact = () => {
   const { toast } = useToast();
+  const { language } = useLanguage();
+  const contactData = t(language, 'contact');
+  
   const [formData, setFormData] = useState({
     name: '',
     organization: '',
@@ -18,10 +23,9 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Mock form submission
     toast({
-      title: "Message envoyé !",
-      description: "Nous vous contacterons dans les 24 heures.",
+      title: language === 'fr' ? "Message envoyé !" : "Message sent!",
+      description: language === 'fr' ? "Nous vous contacterons dans les 24 heures." : "We will contact you within 24 hours.",
     });
     setFormData({
       name: '',
@@ -47,10 +51,10 @@ const Contact = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Contactez-Nous
+              {contactData.title}
             </h2>
             <p className="text-xl text-gray-600">
-              Réservez votre démo gratuite ou posez-nous vos questions. Notre équipe vous répondra rapidement.
+              {contactData.subtitle}
             </p>
           </div>
 
@@ -58,12 +62,12 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 shadow-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Demander une Démonstration
+                {contactData.formTitle}
               </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Nom complet *
+                    {contactData.name} *
                   </label>
                   <Input
                     id="name"
@@ -79,7 +83,7 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="organization" className="block text-sm font-medium text-gray-700 mb-2">
-                    Organisation *
+                    {contactData.organization} *
                   </label>
                   <Input
                     id="organization"
@@ -88,14 +92,14 @@ const Contact = () => {
                     required
                     value={formData.organization}
                     onChange={handleChange}
-                    placeholder="Caserne de Saint-Jean"
+                    placeholder={language === 'fr' ? "Caserne de Saint-Jean" : "Saint-Jean Fire Station"}
                     className="w-full"
                   />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email *
+                    {contactData.email} *
                   </label>
                   <Input
                     id="email"
@@ -111,7 +115,7 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Téléphone
+                    {contactData.phone}
                   </label>
                   <Input
                     id="phone"
@@ -126,7 +130,7 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="pompiers" className="block text-sm font-medium text-gray-700 mb-2">
-                    Nombre de pompiers
+                    {contactData.firefighters}
                   </label>
                   <Input
                     id="pompiers"
@@ -141,7 +145,7 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
+                    {contactData.message}
                   </label>
                   <Textarea
                     id="message"
@@ -149,7 +153,7 @@ const Contact = () => {
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Parlez-nous de vos besoins..."
+                    placeholder={contactData.messagePlaceholder}
                     className="w-full"
                   />
                 </div>
@@ -158,7 +162,7 @@ const Contact = () => {
                   type="submit"
                   className="w-full bg-[#D9072B] hover:bg-[#B00623] text-white py-6 text-lg font-semibold"
                 >
-                  Envoyer la demande
+                  {contactData.send}
                 </Button>
               </form>
             </div>
@@ -166,17 +170,18 @@ const Contact = () => {
             {/* Contact Information */}
             <div>
               <div className="bg-gradient-to-br from-[#D9072B] to-[#B00623] rounded-2xl p-8 text-white mb-8 shadow-lg">
-                <h3 className="text-2xl font-bold mb-6">Informations de Contact</h3>
+                <h3 className="text-2xl font-bold mb-6">{contactData.infoTitle}</h3>
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Mail className="w-6 h-6" />
                     </div>
                     <div>
-                      <div className="font-semibold mb-1">Email</div>
+                      <div className="font-semibold mb-1">{contactData.emailSupport}</div>
                       <a href="mailto:info@profiremanager.ca" className="text-white/90 hover:text-white">
                         info@profiremanager.ca
                       </a>
+                      <div className="text-white/70 text-sm">{contactData.emailDesc}</div>
                     </div>
                   </div>
 
@@ -185,10 +190,11 @@ const Contact = () => {
                       <Phone className="w-6 h-6" />
                     </div>
                     <div>
-                      <div className="font-semibold mb-1">Téléphone</div>
+                      <div className="font-semibold mb-1">{contactData.phoneSupport}</div>
                       <a href="tel:+14503303648" className="text-white/90 hover:text-white">
                         +1 450 330 3648
                       </a>
+                      <div className="text-white/70 text-sm">{contactData.phoneDesc}</div>
                     </div>
                   </div>
 
@@ -197,10 +203,13 @@ const Contact = () => {
                       <Clock className="w-6 h-6" />
                     </div>
                     <div>
-                      <div className="font-semibold mb-1">Heures d'Ouverture</div>
+                      <div className="font-semibold mb-1">{contactData.hours}</div>
                       <div className="text-white/90">
-                        Lundi - Vendredi<br />
-                        8h - 18h (EST)
+                        {contactData.hoursWeekdays}<br />
+                        {contactData.hoursWeekdaysTime}
+                      </div>
+                      <div className="text-white/70 text-sm mt-1">
+                        {contactData.hoursWeekend}: {contactData.hoursWeekendTime}
                       </div>
                     </div>
                   </div>
@@ -208,23 +217,13 @@ const Contact = () => {
               </div>
 
               {/* Quick Stats */}
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
-                  <div className="text-3xl font-bold text-[#D9072B] mb-2">&lt; 24h</div>
-                  <div className="text-sm text-gray-600">Temps de réponse</div>
-                </div>
-                <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
-                  <div className="text-3xl font-bold text-[#D9072B] mb-2">30 min</div>
-                  <div className="text-sm text-gray-600">Démo gratuite</div>
-                </div>
-                <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
-                  <div className="text-3xl font-bold text-[#D9072B] mb-2">1-2 sem</div>
-                  <div className="text-sm text-gray-600">Configuration</div>
-                </div>
-                <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
-                  <div className="text-3xl font-bold text-[#D9072B] mb-2">100%</div>
-                  <div className="text-sm text-gray-600">Québécois</div>
-                </div>
+              <div className="grid grid-cols-2 gap-4">
+                {contactData.stats.map((stat, index) => (
+                  <div key={index} className="bg-white rounded-xl p-6 border-2 border-gray-200">
+                    <div className="text-3xl font-bold text-[#D9072B] mb-2">{stat.value}</div>
+                    <div className="text-sm text-gray-600">{stat.label}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
