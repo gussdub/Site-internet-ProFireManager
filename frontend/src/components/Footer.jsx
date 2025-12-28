@@ -50,7 +50,7 @@ const Footer = () => {
               <img
                 src="/assets/logos/logo-footer.png"
                 alt="ProFireManager"
-                className="h-10 w-auto"
+                className="h-16 w-auto"
               />
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
