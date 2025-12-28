@@ -226,7 +226,7 @@ export const translations = {
     
     // Hero Section
     hero: {
-      badge: 'Quebec solution for fire departments',
+      badge: 'Canadian solution for fire departments',
       title: 'Optimize the management of your',
       titleHighlight: 'fire department',
       subtitle: 'ProFireManager automates shift planning, personnel and equipment management for your fire station.',
@@ -237,7 +237,7 @@ export const translations = {
       ],
       ctaPrimary: 'Request a Free Demo',
       ctaSecondary: 'Discover Features',
-      trustBadge: 'Specifically developed for Quebec fire stations',
+      trustBadge: 'Specifically developed for Canadian fire stations',
       stats: {
         demo: '30 min',
         demoLabel: 'Free Demo',
@@ -398,13 +398,13 @@ export const translations = {
         { value: '< 24h', label: 'Response time' },
         { value: '30 min', label: 'Free demo' },
         { value: '1-2 wks', label: 'Setup' },
-        { value: '100%', label: 'Quebec-based' }
+        { value: '100%', label: 'Canadian' }
       ]
     },
     
     // Footer
     footer: {
-      description: 'Quebec management solution for fire departments. Optimize planning, personnel and equipment for your station.',
+      description: 'Canadian management solution for fire departments. Optimize planning, personnel and equipment for your station.',
       navigation: 'Navigation',
       support: 'Support',
       documentation: 'Documentation',
