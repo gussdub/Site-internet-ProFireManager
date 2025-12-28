@@ -41,49 +41,49 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
+    <footer className="bg-gray-900 text-white pt-12 pb-6">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
-          {/* Brand */}
-          <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
+        <div className="grid md:grid-cols-12 gap-8 mb-8">
+          {/* Brand - Logo plus grand et centré */}
+          <div className="md:col-span-5">
+            <div className="mb-4">
               <img
                 src="/assets/logos/logo-footer.png"
                 alt="ProFireManager"
-                className="h-32 w-auto"
+                className="h-20 w-auto"
               />
             </div>
-            <p className="text-gray-400 mb-6 max-w-md">
+            <p className="text-gray-400 text-sm mb-4 max-w-sm">
               {t(language, 'footer.description')}
             </p>
-            <div className="space-y-3">
-              <div className="flex items-center gap-3 text-gray-400">
-                <Mail className="w-5 h-5 text-[#D9072B]" />
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 text-gray-400 text-sm">
+                <Mail className="w-4 h-4 text-[#D9072B]" />
                 <a href="mailto:info@profiremanager.ca" className="hover:text-white transition-colors">
                   info@profiremanager.ca
                 </a>
               </div>
-              <div className="flex items-center gap-3 text-gray-400">
-                <Phone className="w-5 h-5 text-[#D9072B]" />
+              <div className="flex items-center gap-2 text-gray-400 text-sm">
+                <Phone className="w-4 h-4 text-[#D9072B]" />
                 <a href="tel:+14503303648" className="hover:text-white transition-colors">
                   +1 450 330 3648
                 </a>
               </div>
-              <div className="flex items-center gap-3 text-gray-400">
-                <MapPin className="w-5 h-5 text-[#D9072B]" />
+              <div className="flex items-center gap-2 text-gray-400 text-sm">
+                <MapPin className="w-4 h-4 text-[#D9072B]" />
                 <span>Granby, QC J2H 0A3, Canada</span>
               </div>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-bold mb-4">{t(language, 'footer.navigation')}</h3>
-            <ul className="space-y-3">
+          <div className="md:col-span-3">
+            <h3 className="text-base font-bold mb-3">{t(language, 'footer.navigation')}</h3>
+            <ul className="space-y-2">
               <li>
                 <button
                   onClick={() => scrollToSection('features')}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 text-sm hover:text-white transition-colors"
                 >
                   {t(language, 'nav.features')}
                 </button>
@@ -91,7 +91,7 @@ const Footer = () => {
               <li>
                 <button
                   onClick={() => scrollToSection('benefits')}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 text-sm hover:text-white transition-colors"
                 >
                   {t(language, 'nav.benefits')}
                 </button>
@@ -99,7 +99,7 @@ const Footer = () => {
               <li>
                 <button
                   onClick={() => scrollToSection('pricing')}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 text-sm hover:text-white transition-colors"
                 >
                   {t(language, 'nav.pricing')}
                 </button>
@@ -107,7 +107,7 @@ const Footer = () => {
               <li>
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 text-sm hover:text-white transition-colors"
                 >
                   {t(language, 'nav.contact')}
                 </button>
@@ -116,13 +116,13 @@ const Footer = () => {
           </div>
 
           {/* Support */}
-          <div>
-            <h3 className="text-lg font-bold mb-4">{t(language, 'footer.support')}</h3>
-            <ul className="space-y-3">
+          <div className="md:col-span-4">
+            <h3 className="text-base font-bold mb-3">{t(language, 'footer.support')}</h3>
+            <ul className="space-y-2">
               <li>
                 <button
                   onClick={() => goToPage('documentation')}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 text-sm hover:text-white transition-colors"
                 >
                   {t(language, 'footer.documentation')}
                 </button>
@@ -130,7 +130,7 @@ const Footer = () => {
               <li>
                 <button
                   onClick={() => goToPage('faq')}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 text-sm hover:text-white transition-colors"
                 >
                   {t(language, 'footer.faq')}
                 </button>
@@ -138,7 +138,7 @@ const Footer = () => {
               <li>
                 <button
                   onClick={() => goToPage('tutorials')}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 text-sm hover:text-white transition-colors"
                 >
                   {t(language, 'footer.tutorials')}
                 </button>
@@ -146,7 +146,7 @@ const Footer = () => {
               <li>
                 <button
                   onClick={() => goToPage('support')}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 text-sm hover:text-white transition-colors"
                 >
                   {t(language, 'footer.technicalSupport')}
                 </button>
@@ -156,12 +156,12 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-gray-800">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm">
+        <div className="pt-6 border-t border-gray-800">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3">
+            <p className="text-gray-400 text-xs">
               &copy; {currentYear} ProFireManager Inc. {t(language, 'footer.rights')}
             </p>
-            <div className="flex gap-6 text-sm">
+            <div className="flex gap-4 text-xs">
               <button
                 onClick={() => goToPage('privacy')}
                 className="text-gray-400 hover:text-white transition-colors cursor-pointer"
