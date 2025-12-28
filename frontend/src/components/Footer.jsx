@@ -47,7 +47,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="flex-1 max-w-md">
             <img
-              src="/assets/logos/logo-footer.png"
+              src="/assets/logos/logo-header.png"
               alt="ProFireManager"
               className="h-12 w-auto mb-3"
             />
