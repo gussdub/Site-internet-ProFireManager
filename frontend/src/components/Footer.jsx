@@ -49,7 +49,7 @@ const Footer = () => {
             <img
               src="/assets/logos/logo-footer.png"
               alt="ProFireManager"
-              className="h-16 w-auto mb-3"
+              className="h-24 w-auto mb-3"
             />
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
               {t(language, 'footer.description')}
