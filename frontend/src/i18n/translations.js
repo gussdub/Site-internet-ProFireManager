@@ -11,7 +11,7 @@ export const translations = {
     
     // Hero Section
     hero: {
-      badge: 'Solution québécoise pour services d\'incendie',
+      badge: 'Solution canadienne pour services d\'incendie',
       title: 'Optimisez la gestion de votre',
       titleHighlight: 'service d\'incendie',
       subtitle: 'ProFireManager automatise la planification des gardes, la gestion du personnel et des équipements pour votre caserne.',
@@ -22,7 +22,7 @@ export const translations = {
       ],
       ctaPrimary: 'Demander une démo gratuite',
       ctaSecondary: 'Découvrir les fonctionnalités',
-      trustBadge: 'Développé spécifiquement pour les casernes québécoises',
+      trustBadge: 'Développé spécifiquement pour les casernes canadiennes',
       stats: {
         demo: '30 min',
         demoLabel: 'Démo gratuite',
@@ -183,13 +183,13 @@ export const translations = {
         { value: '< 24h', label: 'Temps de réponse' },
         { value: '30 min', label: 'Démo gratuite' },
         { value: '1-2 sem', label: 'Configuration' },
-        { value: '100%', label: 'Québécois' }
+        { value: '100%', label: 'Canadien' }
       ]
     },
     
     // Footer
     footer: {
-      description: 'Solution québécoise de gestion pour services d\'incendie. Optimisez la planification, le personnel et les équipements de votre caserne.',
+      description: 'Solution canadienne de gestion pour services d\'incendie. Optimisez la planification, le personnel et les équipements de votre caserne.',
       navigation: 'Navigation',
       support: 'Support',
       documentation: 'Documentation',
