@@ -269,12 +269,9 @@ metadata:
   run_ui: true
 
 test_plan:
-  current_focus:
-    - "Bilingual system verification - all sections"
-    - "Language switcher functionality"
-    - "URL-based language detection"
+  current_focus: []
   stuck_tasks: []
-  test_all: true
+  test_all: false
   test_priority: "high_first"
 
 agent_communication:
