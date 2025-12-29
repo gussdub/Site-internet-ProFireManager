@@ -32,6 +32,11 @@ app = FastAPI()
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
 
+# Health check endpoint (required for Kubernetes deployment)
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy"}
+
 
 # Define Models
 class StatusCheck(BaseModel):
