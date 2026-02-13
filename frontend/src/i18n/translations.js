@@ -3,6 +3,7 @@ export const translations = {
     // Navigation
     nav: {
       features: 'Fonctionnalités',
+      modules: 'Modules',
       benefits: 'Avantages',
       pricing: 'Tarification',
       contact: 'Contact',
@@ -425,6 +426,7 @@ export const translations = {
     // Navigation
     nav: {
       features: 'Features',
+      modules: 'Modules',
       benefits: 'Benefits',
       pricing: 'Pricing',
       contact: 'Contact',
