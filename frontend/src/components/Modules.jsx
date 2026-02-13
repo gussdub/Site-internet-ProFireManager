@@ -104,16 +104,6 @@ const Modules = () => {
             );
           })}
         </div>
-
-        {/* Additional Info */}
-        <div className="mt-16 grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {modulesData.highlights.map((highlight, index) => (
-            <div key={index} className="text-center p-6 bg-gradient-to-br from-gray-50 to-red-50 rounded-xl border border-gray-200">
-              <div className="text-3xl font-bold text-[#D9072B] mb-2">{highlight.value}</div>
-              <div className="text-gray-700 font-medium">{highlight.label}</div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
