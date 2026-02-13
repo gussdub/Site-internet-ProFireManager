@@ -52,6 +52,12 @@ const Header = () => {
               {t(language, 'nav.features')}
             </button>
             <button
+              onClick={() => scrollToSection('modules')}
+              className="text-gray-700 hover:text-[#D9072B] transition-colors font-medium"
+            >
+              {t(language, 'nav.modules')}
+            </button>
+            <button
               onClick={() => scrollToSection('benefits')}
               className="text-gray-700 hover:text-[#D9072B] transition-colors font-medium"
             >
