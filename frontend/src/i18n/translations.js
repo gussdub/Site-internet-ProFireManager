@@ -15,14 +15,17 @@ export const translations = {
       badge: 'Solution canadienne pour services d\'incendie',
       title: 'Optimisez la gestion de votre',
       titleHighlight: 'service d\'incendie',
-      subtitle: 'ProFireManager automatise la planification des gardes, la gestion du personnel et des équipements pour votre caserne.',
+      subtitle: 'ProFireManager centralise la gestion du personnel, des interventions, de la paie, des équipements et de la prévention dans une seule plateforme.',
       benefits: [
-        'Attribution automatique des gardes',
-        'Gestion complète des EPI',
-        'Suivi des formations'
+        'Gestion du personnel et des gardes',
+        'Interventions et cartes d\'appel',
+        'Module paie intégré',
+        'Suivi des EPI et formations',
+        'Prévention incendie',
+        'Rapports et statistiques'
       ],
       ctaPrimary: 'Demander une démo gratuite',
-      ctaSecondary: 'Découvrir les fonctionnalités',
+      ctaSecondary: 'Découvrir les modules',
       trustBadge: 'Développé spécifiquement pour les casernes canadiennes',
       stats: {
         demo: '30 min',
