@@ -91,12 +91,6 @@ const Header = () => {
         {isMobileMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 flex flex-col gap-4">
             <button
-              onClick={() => scrollToSection('features')}
-              className="text-left text-gray-700 hover:text-[#D9072B] transition-colors font-medium"
-            >
-              {t(language, 'nav.features')}
-            </button>
-            <button
               onClick={() => scrollToSection('modules')}
               className="text-left text-gray-700 hover:text-[#D9072B] transition-colors font-medium"
             >
