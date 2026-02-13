@@ -211,6 +211,213 @@ export const translations = {
         { title: 'Planning des Gardes', desc: 'Attribution automatique intelligente et vue d\'ensemble claire de la planification.' },
         { title: 'Gestion des Disponibilités', desc: 'Calendrier intuitif pour gérer les disponibilités et indisponibilités de chaque pompier.' }
       ]
+    },
+
+    // Modules
+    modules: {
+      badge: '14 Modules Intégrés',
+      title: 'Une Solution Complète',
+      subtitle: 'Tous les outils nécessaires pour gérer l\'ensemble des opérations de votre service d\'incendie.',
+      items: [
+        {
+          title: 'Tableau de Bord',
+          shortDesc: 'Vue d\'ensemble des activités avec KPI et alertes en temps réel.',
+          access: 'Tous les utilisateurs',
+          features: [
+            'Indicateurs clés de performance (KPI)',
+            'Alertes et notifications en temps réel',
+            'Calendrier des événements',
+            'Messages de diffusion interne',
+            'Statistiques des interventions'
+          ]
+        },
+        {
+          title: 'Gestion du Personnel',
+          shortDesc: 'Dossiers employés complets, grades, équipes et compétences.',
+          access: 'Administrateurs, Superviseurs',
+          features: [
+            'Dossiers employés complets',
+            'Gestion des grades et fonctions',
+            'Équipes de garde avec rotation automatique',
+            'Suivi des compétences et certifications',
+            'Export PDF et Excel'
+          ]
+        },
+        {
+          title: 'Gestion des Actifs',
+          shortDesc: 'Véhicules, EPI, équipements médicaux et matériel d\'intervention.',
+          access: 'Tous les utilisateurs',
+          features: [
+            'Véhicules et équipements de protection',
+            'Suivi des inspections et maintenances',
+            'Alertes d\'expiration automatiques',
+            'Codes-barres et QR codes',
+            'Rapports d\'état détaillés'
+          ]
+        },
+        {
+          title: 'Interventions',
+          shortDesc: 'Cartes d\'appel, rapports d\'intervention et DSI.',
+          access: 'Tous les utilisateurs',
+          features: [
+            'Import automatique via SFTP (XML)',
+            'Chronologie détaillée des interventions',
+            'Déclaration de Sinistre Incendie (DSI)',
+            'Signature électronique des rapports',
+            'Facturation des fausses alarmes'
+          ]
+        },
+        {
+          title: 'Module Paie',
+          shortDesc: 'Calcul automatique des heures et gestion des taux horaires.',
+          access: 'Administrateurs, Superviseurs',
+          features: [
+            'Calcul automatique des heures',
+            'Taux régulier et temps supplémentaire',
+            'Primes de nuit/week-end',
+            'Intégration avec les interventions',
+            'Export pour logiciels de paie'
+          ]
+        },
+        {
+          title: 'Horaire / Planning',
+          shortDesc: 'Calendrier interactif et rotation automatique des équipes.',
+          access: 'Tous les utilisateurs',
+          features: [
+            'Calendrier multi-vues (jour, semaine, mois)',
+            'Rotation automatique des équipes',
+            'Rotations 24h, 48h, hebdomadaire',
+            'Détection des conflits',
+            'Export et impression'
+          ]
+        },
+        {
+          title: 'Remplacements',
+          shortDesc: 'Demandes en ligne et workflow d\'approbation automatisé.',
+          access: 'Tous les utilisateurs',
+          features: [
+            'Demandes de remplacement en ligne',
+            'Workflow d\'approbation automatisé',
+            'Notifications automatiques',
+            'Gestion des congés personnalisable',
+            'Délégation automatique des responsabilités'
+          ]
+        },
+        {
+          title: 'Formations',
+          shortDesc: 'Catalogue, certifications et alertes de renouvellement.',
+          access: 'Tous les utilisateurs',
+          features: [
+            'Catalogue des formations',
+            'Suivi des certifications',
+            'Alertes avant expiration',
+            'Planification des sessions',
+            'Documents et attestations'
+          ]
+        },
+        {
+          title: 'Prévention',
+          shortDesc: 'Gestion des bâtiments, visites d\'inspection et non-conformités.',
+          access: 'Préventionnistes',
+          features: [
+            'Registre des bâtiments à risque',
+            'Visites d\'inspection planifiées',
+            'Suivi des non-conformités',
+            'Workflow de résolution',
+            'Rapports par secteur'
+          ]
+        },
+        {
+          title: 'Disponibilités',
+          shortDesc: 'Déclaration hebdomadaire pour temps partiels et temporaires.',
+          access: 'Temps partiels, Temporaires',
+          features: [
+            'Déclaration hebdomadaire',
+            'Calendrier interactif de saisie',
+            'Validation par superviseurs',
+            'Intégration avec le planning',
+            'Historique des disponibilités'
+          ]
+        },
+        {
+          title: 'Mes EPI',
+          shortDesc: 'Consultation et inspection mensuelle des équipements personnels.',
+          access: 'Tous les employés',
+          features: [
+            'Liste des EPI assignés',
+            'Inspection mensuelle obligatoire',
+            'Formulaire d\'auto-inspection',
+            'Signalement des problèmes',
+            'Rappels automatiques'
+          ]
+        },
+        {
+          title: 'Mon Profil',
+          shortDesc: 'Gestion des informations personnelles et préférences.',
+          access: 'Tous les utilisateurs',
+          features: [
+            'Consultation des informations',
+            'Modification des coordonnées',
+            'Changement de mot de passe',
+            'Préférences de notification',
+            'Historique des connexions'
+          ]
+        },
+        {
+          title: 'Rapports',
+          shortDesc: 'Rapports d\'heures, statistiques et exports personnalisables.',
+          access: 'Administrateurs',
+          features: [
+            'Rapports d\'heures par période',
+            'Statistiques d\'interventions',
+            'Rapports de conformité',
+            'Exports PDF et Excel',
+            'Graphiques et visualisations'
+          ]
+        },
+        {
+          title: 'Paramètres',
+          shortDesc: 'Configuration générale et gestion des utilisateurs.',
+          access: 'Administrateurs',
+          features: [
+            'Configuration de l\'organisation',
+            'Paramètres par module',
+            'Gestion des utilisateurs',
+            'Attribution des rôles',
+            'Templates et personnalisation'
+          ]
+        }
+      ],
+      highlights: [
+        { value: '14', label: 'Modules intégrés' },
+        { value: '100%', label: 'Cloud sécurisé' },
+        { value: '24/7', label: 'Accessible partout' }
+      ]
+    },
+
+    // Points Forts
+    strengths: {
+      title: 'Points Forts',
+      subtitle: 'Ce qui distingue ProFireManager des autres solutions.',
+      items: [
+        { icon: 'CheckCircle', title: 'Solution tout-en-un', desc: 'Un seul outil pour toutes les opérations' },
+        { icon: 'Building', title: 'Multi-tenant', desc: 'Idéal pour les regroupements et MRC' },
+        { icon: 'Zap', title: 'Automatisation', desc: 'Calculs de paie, rotations, alertes' },
+        { icon: 'Shield', title: 'Conformité', desc: 'DSI, inspections, certifications' },
+        { icon: 'Smartphone', title: 'Mobilité', desc: 'Accessible partout, tous les appareils' },
+        { icon: 'MapPin', title: 'Support local', desc: 'Développé au Canada, en français' }
+      ]
+    },
+
+    // Integrations
+    integrations: {
+      title: 'Intégrations',
+      items: [
+        { name: 'Import SFTP', desc: 'Récupération automatique des cartes d\'appel XML' },
+        { name: 'Export', desc: 'PDF et Excel pour tous les rapports' },
+        { name: 'API REST', desc: 'Intégration avec systèmes externes' },
+        { name: 'Email', desc: 'Notifications automatiques' }
+      ]
     }
   },
   
