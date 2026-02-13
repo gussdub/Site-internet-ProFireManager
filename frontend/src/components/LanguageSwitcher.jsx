@@ -14,11 +14,19 @@ const LanguageSwitcher = () => {
     
     // Update URL to match new language
     const currentPath = window.location.pathname;
+    let newPath;
+    
     if (currentPath.startsWith('/fr/')) {
-      navigate(currentPath.replace('/fr/', '/en/'));
+      newPath = currentPath.replace('/fr/', `/${newLang}/`);
     } else if (currentPath.startsWith('/en/')) {
-      navigate(currentPath.replace('/en/', '/fr/'));
+      newPath = currentPath.replace('/en/', `/${newLang}/`);
+    } else if (currentPath === '/fr' || currentPath === '/en') {
+      newPath = `/${newLang}`;
+    } else {
+      newPath = `/${newLang}`;
     }
+    
+    navigate(newPath);
   };
 
   return (
