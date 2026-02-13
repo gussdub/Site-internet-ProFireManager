@@ -88,7 +88,7 @@ const Hero = () => {
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button
-              onClick={() => scrollToSection('features')}
+              onClick={() => scrollToSection('modules')}
               variant="outline"
               className="border-2 border-gray-300 hover:border-[#D9072B] text-gray-700 hover:text-[#D9072B] px-8 py-6 text-lg font-semibold rounded-lg transition-all"
               size="lg"
