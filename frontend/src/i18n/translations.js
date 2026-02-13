@@ -441,14 +441,17 @@ export const translations = {
       badge: 'Canadian solution for fire departments',
       title: 'Optimize the management of your',
       titleHighlight: 'fire department',
-      subtitle: 'ProFireManager automates shift planning, personnel and equipment management for your fire station.',
+      subtitle: 'ProFireManager centralizes personnel, interventions, payroll, equipment and fire prevention management in one platform.',
       benefits: [
-        'Automatic shift assignment',
-        'Complete PPE management',
-        'Training tracking'
+        'Personnel & shift management',
+        'Interventions & call cards',
+        'Integrated payroll module',
+        'PPE & training tracking',
+        'Fire prevention',
+        'Reports & statistics'
       ],
       ctaPrimary: 'Request a Free Demo',
-      ctaSecondary: 'Discover Features',
+      ctaSecondary: 'Discover Modules',
       trustBadge: 'Specifically developed for Canadian fire stations',
       stats: {
         demo: '30 min',
