@@ -633,6 +633,213 @@ export const translations = {
         { title: 'Shift Planning', desc: 'Intelligent automatic assignment and clear overview of planning.' },
         { title: 'Availability Management', desc: 'Intuitive calendar to manage each firefighter\'s availability and unavailability.' }
       ]
+    },
+
+    // Modules
+    modules: {
+      badge: '14 Integrated Modules',
+      title: 'A Complete Solution',
+      subtitle: 'All the tools you need to manage your entire fire department operations.',
+      items: [
+        {
+          title: 'Dashboard',
+          shortDesc: 'Overview of activities with KPIs and real-time alerts.',
+          access: 'All users',
+          features: [
+            'Key performance indicators (KPIs)',
+            'Real-time alerts and notifications',
+            'Event calendar',
+            'Internal broadcast messages',
+            'Intervention statistics'
+          ]
+        },
+        {
+          title: 'Personnel Management',
+          shortDesc: 'Complete employee files, ranks, teams and skills.',
+          access: 'Administrators, Supervisors',
+          features: [
+            'Complete employee files',
+            'Rank and function management',
+            'Guard teams with automatic rotation',
+            'Skills and certifications tracking',
+            'PDF and Excel export'
+          ]
+        },
+        {
+          title: 'Asset Management',
+          shortDesc: 'Vehicles, PPE, medical equipment and intervention gear.',
+          access: 'All users',
+          features: [
+            'Vehicles and protective equipment',
+            'Inspection and maintenance tracking',
+            'Automatic expiration alerts',
+            'Barcodes and QR codes',
+            'Detailed status reports'
+          ]
+        },
+        {
+          title: 'Interventions',
+          shortDesc: 'Call cards, intervention reports and fire declarations.',
+          access: 'All users',
+          features: [
+            'Automatic import via SFTP (XML)',
+            'Detailed intervention timeline',
+            'Fire Incident Declaration (DSI)',
+            'Electronic report signatures',
+            'False alarm billing'
+          ]
+        },
+        {
+          title: 'Payroll Module',
+          shortDesc: 'Automatic hour calculation and hourly rate management.',
+          access: 'Administrators, Supervisors',
+          features: [
+            'Automatic hour calculation',
+            'Regular and overtime rates',
+            'Night/weekend bonuses',
+            'Integration with interventions',
+            'Export for payroll software'
+          ]
+        },
+        {
+          title: 'Schedule / Planning',
+          shortDesc: 'Interactive calendar and automatic team rotation.',
+          access: 'All users',
+          features: [
+            'Multi-view calendar (day, week, month)',
+            'Automatic team rotation',
+            '24h, 48h, weekly rotations',
+            'Conflict detection',
+            'Export and print'
+          ]
+        },
+        {
+          title: 'Replacements',
+          shortDesc: 'Online requests and automated approval workflow.',
+          access: 'All users',
+          features: [
+            'Online replacement requests',
+            'Automated approval workflow',
+            'Automatic notifications',
+            'Customizable leave management',
+            'Automatic responsibility delegation'
+          ]
+        },
+        {
+          title: 'Training',
+          shortDesc: 'Catalog, certifications and renewal alerts.',
+          access: 'All users',
+          features: [
+            'Training catalog',
+            'Certification tracking',
+            'Pre-expiration alerts',
+            'Session planning',
+            'Documents and certificates'
+          ]
+        },
+        {
+          title: 'Prevention',
+          shortDesc: 'Building management, inspection visits and non-conformities.',
+          access: 'Fire prevention officers',
+          features: [
+            'At-risk building registry',
+            'Scheduled inspection visits',
+            'Non-conformity tracking',
+            'Resolution workflow',
+            'Reports by sector'
+          ]
+        },
+        {
+          title: 'Availability',
+          shortDesc: 'Weekly declaration for part-time and temporary staff.',
+          access: 'Part-time, Temporary',
+          features: [
+            'Weekly declaration',
+            'Interactive entry calendar',
+            'Supervisor validation',
+            'Planning integration',
+            'Availability history'
+          ]
+        },
+        {
+          title: 'My PPE',
+          shortDesc: 'View and monthly inspection of personal equipment.',
+          access: 'All employees',
+          features: [
+            'List of assigned PPE',
+            'Mandatory monthly inspection',
+            'Self-inspection form',
+            'Problem reporting',
+            'Automatic reminders'
+          ]
+        },
+        {
+          title: 'My Profile',
+          shortDesc: 'Personal information and preferences management.',
+          access: 'All users',
+          features: [
+            'Information viewing',
+            'Contact modification',
+            'Password change',
+            'Notification preferences',
+            'Login history'
+          ]
+        },
+        {
+          title: 'Reports',
+          shortDesc: 'Hour reports, statistics and customizable exports.',
+          access: 'Administrators',
+          features: [
+            'Hour reports by period',
+            'Intervention statistics',
+            'Compliance reports',
+            'PDF and Excel exports',
+            'Charts and visualizations'
+          ]
+        },
+        {
+          title: 'Settings',
+          shortDesc: 'General configuration and user management.',
+          access: 'Administrators',
+          features: [
+            'Organization configuration',
+            'Module settings',
+            'User management',
+            'Role assignment',
+            'Templates and customization'
+          ]
+        }
+      ],
+      highlights: [
+        { value: '14', label: 'Integrated modules' },
+        { value: '100%', label: 'Secure cloud' },
+        { value: '24/7', label: 'Accessible anywhere' }
+      ]
+    },
+
+    // Strengths
+    strengths: {
+      title: 'Key Strengths',
+      subtitle: 'What sets ProFireManager apart from other solutions.',
+      items: [
+        { icon: 'CheckCircle', title: 'All-in-one solution', desc: 'One tool for all operations' },
+        { icon: 'Building', title: 'Multi-tenant', desc: 'Ideal for groups and regional municipalities' },
+        { icon: 'Zap', title: 'Automation', desc: 'Payroll calculations, rotations, alerts' },
+        { icon: 'Shield', title: 'Compliance', desc: 'DSI, inspections, certifications' },
+        { icon: 'Smartphone', title: 'Mobility', desc: 'Accessible anywhere, all devices' },
+        { icon: 'MapPin', title: 'Local support', desc: 'Developed in Canada, in French' }
+      ]
+    },
+
+    // Integrations
+    integrations: {
+      title: 'Integrations',
+      items: [
+        { name: 'SFTP Import', desc: 'Automatic XML call card retrieval' },
+        { name: 'Export', desc: 'PDF and Excel for all reports' },
+        { name: 'REST API', desc: 'Integration with external systems' },
+        { name: 'Email', desc: 'Automatic notifications' }
+      ]
     }
   }
 };
