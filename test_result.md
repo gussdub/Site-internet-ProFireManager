@@ -274,11 +274,61 @@ test_plan:
   test_all: false
   test_priority: "high_first"
 
+  - task: "New Modules Section"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/Modules.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ TESTED: New Modules section fully functional. French: '14 Modules Intégrés' badge and 'Une Solution Complète' title. English: '14 Integrated Modules' badge and 'A Complete Solution' title. All 14 modules displayed correctly in both languages: Dashboard/Tableau de Bord, Personnel Management/Gestion du Personnel, Asset Management/Gestion des Actifs, Interventions, Payroll Module/Module Paie, Schedule Planning/Horaire Planning, Replacements/Remplacements, Training/Formations, Prevention/Prévention, Availability/Disponibilités, My PPE/Mes EPI, My Profile/Mon Profil, Reports/Rapports, Settings/Paramètres. Module expansion functionality working - clicking cards shows features list with 'Features:' (EN) or 'Fonctionnalités:' (FR)."
+
+  - task: "New Strengths Section"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/Strengths.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ TESTED: New Strengths section fully functional. French: 'Points Forts' title with 6 strength items: Solution tout-en-un, Multi-tenant, Automatisation, Conformité, Mobilité, Support local. English: 'Key Strengths' title with 6 strength items: All-in-one solution, Multi-tenant, Automation, Compliance, Mobility, Local support. Section positioned correctly after AppScreenshots section with dark gradient background and proper styling."
+
+  - task: "Modules Navigation Link"
+    implemented: true
+    working: true
+    file: "/app/frontend/src/components/Header.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+      - working: true
+        agent: "testing"
+        comment: "✅ TESTED: 'Modules' navigation link added to header navigation in both languages. French navigation: 'Fonctionnalités, Modules, Avantages, Tarification, Contact'. English navigation: 'Features, Modules, Benefits, Pricing, Contact'. Clicking 'Modules' link successfully scrolls to modules section. Navigation link properly styled and responsive."
+
+  - task: "Language Switcher Button Click"
+    implemented: true
+    working: false
+    file: "/app/frontend/src/components/LanguageSwitcher.jsx"
+    stuck_count: 1
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+      - working: false
+        agent: "testing"
+        comment: "❌ ISSUE: Language switcher button click not changing URL. Button is visible and clickable (shows 'EN' on French page, 'FR' on English page) but clicking doesn't navigate between /fr and /en URLs. Direct navigation to /fr and /en works perfectly with correct content translation. This appears to be a JavaScript click handler issue rather than a translation system problem."
+
 agent_communication:
   - agent: "main"
     message: "I have fixed the bilingual system. All components were using hardcoded French text. I've updated Hero.jsx, Features.jsx, Benefits.jsx, Pricing.jsx, CTA.jsx, Contact.jsx, and AppScreenshots.jsx to use the useLanguage() hook and t() function for translations. I also fixed the LanguageRouteWrapper in App.js to properly extract the language from the URL path. Please verify: 1) Navigate to /fr and /en - content should be in correct language, 2) Test language switcher - clicking FR/EN should change URL and content, 3) Verify all sections (Hero, Features, Benefits, Pricing, CTA, Contact) display correct translations, 4) Verify Privacy Policy page at /fr/politique-de-confidentialite and /en/privacy-policy"
   - agent: "testing"
     message: "BILINGUAL TESTING COMPLETED ✅ All bilingual functionality is working correctly. French content verified: 'Optimisez la gestion de votre service d'incendie', navigation (Fonctionnalités, Avantages, Tarification, Contact), demo button 'Demander une démo gratuite', section titles 'Fonctionnalités Complètes', 'Pourquoi Choisir ProFireManager?', 'Tarification Simple et Transparente'. English content verified: 'Optimize the management of your fire department', navigation (Features, Benefits, Pricing, Contact), demo button 'Request a Free Demo', section titles 'Complete Features', 'Why Choose ProFireManager?', 'Simple and Transparent Pricing'. Privacy Policy pages work in both languages (/fr/politique-de-confidentialite shows 'Politique de Confidentialité', /en/privacy-policy shows 'Privacy Policy'). Footer logo properly sized (144x96px) and footer content translated. URL-based language detection working correctly. Language switcher present and functional (shows FR on English page, EN on French page). MINOR ISSUE: Root URL redirects to /en instead of /fr, but this doesn't affect core functionality. All translation system components working perfectly."
+  - agent: "testing"
+    message: "NEW MODULES & STRENGTHS TESTING COMPLETED ✅ Successfully tested all new features requested: 1) NEW MODULES SECTION: '14 Modules Intégrés' (FR) / '14 Integrated Modules' (EN) badge working, all 14 modules displayed correctly in both languages, expandable cards functional showing features lists. 2) NEW STRENGTHS SECTION: 'Points Forts' (FR) / 'Key Strengths' (EN) with 6 strength items properly translated. 3) NAVIGATION: 'Modules' link added to header navigation, scrolls correctly to modules section. 4) BILINGUAL: Direct URL navigation (/fr, /en) works perfectly with proper content translation. MINOR ISSUE: Language switcher button click handler not working (button visible but doesn't change URL when clicked). All core functionality working as requested."
 
 #    - Update the `test_plan` section to guide testing priorities
 #    - Add a message to `agent_communication` explaining what you've done
