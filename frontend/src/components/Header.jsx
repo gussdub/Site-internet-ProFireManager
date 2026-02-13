@@ -46,12 +46,6 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
             <button
-              onClick={() => scrollToSection('features')}
-              className="text-gray-700 hover:text-[#D9072B] transition-colors font-medium"
-            >
-              {t(language, 'nav.features')}
-            </button>
-            <button
               onClick={() => scrollToSection('modules')}
               className="text-gray-700 hover:text-[#D9072B] transition-colors font-medium"
             >
