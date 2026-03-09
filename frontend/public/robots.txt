@@ -1,0 +1,11 @@
+# robots.txt pour ProFireManager
+# https://www.profiremanager.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.profiremanager.com/sitemap.xml
+
+# Bloquer les pages d'administration ou techniques si nécessaire
+Disallow: /api/
