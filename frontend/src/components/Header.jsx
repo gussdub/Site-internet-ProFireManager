@@ -38,7 +38,7 @@ const Header = () => {
           <div className="flex items-center gap-3">
             <img
               src="/assets/logos/logo-header.png"
-              alt="ProFireManager"
+              alt="ProFireManager - Logiciel de gestion pour services incendie"
               className="h-10 w-auto"
             />
           </div>
