@@ -48,7 +48,7 @@ const Footer = () => {
           <div className="flex-1 max-w-md">
             <img
               src="/assets/logos/logo-footer-new.png"
-              alt="ProFireManager"
+              alt="ProFireManager - Solution de gestion pour casernes de pompiers"
               className="h-24 w-auto mb-3"
             />
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
