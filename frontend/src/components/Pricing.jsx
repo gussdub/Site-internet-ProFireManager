@@ -28,11 +28,11 @@ const Pricing = () => {
   const counts = [30, 40, 50];
 
   return (
-    <section id="pricing" className="py-24 bg-white">
+    <section id="pricing" className="py-24 bg-white" aria-labelledby="pricing-title">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 id="pricing-title" className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {pricingData.title}
           </h2>
           <p className="text-xl text-gray-600 mb-8">
