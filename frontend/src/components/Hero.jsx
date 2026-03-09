@@ -17,7 +17,7 @@ const Hero = () => {
   const heroData = t(language, 'hero');
 
   return (
-    <section className="relative pt-32 pb-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+    <section className="relative pt-32 pb-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden" aria-labelledby="hero-title">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
