@@ -10,11 +10,11 @@ const Benefits = () => {
   const icons = [Clock, TrendingUp, Scale, DollarSign, Smartphone, FileCheck];
 
   return (
-    <section id="benefits" className="py-24 bg-gradient-to-b from-gray-50 to-white">
+    <section id="benefits" className="py-24 bg-gradient-to-b from-gray-50 to-white" aria-labelledby="benefits-title">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 id="benefits-title" className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {benefitsData.title}
           </h2>
           <p className="text-xl text-gray-600">
