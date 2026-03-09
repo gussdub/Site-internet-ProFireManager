@@ -1,49 +1,129 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr-CA">
     <head>
         <meta charset="utf-8" />
         <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#D9072B" />
-        <meta name="description" content="ProFireManager - Solution de gestion pour services d'incendie québécois" />
-        <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-        <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+        
+        <!-- SEO Meta Tags -->
+        <title>ProFireManager | Logiciel de gestion pour services incendie au Canada</title>
+        <meta name="description" content="Logiciel de gestion de caserne tout-en-un : planning des gardes, paie des pompiers, EPI, formations et prévention incendie. Solution canadienne pour services d'incendie." />
+        <meta name="keywords" content="logiciel gestion incendie, gestion caserne pompiers, logiciel paie pompiers, prévention incendie Québec, EPI pompiers, planning gardes pompiers, logiciel pompiers Canada" />
+        <meta name="author" content="ProFireManager Inc." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.profiremanager.com" />
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.profiremanager.com" />
+        <meta property="og:title" content="ProFireManager | Logiciel de gestion pour services incendie" />
+        <meta property="og:description" content="Solution tout-en-un pour la gestion de votre caserne : planning, paie, EPI, formations et prévention incendie. Développé au Canada." />
+        <meta property="og:image" content="https://www.profiremanager.com/assets/og-image.png" />
+        <meta property="og:locale" content="fr_CA" />
+        <meta property="og:locale:alternate" content="en_CA" />
+        <meta property="og:site_name" content="ProFireManager" />
+        
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://www.profiremanager.com" />
+        <meta name="twitter:title" content="ProFireManager | Logiciel de gestion pour services incendie" />
+        <meta name="twitter:description" content="Solution tout-en-un pour la gestion de votre caserne : planning, paie, EPI, formations et prévention incendie." />
+        <meta name="twitter:image" content="https://www.profiremanager.com/assets/og-image.png" />
+        
+        <!-- Structured Data JSON-LD -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "ProFireManager",
+            "applicationCategory": "BusinessApplication",
+            "applicationSubCategory": "Fire Department Management Software",
+            "operatingSystem": "Web Browser",
+            "description": "Logiciel de gestion complet pour services d'incendie canadiens. Gestion du personnel, planning des gardes, paie, EPI, formations et prévention incendie.",
+            "url": "https://www.profiremanager.com",
+            "author": {
+                "@type": "Organization",
+                "name": "ProFireManager Inc.",
+                "url": "https://www.profiremanager.com",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+1-450-330-3648",
+                    "contactType": "sales",
+                    "email": "info@profiremanager.ca",
+                    "availableLanguage": ["French", "English"],
+                    "areaServed": "CA"
+                }
+            },
+            "offers": {
+                "@type": "Offer",
+                "price": "12",
+                "priceCurrency": "CAD",
+                "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "price": "12",
+                    "priceCurrency": "CAD",
+                    "unitText": "pompier/mois"
+                }
+            },
+            "featureList": [
+                "Gestion du personnel et des gardes",
+                "Module de paie intégré",
+                "Suivi des EPI conforme NFPA 1851",
+                "Gestion des formations conforme NFPA 1500",
+                "Module de prévention incendie",
+                "Interventions et cartes d'appel",
+                "Rapports et statistiques",
+                "Interface bilingue français/anglais"
+            ],
+            "screenshot": "https://www.profiremanager.com/assets/screenshots/planning.png",
+            "softwareVersion": "2025",
+            "releaseNotes": "Solution cloud accessible 24/7",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "ratingCount": "25"
+            }
+        }
+        </script>
+        
+        <!-- Organization Schema -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "ProFireManager Inc.",
+            "url": "https://www.profiremanager.com",
+            "logo": "https://www.profiremanager.com/assets/logos/logo-header.png",
+            "description": "Développeur de logiciels de gestion pour services d'incendie au Canada",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Granby",
+                "addressRegion": "QC",
+                "postalCode": "J2H 0A3",
+                "addressCountry": "CA"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-450-330-3648",
+                "contactType": "customer service",
+                "email": "info@profiremanager.ca",
+                "availableLanguage": ["French", "English"]
+            },
+            "sameAs": []
+        }
+        </script>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-        <title>ProFireManager - Gestion de services d'incendie</title>
         <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
-        <!--
-        These two scripts have been added for the testing, please do not edit or remove them
-        -->
         <script src="https://unpkg.com/rrweb@latest/dist/rrweb.min.js"></script>
         <script src="https://d2adkz2s9zrlge.cloudfront.net/rrweb-recorder-20250919-1.js"></script>
-        <!--
-        These two scripts have been added for the Visual Edits, please do not edit or remove them
-        -->
         <script>
-            // Only load visual edit scripts when inside an iframe and visual edits are enabled
             if (window.self !== window.top && '%REACT_APP_ENABLE_VISUAL_EDITS%' === 'true') {
-                // Load debug monitor script
                 var debugScript = document.createElement('script');
                 debugScript.src = 'https://assets.emergent.sh/scripts/debug-monitor.js';
                 document.head.appendChild(debugScript);
-
-                // Configure Tailwind
                 window.tailwind = window.tailwind || {};
-                tailwind.config = {
-                    corePlugins: { preflight: false },
-                };
-
-                // Load Tailwind CDN
+                tailwind.config = { corePlugins: { preflight: false } };
                 var tailwindScript = document.createElement('script');
                 tailwindScript.src = 'https://cdn.tailwindcss.com';
                 document.head.appendChild(tailwindScript);
@@ -51,18 +131,8 @@
         </script>
     </head>
     <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <noscript>Vous devez activer JavaScript pour utiliser cette application.</noscript>
         <div id="root"></div>
-        <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
         <a
             id="emergent-badge"
             target="_blank"
@@ -75,10 +145,7 @@
                 right: 20px;
                 text-decoration: none;
                 padding: 6px 10px;
-                font-family: -apple-system, BlinkMacSystemFont,
-                    &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell,
-                    &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;,
-                    sans-serif !important;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
                 font-size: 12px !important;
                 z-index: 9999 !important;
                 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
@@ -87,27 +154,13 @@
                 border: 1px solid rgba(255, 255, 255, 0.25) !important;
             "
         >
-            <div
-                style="display: flex; flex-direction: row; align-items: center"
-            >
+            <div style="display: flex; flex-direction: row; align-items: center">
                 <img
                     style="width: 20px; height: 20px; margin-right: 8px"
                     src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4"
+                    alt="Emergent logo"
                 />
-                <p
-                    style="
-                        color: #000000;
-                        font-family: -apple-system, BlinkMacSystemFont,
-                            &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu,
-                            Cantarell, &quot;Open Sans&quot;,
-                            &quot;Helvetica Neue&quot;, sans-serif !important;
-                        font-size: 12px !important;
-                        align-items: center;
-                        margin-bottom: 0;
-                    "
-                >
-                    Made with Emergent
-                </p>
+                <p style="color: #000000; font-size: 12px !important; margin-bottom: 0;">Made with Emergent</p>
             </div>
         </a>
         <script>
@@ -121,48 +174,26 @@
                             var o = e.split(".");
                             2 == o.length && ((t = t[o[0]]), (e = o[1])),
                                 (t[e] = function () {
-                                    t.push(
-                                        [e].concat(
-                                            Array.prototype.slice.call(
-                                                arguments,
-                                                0,
-                                            ),
-                                        ),
-                                    );
+                                    t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
                                 });
                         }
-                        ((p = t.createElement("script")).type =
-                            "text/javascript"),
+                        ((p = t.createElement("script")).type = "text/javascript"),
                             (p.crossOrigin = "anonymous"),
                             (p.async = !0),
-                            (p.src =
-                                s.api_host.replace(
-                                    ".i.posthog.com",
-                                    "-assets.i.posthog.com",
-                                ) + "/static/array.js"),
-                            (r =
-                                t.getElementsByTagName(
-                                    "script",
-                                )[0]).parentNode.insertBefore(p, r);
+                            (p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js"),
+                            (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
                         var u = e;
                         for (
                             void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
                                 u.people = u.people || [],
                                 u.toString = function (t) {
                                     var e = "posthog";
-                                    return (
-                                        "posthog" !== a && (e += "." + a),
-                                        t || (e += " (stub)"),
-                                        e
-                                    );
+                                    return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e;
                                 },
                                 u.people.toString = function () {
                                     return u.toString(1) + ".people (stub)";
                                 },
-                                o =
-                                    "init me ws ys ps bs capture je Di ks register register_once register_for_session unregister unregister_for_session Ps getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Es $s createPersonProfile Is opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Ss debug xs getPageViewId captureTraceFeedback captureTraceMetric".split(
-                                        " ",
-                                    ),
+                                o = "init me ws ys ps bs capture je Di ks register register_once register_for_session unregister unregister_for_session Ps getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Es $s createPersonProfile Is opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Ss debug xs getPageViewId captureTraceFeedback captureTraceMetric".split(" "),
                                 n = 0;
                             n < o.length;
                             n++
@@ -174,7 +205,7 @@
             })(document, window.posthog || []);
             posthog.init("phc_yJW1VjHGGwmCbbrtczfqqNxgBDbhlhOWcdzcIJEOTFE", {
                 api_host: "https://us.i.posthog.com",
-                person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well
+                person_profiles: "identified_only",
             });
         </script>
     </body>
