@@ -15,6 +15,19 @@ const AppScreenshots = () => {
     '/assets/screenshots/disponibilites.png'
   ];
 
+  // SEO-optimized alt texts
+  const altTexts = language === 'fr' ? [
+    'Interface de gestion des formations pompiers dans ProFireManager - Suivi des certifications NFPA 1500',
+    'Module de suivi des EPI conforme NFPA 1851 - Inventaire équipements de protection',
+    'Planning automatisé des gardes de pompiers - Attribution intelligente des quarts',
+    'Calendrier de disponibilités des pompiers temps partiel - Gestion des horaires'
+  ] : [
+    'Firefighter training management interface in ProFireManager - NFPA 1500 certification tracking',
+    'PPE tracking module NFPA 1851 compliant - Personal protective equipment inventory',
+    'Automated firefighter shift planning - Intelligent shift assignment',
+    'Part-time firefighter availability calendar - Schedule management'
+  ];
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % screenshotsData.items.length);
   };
@@ -24,11 +37,11 @@ const AppScreenshots = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+    <section id="screenshots" className="py-24 bg-gradient-to-b from-white to-gray-50" aria-labelledby="screenshots-title">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 id="screenshots-title" className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {screenshotsData.title}
           </h2>
           <p className="text-xl text-gray-600">
@@ -43,8 +56,9 @@ const AppScreenshots = () => {
             <div className="relative aspect-video bg-gray-100">
               <img
                 src={images[currentSlide]}
-                alt={screenshotsData.items[currentSlide]?.title}
+                alt={altTexts[currentSlide]}
                 className="w-full h-full object-contain"
+                loading="lazy"
               />
               
               {/* Navigation Arrows */}
