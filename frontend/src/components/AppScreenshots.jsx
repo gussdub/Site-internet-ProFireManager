@@ -119,8 +119,9 @@ const AppScreenshots = () => {
               >
                 <img
                   src={images[index]}
-                  alt={screenshot.title}
+                  alt={altTexts[index]}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </button>
             ))}
