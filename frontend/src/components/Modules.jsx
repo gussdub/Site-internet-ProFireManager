@@ -24,14 +24,14 @@ const Modules = () => {
   };
 
   return (
-    <section id="modules" className="py-24 bg-white">
+    <section id="modules" className="py-24 bg-white" aria-labelledby="modules-title">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block bg-red-50 text-[#D9072B] px-4 py-2 rounded-full text-sm font-semibold mb-4">
             {modulesData.badge}
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 id="modules-title" className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {modulesData.title}
           </h2>
           <p className="text-xl text-gray-600">
