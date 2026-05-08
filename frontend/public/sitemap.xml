@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <!-- Page d'accueil - Français -->
+    <url>
+        <loc>https://www.profiremanager.com/fr</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en"/>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Page d'accueil - Anglais -->
+    <url>
+        <loc>https://www.profiremanager.com/en</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en"/>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Politique de confidentialité - Français -->
+    <url>
+        <loc>https://www.profiremanager.com/fr/politique-de-confidentialite</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/politique-de-confidentialite"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/privacy-policy"/>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <!-- Privacy Policy - English -->
+    <url>
+        <loc>https://www.profiremanager.com/en/privacy-policy</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/politique-de-confidentialite"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/privacy-policy"/>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <!-- Conditions d'utilisation - Français -->
+    <url>
+        <loc>https://www.profiremanager.com/fr/conditions-utilisation</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/conditions-utilisation"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/terms-of-service"/>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <!-- Terms of Service - English -->
+    <url>
+        <loc>https://www.profiremanager.com/en/terms-of-service</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/conditions-utilisation"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/terms-of-service"/>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <!-- FAQ - Français -->
+    <url>
+        <loc>https://www.profiremanager.com/fr/faq</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/faq"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/faq"/>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- FAQ - English -->
+    <url>
+        <loc>https://www.profiremanager.com/en/faq</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/faq"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/faq"/>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Documentation - Français -->
+    <url>
+        <loc>https://www.profiremanager.com/fr/documentation</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/documentation"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/documentation"/>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Documentation - English -->
+    <url>
+        <loc>https://www.profiremanager.com/en/documentation</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/documentation"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/documentation"/>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Support - Français -->
+    <url>
+        <loc>https://www.profiremanager.com/fr/support-technique</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/support-technique"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/technical-support"/>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Support - English -->
+    <url>
+        <loc>https://www.profiremanager.com/en/technical-support</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/support-technique"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/technical-support"/>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+</urlset>
