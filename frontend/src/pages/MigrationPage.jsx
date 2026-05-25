@@ -20,8 +20,8 @@ const MigrationPage = () => {
       en: 'Migrate from Première Ligne to ProFireManager — 100% Data Transfer'
     };
     const descByLang = {
-      fr: 'Vous utilisez Première Ligne ? ProFireManager récupère 100 % de vos données : employés, équipements, interventions, prévention. Forfait fixe 5 000 $ CAD.',
-      en: 'Using Première Ligne? ProFireManager recovers 100% of your data: employees, equipment, interventions, prevention. Flat fee of $5,000 CAD.'
+      fr: 'Vous utilisez Première Ligne ? ProFireManager récupère 100 % de vos données : employés, équipements, interventions, prévention. Forfait fixe 10 000 $ CAD.',
+      en: 'Using Première Ligne? ProFireManager recovers 100% of your data: employees, equipment, interventions, prevention. Flat fee of $10,000 CAD.'
     };
     const canonicalByLang = {
       fr: 'https://www.profiremanager.com/fr/migration-premiere-ligne',

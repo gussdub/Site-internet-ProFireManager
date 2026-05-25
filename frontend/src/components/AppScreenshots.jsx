@@ -40,13 +40,58 @@ const AppScreenshots = () => {
     <section id="screenshots" className="py-24 bg-gradient-to-b from-white to-gray-50" aria-labelledby="screenshots-title">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 id="screenshots-title" className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {screenshotsData.title}
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600 mb-6">
             {screenshotsData.subtitle}
           </p>
+
+          {/* App Store Badges */}
+          <div className="flex flex-col items-center gap-3 mb-4" data-testid="app-badges-section">
+            <p className="text-sm font-semibold uppercase tracking-wider text-gray-500">
+              {t(language, 'appBadges.title')}
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="#contact"
+                onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({behavior:'smooth'}); }}
+                aria-label={t(language, 'appBadges.appStoreAlt')}
+                data-testid="app-store-badge"
+                className="inline-flex items-center gap-3 bg-black hover:bg-gray-800 text-white rounded-xl px-5 py-2.5 transition-all hover:scale-105 shadow-md"
+              >
+                <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                </svg>
+                <div className="text-left leading-tight">
+                  <div className="text-[10px] opacity-90">{language === 'fr' ? 'Télécharger sur' : 'Download on the'}</div>
+                  <div className="text-base font-semibold">App Store</div>
+                </div>
+              </a>
+              <a
+                href="#contact"
+                onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({behavior:'smooth'}); }}
+                aria-label={t(language, 'appBadges.googlePlayAlt')}
+                data-testid="google-play-badge"
+                className="inline-flex items-center gap-3 bg-black hover:bg-gray-800 text-white rounded-xl px-5 py-2.5 transition-all hover:scale-105 shadow-md"
+              >
+                <svg className="w-8 h-8" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#34A853" d="M3.609 1.814 13.792 12 3.609 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .61-.92z"/>
+                  <path fill="#FBBC04" d="m13.792 12 3.05-3.05 4.7 2.65a1 1 0 0 1 0 1.74l-4.7 2.65L13.792 12z"/>
+                  <path fill="#EA4335" d="M16.842 8.95 13.792 12 3.61 1.814A1 1 0 0 1 4.61 1.62l12.232 7.33z"/>
+                  <path fill="#4285F4" d="M3.609 22.186 13.792 12l3.05 3.05L4.61 22.38a1 1 0 0 1-1-.194z"/>
+                </svg>
+                <div className="text-left leading-tight">
+                  <div className="text-[10px] opacity-90">{language === 'fr' ? 'Disponible sur' : 'Get it on'}</div>
+                  <div className="text-base font-semibold">Google Play</div>
+                </div>
+              </a>
+            </div>
+            <p className="text-xs text-gray-500 italic max-w-md">
+              {t(language, 'appBadges.subtitle')}
+            </p>
+          </div>
         </div>
 
         {/* Carousel */}

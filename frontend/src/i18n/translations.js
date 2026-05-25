@@ -400,7 +400,6 @@ export const translations = {
 
     // Migration depuis Première Ligne
     migration: {
-      badge: 'Migration sans douleur',
       title: 'Vous utilisez Première Ligne ? Migrez sans rien perdre.',
       subtitle: 'Vous utilisez actuellement le logiciel Première Ligne ? Aucun problème — ProFireManager est 100 % compatible.',
       intro: 'Nous récupérons l\'intégralité de vos données :',
@@ -409,11 +408,10 @@ export const translations = {
         'Équipements et inspections passées',
         'Cartes d\'appel et rapports d\'intervention archivés',
         'Bâtiments en prévention et visites antérieures',
-        'Formations et certifications',
-        'Historique de paie'
+        'Formations et certifications'
       ],
       feeLabel: 'Service de transfert complet',
-      feeValue: '5 000 $ CAD',
+      feeValue: '10 000 $ CAD',
       feeDetail: 'Forfait fixe — taxes en sus, paiement unique',
       promise1: 'Votre historique reste intact. Aucune donnée perdue.',
       promise2: 'Notre équipe s\'occupe de tout. Vous repartez là où vous étiez.',
@@ -428,7 +426,7 @@ export const translations = {
       hero: {
         badge: 'Migration Première Ligne → ProFireManager',
         title: 'Migrez de Première Ligne vers ProFireManager sans rien perdre',
-        subtitle: 'ProFireManager récupère 100 % de vos données : employés, équipements, interventions, prévention, paie. Forfait fixe 5 000 $ CAD.',
+        subtitle: 'ProFireManager récupère 100 % de vos données : employés, équipements, interventions, prévention. Forfait fixe 10 000 $ CAD.',
         cta: 'Demander une démo de migration'
       },
       whyTitle: 'Pourquoi migrer vers ProFireManager ?',
@@ -447,7 +445,7 @@ export const translations = {
         { step: '3', title: 'Migration sécurisée', desc: 'Transfert chiffré de l\'ensemble de vos données vers ProFireManager.' },
         { step: '4', title: 'Validation et formation', desc: 'Vérification des données migrées et formation initiale de vos administrateurs.' }
       ],
-      includedTitle: 'Ce qui est inclus dans le forfait de 5 000 $ CAD',
+      includedTitle: 'Ce qui est inclus dans le forfait de 10 000 $ CAD',
       includedItems: [
         'Récupération de 100 % de vos données historiques',
         'Mapping personnalisé Première Ligne → ProFireManager',
@@ -473,12 +471,8 @@ export const translations = {
           a: 'Notre processus prévoit un mapping exhaustif. Dans le cas rare où certains champs personnalisés ne peuvent être transférés automatiquement, nous proposons une solution manuelle ou un archivage sécurisé.'
         },
         {
-          q: 'Le forfait de 5 000 $ CAD est-il vraiment fixe ?',
+          q: 'Le forfait de 10 000 $ CAD est-il vraiment fixe ?',
           a: 'Oui. C\'est un forfait unique, taxes en sus, valable quel que soit le volume de données. Aucun frais caché.'
-        },
-        {
-          q: 'Puis-je conserver mon historique de paie ?',
-          a: 'Oui. L\'historique de paie fait partie intégrante du forfait de migration.'
         }
       ],
       ctaTitle: 'Prêt à migrer vers ProFireManager ?',
@@ -495,6 +489,14 @@ export const translations = {
         { name: 'API REST', desc: 'Intégration avec systèmes externes' },
         { name: 'Email', desc: 'Notifications automatiques' }
       ]
+    },
+
+    // App Badges
+    appBadges: {
+      title: 'Disponible sur',
+      subtitle: 'Applications natives iOS et Android avec authentification biométrique (Face ID / Touch ID).',
+      appStoreAlt: 'Télécharger ProFireManager sur l\'App Store',
+      googlePlayAlt: 'Télécharger ProFireManager sur Google Play'
     }
   },
   
@@ -899,7 +901,6 @@ export const translations = {
 
     // Migration from Première Ligne
     migration: {
-      badge: 'Painless migration',
       title: 'Using Première Ligne? Migrate without losing anything.',
       subtitle: 'Currently using Première Ligne? No problem — ProFireManager is 100% compatible.',
       intro: 'We recover all your data:',
@@ -908,11 +909,10 @@ export const translations = {
         'Equipment and past inspections',
         'Call cards and archived intervention reports',
         'Prevention buildings and previous visits',
-        'Training and certifications',
-        'Payroll history'
+        'Training and certifications'
       ],
       feeLabel: 'Complete transfer service',
-      feeValue: '$5,000 CAD',
+      feeValue: '$10,000 CAD',
       feeDetail: 'Flat fee — taxes extra, one-time payment',
       promise1: 'Your history stays intact. No data lost.',
       promise2: 'Our team handles everything. You pick up where you left off.',
@@ -927,7 +927,7 @@ export const translations = {
       hero: {
         badge: 'Première Ligne → ProFireManager Migration',
         title: 'Migrate from Première Ligne to ProFireManager without losing anything',
-        subtitle: 'ProFireManager recovers 100% of your data: employees, equipment, interventions, prevention, payroll. Flat fee of $5,000 CAD.',
+        subtitle: 'ProFireManager recovers 100% of your data: employees, equipment, interventions, prevention. Flat fee of $10,000 CAD.',
         cta: 'Request a migration demo'
       },
       whyTitle: 'Why migrate to ProFireManager?',
@@ -946,7 +946,7 @@ export const translations = {
         { step: '3', title: 'Secure migration', desc: 'Encrypted transfer of all your data to ProFireManager.' },
         { step: '4', title: 'Validation & training', desc: 'Migrated data verification and initial admin training.' }
       ],
-      includedTitle: 'What\'s included in the $5,000 CAD flat fee',
+      includedTitle: 'What\'s included in the $10,000 CAD flat fee',
       includedItems: [
         'Recovery of 100% of your historical data',
         'Custom mapping Première Ligne → ProFireManager',
@@ -972,12 +972,8 @@ export const translations = {
           a: 'Our process includes comprehensive mapping. In the rare case where certain custom fields cannot be transferred automatically, we offer a manual solution or secure archiving.'
         },
         {
-          q: 'Is the $5,000 CAD fee really flat?',
+          q: 'Is the $10,000 CAD fee really flat?',
           a: 'Yes. It is a one-time flat fee, taxes extra, regardless of data volume. No hidden charges.'
-        },
-        {
-          q: 'Can I keep my payroll history?',
-          a: 'Yes. Payroll history is fully included in the migration package.'
         }
       ],
       ctaTitle: 'Ready to migrate to ProFireManager?',
@@ -994,6 +990,14 @@ export const translations = {
         { name: 'REST API', desc: 'Integration with external systems' },
         { name: 'Email', desc: 'Automatic notifications' }
       ]
+    },
+
+    // App Badges
+    appBadges: {
+      title: 'Available on',
+      subtitle: 'Native iOS and Android applications with biometric authentication (Face ID / Touch ID).',
+      appStoreAlt: 'Download ProFireManager on the App Store',
+      googlePlayAlt: 'Get ProFireManager on Google Play'
     }
   }
 };

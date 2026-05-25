@@ -83,13 +83,13 @@ const Pricing = () => {
             >
               {index === 1 && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="bg-[#D9072B] text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-[#D9072B] text-white px-4 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
                     {pricingData.popular}
                   </span>
                 </div>
               )}
-              <CardContent className="p-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{tier.name}</h3>
+              <CardContent className="p-6 md:p-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 whitespace-nowrap">{tier.name}</h3>
                 <div className="mb-6">
                   <div className="flex items-baseline gap-2">
                     <span className="text-5xl font-bold text-[#D9072B]">

@@ -30,9 +30,6 @@ const Migration = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left side - Content */}
             <div>
-              <span className="inline-block bg-[#D9072B]/20 text-[#FF6B7E] px-4 py-2 rounded-full text-sm font-semibold mb-4 border border-[#D9072B]/30">
-                {data.badge}
-              </span>
               <h2 id="migration-title" className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight">
                 {data.title}
               </h2>
@@ -101,8 +98,8 @@ const Migration = () => {
                   </div>
 
                   <div className="text-center">
-                    <div className="w-20 h-20 bg-[#D9072B] rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg shadow-[#D9072B]/30">
-                      <img src="/assets/logos/logo-header.png" alt="ProFireManager" className="w-12 h-12 object-contain" />
+                    <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg shadow-[#D9072B]/30 p-3 border-2 border-[#D9072B]">
+                      <img src="/assets/logos/logo-header.png" alt="ProFireManager" className="w-full h-full object-contain" />
                     </div>
                     <p className="text-white font-semibold text-sm">ProFireManager</p>
                   </div>
