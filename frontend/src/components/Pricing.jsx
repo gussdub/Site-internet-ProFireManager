@@ -91,11 +91,11 @@ const Pricing = () => {
               <CardContent className="p-6 md:p-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 whitespace-nowrap">{tier.name}</h3>
                 <div className="mb-6">
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-bold text-[#D9072B]">
+                  <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                    <span className="text-4xl md:text-5xl font-bold text-[#D9072B] whitespace-nowrap">
                       {calculatePrice(basePrices[index])}$
                     </span>
-                    <span className="text-gray-600">{pricingData.perFirefighter}</span>
+                    <span className="text-sm md:text-base text-gray-600 whitespace-nowrap">{pricingData.perFirefighter}</span>
                   </div>
                   <p className="text-sm text-gray-500 mt-2">
                     {(calculatePrice(basePrices[index]) * counts[index]).toFixed(0)}$/{billingCycle === 'monthly' ? (language === 'fr' ? 'mois' : 'month') : pricingData.billedAnnually} ({counts[index]} {language === 'fr' ? 'pompiers' : 'firefighters'})

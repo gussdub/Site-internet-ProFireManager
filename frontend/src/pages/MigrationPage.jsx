@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight, CheckCircle2, Database, Shield, Smartphone, Bell, Building, Layers, ArrowLeft } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Database, Lock, FileArchive, Image as ImageIcon, ArrowLeft } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -47,7 +47,7 @@ const MigrationPage = () => {
     }, 100);
   };
 
-  const whyIcons = [Smartphone, Layers, Shield, Bell, Database, Building];
+  const whyIcons = [Database, Lock, FileArchive, ImageIcon];
 
   return (
     <main className="pt-24 pb-16 bg-white" data-testid="migration-page">
@@ -92,11 +92,11 @@ const MigrationPage = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
             {data.whyTitle}
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {data.whyItems.map((item, idx) => {
               const Icon = whyIcons[idx];
               return (
-                <Card key={idx} className="border-2 border-gray-200 hover:border-[#D9072B] transition-all">
+                <Card key={idx} className="border-2 border-gray-200 hover:border-[#D9072B] transition-all" data-testid={`why-item-${idx}`}>
                   <CardContent className="p-6">
                     <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center mb-4">
                       <Icon className="w-6 h-6 text-[#D9072B]" />
