@@ -434,7 +434,8 @@ export const translations = {
         { title: 'Données traitées en local', desc: 'Toutes vos données sont traitées localement, sans exposition à des serveurs tiers pendant la migration. Vous gardez le contrôle de bout en bout.' },
         { title: 'Sécurisation des données sensibles', desc: 'Chiffrement de niveau bancaire, accès restreint, audit complet. Vos dossiers employés, paie et interventions restent confidentiels.' },
         { title: 'Formats ouverts ZIP, XML, CSV', desc: 'Nous transférons aussi vos données dans des formats standards (ZIP, XML, CSV) — même si vous ne transférez pas vers ProFireManager. Vos données vous appartiennent, point.' },
-        { title: 'Récupération complète', desc: 'Photos d\'intervention, plans de bâtiments, schémas, archives PDF, pièces jointes : on récupère absolument tout. Pas juste les bases de données.' }
+        { title: 'Récupération complète', desc: 'Photos d\'intervention, plans de bâtiments, schémas, archives PDF, pièces jointes : on récupère absolument tout. Pas juste les bases de données.' },
+        { title: 'Tri automatisé des doublons', desc: 'Pompiers en double, équipements dupliqués, bâtiments listés plusieurs fois ? Notre moteur de déduplication détecte et fusionne automatiquement les doublons lors de l\'import dans ProFireManager. Vous démarrez avec une base propre, sans saisie manuelle ni nettoyage fastidieux.' }
       ],
       processTitle: 'Notre processus de migration en 4 étapes',
       processSteps: [
@@ -448,7 +449,7 @@ export const translations = {
         'Récupération de 100 % de vos données historiques',
         'Récupération des photos d\'intervention, plans de bâtiments et pièces jointes',
         'Mapping personnalisé Première Ligne → ProFireManager',
-        'Tri automatisé de vos doublons lors de l\'import dans ProFireManager',
+        'Tri automatisé des doublons (pompiers, équipements, bâtiments) — fusion intelligente, sans saisie manuelle',
         'Export aussi en formats ouverts ZIP, XML, CSV',
         'Transfert chiffré et sécurisé',
         'Validation et rapprochement des données',
@@ -934,7 +935,8 @@ export const translations = {
         { title: 'Data processed locally', desc: 'All your data is processed locally during migration, with no exposure to third-party servers. You keep full control end-to-end.' },
         { title: 'Sensitive data security', desc: 'Bank-grade encryption, restricted access, full audit trail. Your employee, payroll and intervention records stay confidential.' },
         { title: 'Open formats ZIP, XML, CSV', desc: 'We also export your data in standard formats (ZIP, XML, CSV) — even if you don\'t migrate to ProFireManager. Your data belongs to you, period.' },
-        { title: 'Complete recovery', desc: 'Intervention photos, building plans, sketches, PDF archives, attachments: we recover absolutely everything. Not just databases.' }
+        { title: 'Complete recovery', desc: 'Intervention photos, building plans, sketches, PDF archives, attachments: we recover absolutely everything. Not just databases.' },
+        { title: 'Automated duplicate sorting', desc: 'Duplicate firefighters, equipment listed twice, buildings registered multiple times? Our deduplication engine automatically detects and merges duplicates during import into ProFireManager. You start with a clean base — no manual entry, no tedious clean-up.' }
       ],
       processTitle: 'Our 4-step migration process',
       processSteps: [
@@ -948,7 +950,7 @@ export const translations = {
         'Recovery of 100% of your historical data',
         'Recovery of intervention photos, building plans and attachments',
         'Custom mapping Première Ligne → ProFireManager',
-        'Automated duplicate sorting during import into ProFireManager',
+        'Automated duplicate sorting (firefighters, equipment, buildings) — smart merge, no manual entry',
         'Export also in open formats ZIP, XML, CSV',
         'Encrypted and secure transfer',
         'Data validation and reconciliation',

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight, CheckCircle2, Database, Lock, FileArchive, Image as ImageIcon, ArrowLeft } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Database, Lock, FileArchive, Image as ImageIcon, GitMerge, ArrowLeft } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -47,7 +47,7 @@ const MigrationPage = () => {
     }, 100);
   };
 
-  const whyIcons = [Database, Lock, FileArchive, ImageIcon];
+  const whyIcons = [Database, Lock, FileArchive, ImageIcon, GitMerge];
 
   return (
     <main className="pt-24 pb-16 bg-white" data-testid="migration-page">
@@ -95,14 +95,38 @@ const MigrationPage = () => {
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {data.whyItems.map((item, idx) => {
               const Icon = whyIcons[idx];
+              const isHighlight = idx === 4; // Tri automatisé des doublons - hero card
               return (
-                <Card key={idx} className="border-2 border-gray-200 hover:border-[#D9072B] transition-all" data-testid={`why-item-${idx}`}>
-                  <CardContent className="p-6">
-                    <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center mb-4">
-                      <Icon className="w-6 h-6 text-[#D9072B]" />
+                <Card
+                  key={idx}
+                  className={`border-2 transition-all ${
+                    isHighlight
+                      ? 'md:col-span-2 border-[#D9072B] bg-gradient-to-br from-red-50 via-white to-white shadow-lg'
+                      : 'border-gray-200 hover:border-[#D9072B]'
+                  }`}
+                  data-testid={`why-item-${idx}`}
+                >
+                  <CardContent className={isHighlight ? 'p-8' : 'p-6'}>
+                    <div className="flex items-start gap-4">
+                      <div className={`flex-shrink-0 rounded-xl flex items-center justify-center ${
+                        isHighlight ? 'w-14 h-14 bg-[#D9072B]' : 'w-12 h-12 bg-red-50'
+                      }`}>
+                        <Icon className={`${isHighlight ? 'w-7 h-7 text-white' : 'w-6 h-6 text-[#D9072B]'}`} />
+                      </div>
+                      <div className="flex-1">
+                        {isHighlight && (
+                          <span className="inline-block bg-[#D9072B] text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2">
+                            {language === 'fr' ? 'Notre différenciateur' : 'Our differentiator'}
+                          </span>
+                        )}
+                        <h3 className={`font-bold text-gray-900 mb-2 ${isHighlight ? 'text-2xl' : 'text-lg'}`}>
+                          {item.title}
+                        </h3>
+                        <p className={`text-gray-600 leading-relaxed ${isHighlight ? 'text-base' : 'text-sm'}`}>
+                          {item.desc}
+                        </p>
+                      </div>
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
                   </CardContent>
                 </Card>
               );
