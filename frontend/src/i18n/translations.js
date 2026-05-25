@@ -441,16 +441,17 @@ export const translations = {
         { step: '1', title: 'Audit de vos données', desc: 'Analyse complète de votre base Première Ligne et de votre historique.' },
         { step: '2', title: 'Plan de transfert', desc: 'Plan personnalisé approuvé par votre direction avant la migration.' },
         { step: '3', title: 'Migration sécurisée', desc: 'Transfert chiffré de l\'ensemble de vos données vers ProFireManager.' },
-        { step: '4', title: 'Validation et formation', desc: 'Vérification des données migrées et formation initiale de vos administrateurs.' }
+        { step: '4', title: 'Validation des données', desc: 'Vérification complète et rapprochement des données migrées pour garantir leur intégrité.' }
       ],
       includedTitle: 'Ce qui est inclus dans le forfait de 10 000 $ CAD',
       includedItems: [
         'Récupération de 100 % de vos données historiques',
+        'Récupération des photos d\'intervention, plans de bâtiments et pièces jointes',
         'Mapping personnalisé Première Ligne → ProFireManager',
+        'Tri automatisé de vos doublons lors de l\'import dans ProFireManager',
+        'Export aussi en formats ouverts ZIP, XML, CSV',
         'Transfert chiffré et sécurisé',
         'Validation et rapprochement des données',
-        'Formation initiale de vos administrateurs (2h)',
-        'Support dédié pendant toute la migration',
         'Rapport de migration détaillé',
         'Garantie d\'intégrité des données'
       ],
@@ -940,16 +941,17 @@ export const translations = {
         { step: '1', title: 'Data audit', desc: 'Comprehensive analysis of your Première Ligne database and history.' },
         { step: '2', title: 'Transfer plan', desc: 'Custom plan approved by your management before migration.' },
         { step: '3', title: 'Secure migration', desc: 'Encrypted transfer of all your data to ProFireManager.' },
-        { step: '4', title: 'Validation & training', desc: 'Migrated data verification and initial admin training.' }
+        { step: '4', title: 'Data validation', desc: 'Comprehensive verification and reconciliation of migrated data to guarantee integrity.' }
       ],
       includedTitle: 'What\'s included in the $10,000 CAD flat fee',
       includedItems: [
         'Recovery of 100% of your historical data',
+        'Recovery of intervention photos, building plans and attachments',
         'Custom mapping Première Ligne → ProFireManager',
+        'Automated duplicate sorting during import into ProFireManager',
+        'Export also in open formats ZIP, XML, CSV',
         'Encrypted and secure transfer',
         'Data validation and reconciliation',
-        'Initial admin training (2h)',
-        'Dedicated support throughout migration',
         'Detailed migration report',
         'Data integrity guarantee'
       ],
