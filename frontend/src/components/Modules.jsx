@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { 
-  LayoutDashboard, Users, Truck, Bell, DollarSign, Calendar, 
+  LayoutDashboard, Users, Truck, Siren, DollarSign, Calendar, 
   RefreshCw, GraduationCap, Flame, ClipboardList, Shield, 
-  User, BarChart3, Settings, ChevronDown, ChevronUp
+  BarChart3, ChevronDown, ChevronUp
 } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -14,9 +14,9 @@ const Modules = () => {
   const [expandedModule, setExpandedModule] = useState(null);
   
   const icons = [
-    LayoutDashboard, Users, Truck, Bell, DollarSign, Calendar,
+    LayoutDashboard, Users, Truck, Siren, DollarSign, Calendar,
     RefreshCw, GraduationCap, Flame, ClipboardList, Shield,
-    User, BarChart3, Settings
+    BarChart3
   ];
 
   const toggleModule = (index) => {

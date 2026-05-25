@@ -7,18 +7,21 @@
         <meta name="theme-color" content="#D9072B" />
         
         <!-- SEO Meta Tags -->
-        <title>ProFireManager | Logiciel de gestion pour services incendie au Canada</title>
-        <meta name="description" content="Logiciel de gestion de caserne tout-en-un : planning des gardes, paie des pompiers, EPI, formations et prévention incendie. Solution canadienne pour services d'incendie." />
-        <meta name="keywords" content="logiciel gestion incendie, gestion caserne pompiers, logiciel paie pompiers, prévention incendie Québec, EPI pompiers, planning gardes pompiers, logiciel pompiers Canada" />
+        <title>Logiciel de gestion pour services d'incendie au Québec | ProFireManager</title>
+        <meta name="description" content="ProFireManager — la plateforme québécoise tout-en-un pour gérer personnel, interventions, EPI, paie, formations et prévention incendie. Web, iOS, Android. Demandez une démo." />
+        <meta name="keywords" content="logiciel pompier, logiciel service incendie, logiciel gestion caserne, logiciel gestion pompiers Québec, application pompier Québec, gestion caserne pompiers, alternative Première Ligne, gestion paie pompiers, EPI pompiers NFPA 1851, planning gardes pompiers" />
         <meta name="author" content="ProFireManager Inc." />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.profiremanager.com" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <link rel="canonical" href="https://www.profiremanager.com/fr" />
+        <link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr" />
+        <link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en" />
+        <link rel="alternate" hreflang="x-default" href="https://www.profiremanager.com/fr" />
         
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.profiremanager.com" />
-        <meta property="og:title" content="ProFireManager | Logiciel de gestion pour services incendie" />
-        <meta property="og:description" content="Solution tout-en-un pour la gestion de votre caserne : planning, paie, EPI, formations et prévention incendie. Développé au Canada." />
+        <meta property="og:url" content="https://www.profiremanager.com/fr" />
+        <meta property="og:title" content="Logiciel de gestion pour services d'incendie au Québec | ProFireManager" />
+        <meta property="og:description" content="Plateforme québécoise tout-en-un pour gérer personnel, interventions, EPI, paie, formations et prévention incendie. Web, iOS, Android." />
         <meta property="og:image" content="https://www.profiremanager.com/assets/og-image.png" />
         <meta property="og:locale" content="fr_CA" />
         <meta property="og:locale:alternate" content="en_CA" />
@@ -26,12 +29,12 @@
         
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://www.profiremanager.com" />
-        <meta name="twitter:title" content="ProFireManager | Logiciel de gestion pour services incendie" />
-        <meta name="twitter:description" content="Solution tout-en-un pour la gestion de votre caserne : planning, paie, EPI, formations et prévention incendie." />
+        <meta name="twitter:url" content="https://www.profiremanager.com/fr" />
+        <meta name="twitter:title" content="Logiciel de gestion pour services d'incendie au Québec | ProFireManager" />
+        <meta name="twitter:description" content="Plateforme québécoise tout-en-un pour services d'incendie : personnel, interventions, EPI, paie, formations et prévention." />
         <meta name="twitter:image" content="https://www.profiremanager.com/assets/og-image.png" />
         
-        <!-- Structured Data JSON-LD -->
+        <!-- SoftwareApplication Schema -->
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -39,9 +42,10 @@
             "name": "ProFireManager",
             "applicationCategory": "BusinessApplication",
             "applicationSubCategory": "Fire Department Management Software",
-            "operatingSystem": "Web Browser",
-            "description": "Logiciel de gestion complet pour services d'incendie canadiens. Gestion du personnel, planning des gardes, paie, EPI, formations et prévention incendie.",
+            "operatingSystem": "Web, iOS, Android",
+            "description": "Logiciel de gestion tout-en-un pour services d'incendie au Québec : tableau de bord, personnel, actifs, interventions (DSI, cartes d'appel), paie, planning, remplacements, formations, prévention, disponibilités, Mes EPI et rapports.",
             "url": "https://www.profiremanager.com",
+            "inLanguage": ["fr-CA", "en-CA"],
             "author": {
                 "@type": "Organization",
                 "name": "ProFireManager Inc.",
@@ -55,34 +59,93 @@
                     "areaServed": "CA"
                 }
             },
-            "offers": {
-                "@type": "Offer",
-                "price": "12",
-                "priceCurrency": "CAD",
-                "priceSpecification": {
-                    "@type": "UnitPriceSpecification",
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "name": "Niveau 1 - 0 à 30 pompiers",
                     "price": "12",
                     "priceCurrency": "CAD",
-                    "unitText": "pompier/mois"
+                    "priceSpecification": {
+                        "@type": "UnitPriceSpecification",
+                        "price": "12",
+                        "priceCurrency": "CAD",
+                        "unitText": "pompier/mois"
+                    },
+                    "url": "https://www.profiremanager.com/fr#pricing"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Niveau 2 - 31 à 50 pompiers",
+                    "price": "20",
+                    "priceCurrency": "CAD",
+                    "priceSpecification": {
+                        "@type": "UnitPriceSpecification",
+                        "price": "20",
+                        "priceCurrency": "CAD",
+                        "unitText": "pompier/mois"
+                    },
+                    "url": "https://www.profiremanager.com/fr#pricing"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "Niveau 3 - 51+ pompiers",
+                    "price": "27",
+                    "priceCurrency": "CAD",
+                    "priceSpecification": {
+                        "@type": "UnitPriceSpecification",
+                        "price": "27",
+                        "priceCurrency": "CAD",
+                        "unitText": "pompier/mois"
+                    },
+                    "url": "https://www.profiremanager.com/fr#pricing"
                 }
-            },
+            ],
             "featureList": [
-                "Gestion du personnel et des gardes",
-                "Module de paie intégré",
-                "Suivi des EPI conforme NFPA 1851",
-                "Gestion des formations conforme NFPA 1500",
-                "Module de prévention incendie",
-                "Interventions et cartes d'appel",
-                "Rapports et statistiques",
-                "Interface bilingue français/anglais"
+                "Tableau de bord temps réel",
+                "Gestion du personnel et des équipes de garde",
+                "Gestion des actifs (véhicules, EPI, équipements)",
+                "Interventions et cartes d'appel (DSI, signature électronique)",
+                "Module Paie intégré",
+                "Horaire / Planning avec rotation automatique",
+                "Remplacements (workflow d'approbation)",
+                "Formations et certifications",
+                "Prévention incendie (optionnel)",
+                "Disponibilités (temps partiels/temporaires)",
+                "Mes EPI (inspection mensuelle)",
+                "Rapports personnalisables (PDF/Excel)",
+                "Applications iOS et Android (Face ID / Touch ID)",
+                "Notifications push en temps réel",
+                "Multi-tenant pour MRC et regroupements"
             ],
             "screenshot": "https://www.profiremanager.com/assets/screenshots/planning.png",
-            "softwareVersion": "2025",
-            "releaseNotes": "Solution cloud accessible 24/7",
+            "softwareVersion": "2.0",
             "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.8",
                 "ratingCount": "25"
+            }
+        }
+        </script>
+        
+        <!-- Product + Offer Schema (pour Rich Results sur la tarification) -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "ProFireManager — Logiciel de gestion pour services d'incendie",
+            "description": "Abonnement SaaS tout-en-un pour services d'incendie : 12 modules intégrés, applications iOS/Android, support local au Québec.",
+            "brand": {
+                "@type": "Brand",
+                "name": "ProFireManager"
+            },
+            "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "CAD",
+                "lowPrice": "12",
+                "highPrice": "27",
+                "offerCount": "3",
+                "availability": "https://schema.org/InStock",
+                "url": "https://www.profiremanager.com/fr#pricing"
             }
         }
         </script>
@@ -95,7 +158,7 @@
             "name": "ProFireManager Inc.",
             "url": "https://www.profiremanager.com",
             "logo": "https://www.profiremanager.com/assets/logos/logo-header.png",
-            "description": "Développeur de logiciels de gestion pour services d'incendie au Canada",
+            "description": "Développeur de logiciels de gestion pour services d'incendie au Québec et au Canada.",
             "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Granby",

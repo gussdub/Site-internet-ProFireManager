@@ -11,6 +11,7 @@ import SupportPage from './pages/SupportPage';
 import DocumentationPage from './pages/DocumentationPage';
 import FAQPage from './pages/FAQPage';
 import TutorialsPage from './pages/TutorialsPage';
+import MigrationPage from './pages/MigrationPage';
 import { Toaster } from './components/ui/sonner';
 
 // Route wrapper to sync URL language with context
@@ -53,6 +54,7 @@ function AppContent() {
           <Route path="/fr/documentation" element={<LanguageRouteWrapper><DocumentationPage /></LanguageRouteWrapper>} />
           <Route path="/fr/faq" element={<LanguageRouteWrapper><FAQPage /></LanguageRouteWrapper>} />
           <Route path="/fr/tutoriels" element={<LanguageRouteWrapper><TutorialsPage /></LanguageRouteWrapper>} />
+          <Route path="/fr/migration-premiere-ligne" element={<LanguageRouteWrapper><MigrationPage /></LanguageRouteWrapper>} />
           
           {/* English routes */}
           <Route path="/en" element={<LanguageRouteWrapper><HomePage /></LanguageRouteWrapper>} />
@@ -62,6 +64,7 @@ function AppContent() {
           <Route path="/en/documentation" element={<LanguageRouteWrapper><DocumentationPage /></LanguageRouteWrapper>} />
           <Route path="/en/faq" element={<LanguageRouteWrapper><FAQPage /></LanguageRouteWrapper>} />
           <Route path="/en/tutorials" element={<LanguageRouteWrapper><TutorialsPage /></LanguageRouteWrapper>} />
+          <Route path="/en/migration-from-premiere-ligne" element={<LanguageRouteWrapper><MigrationPage /></LanguageRouteWrapper>} />
           
           {/* Catch all */}
           <Route path="*" element={<Navigate to="/" replace />} />

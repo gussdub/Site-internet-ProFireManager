@@ -122,4 +122,24 @@
         <priority>0.6</priority>
     </url>
     
+    <!-- Migration depuis Première Ligne - Français -->
+    <url>
+        <loc>https://www.profiremanager.com/fr/migration-premiere-ligne</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/migration-premiere-ligne"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/migration-from-premiere-ligne"/>
+        <lastmod>2026-05-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Migration from Première Ligne - English -->
+    <url>
+        <loc>https://www.profiremanager.com/en/migration-from-premiere-ligne</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/migration-premiere-ligne"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/migration-from-premiere-ligne"/>
+        <lastmod>2026-05-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
 </urlset>

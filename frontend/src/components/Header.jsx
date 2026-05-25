@@ -64,6 +64,13 @@ const Header = () => {
               {t(language, 'nav.pricing')}
             </button>
             <button
+              onClick={() => scrollToSection('migration')}
+              data-testid="nav-migration-btn"
+              className="text-gray-700 hover:text-[#D9072B] transition-colors font-medium"
+            >
+              {t(language, 'nav.migration')}
+            </button>
+            <button
               onClick={() => scrollToSection('contact')}
               className="text-gray-700 hover:text-[#D9072B] transition-colors font-medium"
             >
@@ -107,6 +114,12 @@ const Header = () => {
               className="text-left text-gray-700 hover:text-[#D9072B] transition-colors font-medium"
             >
               {t(language, 'nav.pricing')}
+            </button>
+            <button
+              onClick={() => scrollToSection('migration')}
+              className="text-left text-gray-700 hover:text-[#D9072B] transition-colors font-medium"
+            >
+              {t(language, 'nav.migration')}
             </button>
             <button
               onClick={() => scrollToSection('contact')}

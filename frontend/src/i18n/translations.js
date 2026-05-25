@@ -6,6 +6,7 @@ export const translations = {
       modules: 'Modules',
       benefits: 'Avantages',
       pricing: 'Tarification',
+      migration: 'Migration',
       contact: 'Contact',
       requestDemo: 'Demander une démo'
     },
@@ -119,49 +120,50 @@ export const translations = {
       perFirefighter: '/pompier/mois',
       popular: 'Le plus populaire',
       tiers: [
-        { name: '0 à 30 pompiers', count: 30 },
-        { name: '31 à 50 pompiers', count: 40 },
-        { name: '51+ pompiers', count: 50 }
+        { name: '0 à 30 pompiers', count: 30, setupFee: 1500 },
+        { name: '31 à 50 pompiers', count: 40, setupFee: 2500 },
+        { name: '51+ pompiers', count: 50, setupFee: 3500 }
       ],
       billedAnnually: 'facturé annuellement',
       annualSavings: 'Facturé annuellement - Économie de 10%',
-      startNow: 'Commencer maintenant',
+      startNow: 'Demander une démo',
+      setupFeeLabel: 'Paramétrage initial',
+      setupFeeSuffix: '(unique)',
+      setupFeeCurrency: '$ CAD',
       includedTitle: 'Modules Inclus',
       includedItems: [
-        'Gestion des gardes avec attribution automatique',
-        'Planification intelligente et calendrier',
-        'Gestion complète du personnel',
-        'Module EPI conforme NFPA 1851',
-        'Module Formations conforme NFPA 1500',
-        'Interventions et cartes d\'appel',
-        'Module Paie intégré',
-        'Tableaux de bord et rapports',
+        'Tableau de bord temps réel (KPI, alertes, messages internes)',
+        'Gestion du personnel et des équipes de garde',
+        'Gestion des actifs (véhicules, EPI, équipements)',
+        'Interventions et cartes d\'appel (import SFTP, DSI, signature)',
+        'Module Paie intégré (calcul automatique, exports)',
+        'Horaire / Planning avec rotation automatique',
+        'Remplacements (workflow d\'approbation)',
+        'Formations et certifications',
+        'Disponibilités (temps partiels/temporaires)',
+        'Mes EPI (inspection mensuelle par l\'employé)',
+        'Rapports personnalisables (PDF/Excel)',
         'Multi-tenant et gestion des rôles',
-        'Support par email',
-        'Mises à jour automatiques'
+        'Applications iOS et Android (Face ID / Touch ID)',
+        'Notifications push en temps réel',
+        'Support par email et mises à jour automatiques'
       ],
       optionalTitle: 'Module Optionnel',
-      optionalModule: 'Module Prévention: +3$/pompier/mois',
-      offerTitle: 'Offre de Lancement',
-      offerItems: [
-        '-30% sur les 3 premiers mois',
-        'Formation initiale de 2h OFFERTE (valeur 400$)'
-      ],
-      offerValidity: 'Offre valable pour toute souscription avant le 31 mars 2026',
-      offerBtn: 'Profiter de l\'offre maintenant'
+      optionalModule: 'Module Prévention : +3$/pompier/mois',
+      setupFeeNote: 'Les frais de paramétrage couvrent : la configuration initiale de votre organisation, l\'import de vos employés et équipements, le paramétrage des équipes de garde, la configuration de la paie et des notifications, ainsi que la formation initiale de vos administrateurs. Frais uniques, payables au lancement. Prix en dollars canadiens, taxes en sus.'
     },
 
     // CTA
     cta: {
       title: 'Prêt à Transformer Votre Gestion ?',
-      subtitle: 'Rejoignez les services d\'incendie québécois qui ont déjà optimisé leur gestion avec ProFireManager.',
+      subtitle: 'Rejoignez les services d\'incendie canadiens qui ont déjà optimisé leur gestion avec ProFireManager.',
       benefits: [
         { value: '30 min', label: 'Démonstration gratuite' },
         { value: '1-2 sem', label: 'Configuration rapide' },
         { value: '60 jours', label: 'Garantie satisfait ou remboursé' }
       ],
-      btn: 'Démarrer votre essai gratuit',
-      trust: 'Configuration en 1-2 semaines • Support dédié • Solution québécoise'
+      btn: 'Demander une démo gratuite',
+      trust: 'Configuration en 1-2 semaines • Support dédié • Solution canadienne'
     },
 
     // Contact
@@ -206,6 +208,7 @@ export const translations = {
       technicalSupport: 'Support Technique',
       privacy: 'Politique de confidentialité',
       terms: 'Conditions d\'utilisation',
+      migration: 'Migration depuis Première Ligne',
       rights: 'Tous droits réservés.'
     },
 
@@ -221,15 +224,15 @@ export const translations = {
       ]
     },
 
-    // Modules
+    // Modules (12 modules officiels)
     modules: {
-      badge: '14 Modules Intégrés',
+      badge: '12 Modules Intégrés',
       title: 'Une Solution Complète',
       subtitle: 'Tous les outils nécessaires pour gérer l\'ensemble des opérations de votre service d\'incendie.',
       items: [
         {
           title: 'Tableau de Bord',
-          shortDesc: 'Vue d\'ensemble des activités avec KPI et alertes en temps réel.',
+          shortDesc: 'Vue d\'ensemble en temps réel : KPI, alertes, calendrier, messages internes.',
           access: 'Tous les utilisateurs',
           features: [
             'Indicateurs clés de performance (KPI)',
@@ -241,7 +244,7 @@ export const translations = {
         },
         {
           title: 'Gestion du Personnel',
-          shortDesc: 'Dossiers employés complets, grades, équipes et compétences.',
+          shortDesc: 'Dossiers employés, grades, équipes de garde avec rotation automatique, compétences.',
           access: 'Administrateurs, Superviseurs',
           features: [
             'Dossiers employés complets',
@@ -253,19 +256,19 @@ export const translations = {
         },
         {
           title: 'Gestion des Actifs',
-          shortDesc: 'Véhicules, EPI, équipements médicaux et matériel d\'intervention.',
+          shortDesc: 'Véhicules, EPI, équipements médicaux et de communication. Inspections, QR codes.',
           access: 'Tous les utilisateurs',
           features: [
             'Véhicules et équipements de protection',
-            'Suivi des inspections et maintenances',
-            'Alertes d\'expiration automatiques',
+            'Équipements médicaux et de communication',
+            'Inspections planifiées et alertes d\'expiration',
             'Codes-barres et QR codes',
             'Rapports d\'état détaillés'
           ]
         },
         {
-          title: 'Interventions',
-          shortDesc: 'Cartes d\'appel, rapports d\'intervention et DSI.',
+          title: 'Interventions (cartes d\'appel)',
+          shortDesc: 'Import SFTP automatique, rapport complet, DSI, signature électronique, fausses alarmes.',
           access: 'Tous les utilisateurs',
           features: [
             'Import automatique via SFTP (XML)',
@@ -276,8 +279,8 @@ export const translations = {
           ]
         },
         {
-          title: 'Module Paie',
-          shortDesc: 'Calcul automatique des heures et gestion des taux horaires.',
+          title: 'Paie',
+          shortDesc: 'Calcul automatique des heures, taux multiples (régulier, supplémentaire, primes), exports.',
           access: 'Administrateurs, Superviseurs',
           features: [
             'Calcul automatique des heures',
@@ -289,31 +292,31 @@ export const translations = {
         },
         {
           title: 'Horaire / Planning',
-          shortDesc: 'Calendrier interactif et rotation automatique des équipes.',
+          shortDesc: 'Calendrier multi-vues, rotation automatique (24h, 48h, hebdo, personnalisé), conflits.',
           access: 'Tous les utilisateurs',
           features: [
             'Calendrier multi-vues (jour, semaine, mois)',
             'Rotation automatique des équipes',
-            'Rotations 24h, 48h, hebdomadaire',
+            'Rotations 24h, 48h, hebdomadaire, personnalisé',
             'Détection des conflits',
             'Export et impression'
           ]
         },
         {
           title: 'Remplacements',
-          shortDesc: 'Demandes en ligne et workflow d\'approbation automatisé.',
+          shortDesc: 'Demandes en ligne, workflow d\'approbation, offres aux remplaçants, gestion des congés.',
           access: 'Tous les utilisateurs',
           features: [
             'Demandes de remplacement en ligne',
             'Workflow d\'approbation automatisé',
-            'Notifications automatiques',
+            'Offres aux remplaçants par notification',
             'Gestion des congés personnalisable',
             'Délégation automatique des responsabilités'
           ]
         },
         {
           title: 'Formations',
-          shortDesc: 'Catalogue, certifications et alertes de renouvellement.',
+          shortDesc: 'Catalogue, certifications, alertes d\'expiration, planification, attestations.',
           access: 'Tous les utilisateurs',
           features: [
             'Catalogue des formations',
@@ -324,32 +327,32 @@ export const translations = {
           ]
         },
         {
-          title: 'Prévention',
-          shortDesc: 'Gestion des bâtiments, visites d\'inspection et non-conformités.',
+          title: 'Prévention (optionnel)',
+          shortDesc: 'Bâtiments à risque, visites d\'inspection, non-conformités, géolocalisation.',
           access: 'Préventionnistes',
           features: [
             'Registre des bâtiments à risque',
             'Visites d\'inspection planifiées',
             'Suivi des non-conformités',
-            'Workflow de résolution',
+            'Géolocalisation et avis officiels',
             'Rapports par secteur'
           ]
         },
         {
           title: 'Disponibilités',
-          shortDesc: 'Déclaration hebdomadaire pour temps partiels et temporaires.',
+          shortDesc: 'Saisie hebdomadaire pour temps partiels et temporaires, validation, planning.',
           access: 'Temps partiels, Temporaires',
           features: [
-            'Déclaration hebdomadaire',
-            'Calendrier interactif de saisie',
+            'Saisie hebdomadaire des disponibilités',
+            'Calendrier interactif',
             'Validation par superviseurs',
-            'Intégration avec le planning',
+            'Intégration au planning',
             'Historique des disponibilités'
           ]
         },
         {
           title: 'Mes EPI',
-          shortDesc: 'Consultation et inspection mensuelle des équipements personnels.',
+          shortDesc: 'Inspection mensuelle obligatoire par l\'employé, signalement, rappels automatiques.',
           access: 'Tous les employés',
           features: [
             'Liste des EPI assignés',
@@ -360,61 +363,127 @@ export const translations = {
           ]
         },
         {
-          title: 'Mon Profil',
-          shortDesc: 'Gestion des informations personnelles et préférences.',
-          access: 'Tous les utilisateurs',
-          features: [
-            'Consultation des informations',
-            'Modification des coordonnées',
-            'Changement de mot de passe',
-            'Préférences de notification',
-            'Historique des connexions'
-          ]
-        },
-        {
           title: 'Rapports',
-          shortDesc: 'Rapports d\'heures, statistiques et exports personnalisables.',
+          shortDesc: 'Heures, interventions, conformité. Exports PDF/Excel personnalisables.',
           access: 'Administrateurs',
           features: [
             'Rapports d\'heures par période',
             'Statistiques d\'interventions',
             'Rapports de conformité',
-            'Exports PDF et Excel',
+            'Exports PDF et Excel personnalisables',
             'Graphiques et visualisations'
-          ]
-        },
-        {
-          title: 'Paramètres',
-          shortDesc: 'Configuration générale et gestion des utilisateurs.',
-          access: 'Administrateurs',
-          features: [
-            'Configuration de l\'organisation',
-            'Paramètres par module',
-            'Gestion des utilisateurs',
-            'Attribution des rôles',
-            'Templates et personnalisation'
           ]
         }
       ],
       highlights: [
-        { value: '14', label: 'Modules intégrés' },
+        { value: '12', label: 'Modules intégrés' },
         { value: '100%', label: 'Cloud sécurisé' },
         { value: '24/7', label: 'Accessible partout' }
       ]
     },
 
-    // Points Forts
+    // Points Forts (8 éléments officiels)
     strengths: {
       title: 'Points Forts',
       subtitle: 'Ce qui distingue ProFireManager des autres solutions.',
       items: [
         { icon: 'CheckCircle', title: 'Solution tout-en-un', desc: 'Un seul outil pour toutes les opérations' },
         { icon: 'Building', title: 'Multi-tenant', desc: 'Idéal pour les regroupements et MRC' },
-        { icon: 'Zap', title: 'Automatisation', desc: 'Calculs de paie, rotations, alertes' },
-        { icon: 'Shield', title: 'Conformité', desc: 'DSI, inspections, certifications' },
-        { icon: 'Smartphone', title: 'Mobilité', desc: 'Accessible partout, tous les appareils' },
-        { icon: 'MapPin', title: 'Support local', desc: 'Développé au Canada, en français' }
+        { icon: 'Smartphone', title: 'Multi-plateforme', desc: 'Web, iOS, Android (PWA + applications natives)' },
+        { icon: 'Fingerprint', title: 'Authentification biométrique', desc: 'Face ID / Touch ID sur mobile' },
+        { icon: 'Bell', title: 'Notifications push', desc: 'Alertes en temps réel sur tous les appareils' },
+        { icon: 'MapPin', title: 'Support local', desc: 'Développé au Québec, en français' },
+        { icon: 'Shield', title: 'Conformité DSI', desc: 'Déclaration de Sinistre Incendie automatisée' },
+        { icon: 'Layers', title: 'Évolutif', desc: 'Modules activables selon vos besoins' }
       ]
+    },
+
+    // Migration depuis Première Ligne
+    migration: {
+      badge: 'Migration sans douleur',
+      title: 'Vous utilisez Première Ligne ? Migrez sans rien perdre.',
+      subtitle: 'Vous utilisez actuellement le logiciel Première Ligne ? Aucun problème — ProFireManager est 100 % compatible.',
+      intro: 'Nous récupérons l\'intégralité de vos données :',
+      items: [
+        'Dossiers employés et historiques',
+        'Équipements et inspections passées',
+        'Cartes d\'appel et rapports d\'intervention archivés',
+        'Bâtiments en prévention et visites antérieures',
+        'Formations et certifications',
+        'Historique de paie'
+      ],
+      feeLabel: 'Service de transfert complet',
+      feeValue: '5 000 $ CAD',
+      feeDetail: 'Forfait fixe — taxes en sus, paiement unique',
+      promise1: 'Votre historique reste intact. Aucune donnée perdue.',
+      promise2: 'Notre équipe s\'occupe de tout. Vous repartez là où vous étiez.',
+      cta: 'Demander une démo de migration',
+      learnMore: 'En savoir plus sur la migration',
+      disclaimer: 'Première Ligne est une marque tierce mentionnée à titre informatif uniquement.',
+      badge100: '100 % des données transférées'
+    },
+
+    // Migration Page (page dédiée)
+    migrationPage: {
+      hero: {
+        badge: 'Migration Première Ligne → ProFireManager',
+        title: 'Migrez de Première Ligne vers ProFireManager sans rien perdre',
+        subtitle: 'ProFireManager récupère 100 % de vos données : employés, équipements, interventions, prévention, paie. Forfait fixe 5 000 $ CAD.',
+        cta: 'Demander une démo de migration'
+      },
+      whyTitle: 'Pourquoi migrer vers ProFireManager ?',
+      whyItems: [
+        { title: 'Solution moderne', desc: 'Plateforme web responsive + applications natives iOS et Android avec authentification biométrique (Face ID / Touch ID).' },
+        { title: 'Tout-en-un', desc: 'Personnel, interventions, EPI, paie, formations, prévention, planning — un seul outil pour toutes vos opérations.' },
+        { title: 'Conformité DSI', desc: 'Déclaration de Sinistre Incendie automatisée, signature électronique, facturation des fausses alarmes.' },
+        { title: 'Notifications push', desc: 'Alertes temps réel sur mobile pour interventions, remplacements et expirations d\'EPI.' },
+        { title: 'Support local', desc: 'Développé au Québec, en français, par et pour les services incendie québécois.' },
+        { title: 'Multi-tenant', desc: 'Idéal pour les regroupements de casernes et les MRC.' }
+      ],
+      processTitle: 'Notre processus de migration en 4 étapes',
+      processSteps: [
+        { step: '1', title: 'Audit de vos données', desc: 'Analyse complète de votre base Première Ligne et de votre historique.' },
+        { step: '2', title: 'Plan de transfert', desc: 'Plan personnalisé approuvé par votre direction avant la migration.' },
+        { step: '3', title: 'Migration sécurisée', desc: 'Transfert chiffré de l\'ensemble de vos données vers ProFireManager.' },
+        { step: '4', title: 'Validation et formation', desc: 'Vérification des données migrées et formation initiale de vos administrateurs.' }
+      ],
+      includedTitle: 'Ce qui est inclus dans le forfait de 5 000 $ CAD',
+      includedItems: [
+        'Récupération de 100 % de vos données historiques',
+        'Mapping personnalisé Première Ligne → ProFireManager',
+        'Transfert chiffré et sécurisé',
+        'Validation et rapprochement des données',
+        'Formation initiale de vos administrateurs (2h)',
+        'Support dédié pendant toute la migration',
+        'Rapport de migration détaillé',
+        'Garantie d\'intégrité des données'
+      ],
+      faqTitle: 'Questions fréquentes sur la migration',
+      faqItems: [
+        {
+          q: 'Combien de temps prend une migration depuis Première Ligne ?',
+          a: 'La majorité des migrations sont complétées en 2 à 4 semaines, selon le volume de données. Notre équipe vous fournit un calendrier précis dès l\'audit initial.'
+        },
+        {
+          q: 'Mes données seront-elles inaccessibles pendant la migration ?',
+          a: 'Non. Vous continuez à utiliser Première Ligne pendant toute la durée de la migration. Le basculement vers ProFireManager se fait à une date convenue.'
+        },
+        {
+          q: 'Que se passe-t-il si certaines données ne peuvent pas être migrées ?',
+          a: 'Notre processus prévoit un mapping exhaustif. Dans le cas rare où certains champs personnalisés ne peuvent être transférés automatiquement, nous proposons une solution manuelle ou un archivage sécurisé.'
+        },
+        {
+          q: 'Le forfait de 5 000 $ CAD est-il vraiment fixe ?',
+          a: 'Oui. C\'est un forfait unique, taxes en sus, valable quel que soit le volume de données. Aucun frais caché.'
+        },
+        {
+          q: 'Puis-je conserver mon historique de paie ?',
+          a: 'Oui. L\'historique de paie fait partie intégrante du forfait de migration.'
+        }
+      ],
+      ctaTitle: 'Prêt à migrer vers ProFireManager ?',
+      ctaSubtitle: 'Discutons de votre projet et obtenez un calendrier précis.',
+      ctaButton: 'Demander une démo de migration'
     },
 
     // Integrations
@@ -436,6 +505,7 @@ export const translations = {
       modules: 'Modules',
       benefits: 'Benefits',
       pricing: 'Pricing',
+      migration: 'Migration',
       contact: 'Contact',
       requestDemo: 'Request a Demo'
     },
@@ -549,49 +619,50 @@ export const translations = {
       perFirefighter: '/firefighter/month',
       popular: 'Most Popular',
       tiers: [
-        { name: '0 to 30 firefighters', count: 30 },
-        { name: '31 to 50 firefighters', count: 40 },
-        { name: '51+ firefighters', count: 50 }
+        { name: '0 to 30 firefighters', count: 30, setupFee: 1500 },
+        { name: '31 to 50 firefighters', count: 40, setupFee: 2500 },
+        { name: '51+ firefighters', count: 50, setupFee: 3500 }
       ],
       billedAnnually: 'billed annually',
       annualSavings: 'Billed annually - 10% savings',
-      startNow: 'Start Now',
+      startNow: 'Request a Demo',
+      setupFeeLabel: 'Initial setup',
+      setupFeeSuffix: '(one-time)',
+      setupFeeCurrency: 'CAD',
       includedTitle: 'Included Modules',
       includedItems: [
-        'Shift management with automatic assignment',
-        'Smart planning and calendar',
-        'Complete personnel management',
-        'PPE Module - NFPA 1851 compliant',
-        'Training Module - NFPA 1500 compliant',
-        'Interventions and call cards',
-        'Integrated Payroll module',
-        'Dashboards and reports',
+        'Real-time dashboard (KPIs, alerts, internal messages)',
+        'Personnel and guard team management',
+        'Asset management (vehicles, PPE, equipment)',
+        'Interventions and call cards (SFTP import, DSI, signature)',
+        'Integrated Payroll module (automatic calculation, exports)',
+        'Schedule / Planning with automatic rotation',
+        'Replacements (approval workflow)',
+        'Training and certifications',
+        'Availability (part-time/temporary staff)',
+        'My PPE (mandatory monthly inspection)',
+        'Customizable reports (PDF/Excel)',
         'Multi-tenant and role management',
-        'Email support',
-        'Automatic updates'
+        'iOS and Android apps (Face ID / Touch ID)',
+        'Real-time push notifications',
+        'Email support and automatic updates'
       ],
       optionalTitle: 'Optional Module',
       optionalModule: 'Prevention Module: +$3/firefighter/month',
-      offerTitle: 'Launch Offer',
-      offerItems: [
-        '-30% on first 3 months',
-        '2h initial training INCLUDED ($400 value)'
-      ],
-      offerValidity: 'Offer valid for any subscription before March 31, 2026',
-      offerBtn: 'Take Advantage of the Offer'
+      setupFeeNote: 'Setup fees cover: initial configuration of your organization, import of your employees and equipment, configuration of guard teams, payroll and notification setup, and initial training of your administrators. One-time fee, payable at launch. Prices in Canadian dollars, taxes extra.'
     },
 
     // CTA
     cta: {
       title: 'Ready to Transform Your Management?',
-      subtitle: 'Join Quebec fire departments that have already optimized their management with ProFireManager.',
+      subtitle: 'Join Canadian fire departments that have already optimized their management with ProFireManager.',
       benefits: [
         { value: '30 min', label: 'Free demo' },
         { value: '1-2 wks', label: 'Quick setup' },
         { value: '60 days', label: 'Money-back guarantee' }
       ],
-      btn: 'Start Your Free Trial',
-      trust: 'Setup in 1-2 weeks • Dedicated support • Quebec solution'
+      btn: 'Request a Free Demo',
+      trust: 'Setup in 1-2 weeks • Dedicated support • Canadian solution'
     },
 
     // Contact
@@ -636,6 +707,7 @@ export const translations = {
       technicalSupport: 'Technical Support',
       privacy: 'Privacy Policy',
       terms: 'Terms of Service',
+      migration: 'Migration from Première Ligne',
       rights: 'All rights reserved.'
     },
 
@@ -651,15 +723,15 @@ export const translations = {
       ]
     },
 
-    // Modules
+    // Modules (12 official modules)
     modules: {
-      badge: '14 Integrated Modules',
+      badge: '12 Integrated Modules',
       title: 'A Complete Solution',
       subtitle: 'All the tools you need to manage your entire fire department operations.',
       items: [
         {
           title: 'Dashboard',
-          shortDesc: 'Overview of activities with KPIs and real-time alerts.',
+          shortDesc: 'Real-time overview: KPIs, alerts, calendar, internal messages.',
           access: 'All users',
           features: [
             'Key performance indicators (KPIs)',
@@ -671,7 +743,7 @@ export const translations = {
         },
         {
           title: 'Personnel Management',
-          shortDesc: 'Complete employee files, ranks, teams and skills.',
+          shortDesc: 'Employee files, ranks, guard teams with auto-rotation, skills.',
           access: 'Administrators, Supervisors',
           features: [
             'Complete employee files',
@@ -683,19 +755,19 @@ export const translations = {
         },
         {
           title: 'Asset Management',
-          shortDesc: 'Vehicles, PPE, medical equipment and intervention gear.',
+          shortDesc: 'Vehicles, PPE, medical and communication equipment. Inspections, QR codes.',
           access: 'All users',
           features: [
             'Vehicles and protective equipment',
-            'Inspection and maintenance tracking',
-            'Automatic expiration alerts',
+            'Medical and communication equipment',
+            'Scheduled inspections and expiration alerts',
             'Barcodes and QR codes',
             'Detailed status reports'
           ]
         },
         {
-          title: 'Interventions',
-          shortDesc: 'Call cards, intervention reports and fire declarations.',
+          title: 'Interventions (call cards)',
+          shortDesc: 'Auto SFTP import, full report, DSI, electronic signature, false alarms billing.',
           access: 'All users',
           features: [
             'Automatic import via SFTP (XML)',
@@ -706,8 +778,8 @@ export const translations = {
           ]
         },
         {
-          title: 'Payroll Module',
-          shortDesc: 'Automatic hour calculation and hourly rate management.',
+          title: 'Payroll',
+          shortDesc: 'Automatic hour calculation, multiple rates (regular, overtime, bonuses), exports.',
           access: 'Administrators, Supervisors',
           features: [
             'Automatic hour calculation',
@@ -719,31 +791,31 @@ export const translations = {
         },
         {
           title: 'Schedule / Planning',
-          shortDesc: 'Interactive calendar and automatic team rotation.',
+          shortDesc: 'Multi-view calendar, auto rotation (24h, 48h, weekly, custom), conflict detection.',
           access: 'All users',
           features: [
             'Multi-view calendar (day, week, month)',
             'Automatic team rotation',
-            '24h, 48h, weekly rotations',
+            '24h, 48h, weekly, custom rotations',
             'Conflict detection',
             'Export and print'
           ]
         },
         {
           title: 'Replacements',
-          shortDesc: 'Online requests and automated approval workflow.',
+          shortDesc: 'Online requests, approval workflow, offers to replacements, leave management.',
           access: 'All users',
           features: [
             'Online replacement requests',
             'Automated approval workflow',
-            'Automatic notifications',
+            'Notifications to replacements',
             'Customizable leave management',
             'Automatic responsibility delegation'
           ]
         },
         {
           title: 'Training',
-          shortDesc: 'Catalog, certifications and renewal alerts.',
+          shortDesc: 'Catalog, certifications, expiration alerts, session planning, certificates.',
           access: 'All users',
           features: [
             'Training catalog',
@@ -754,24 +826,24 @@ export const translations = {
           ]
         },
         {
-          title: 'Prevention',
-          shortDesc: 'Building management, inspection visits and non-conformities.',
+          title: 'Prevention (optional)',
+          shortDesc: 'At-risk buildings, inspection visits, non-conformities, geolocation.',
           access: 'Fire prevention officers',
           features: [
             'At-risk building registry',
             'Scheduled inspection visits',
             'Non-conformity tracking',
-            'Resolution workflow',
+            'Geolocation and official notices',
             'Reports by sector'
           ]
         },
         {
           title: 'Availability',
-          shortDesc: 'Weekly declaration for part-time and temporary staff.',
+          shortDesc: 'Weekly entry for part-time and temporary staff, validation, planning.',
           access: 'Part-time, Temporary',
           features: [
-            'Weekly declaration',
-            'Interactive entry calendar',
+            'Weekly availability entry',
+            'Interactive calendar',
             'Supervisor validation',
             'Planning integration',
             'Availability history'
@@ -779,7 +851,7 @@ export const translations = {
         },
         {
           title: 'My PPE',
-          shortDesc: 'View and monthly inspection of personal equipment.',
+          shortDesc: 'Mandatory monthly self-inspection by employee, reporting, automatic reminders.',
           access: 'All employees',
           features: [
             'List of assigned PPE',
@@ -790,61 +862,127 @@ export const translations = {
           ]
         },
         {
-          title: 'My Profile',
-          shortDesc: 'Personal information and preferences management.',
-          access: 'All users',
-          features: [
-            'Information viewing',
-            'Contact modification',
-            'Password change',
-            'Notification preferences',
-            'Login history'
-          ]
-        },
-        {
           title: 'Reports',
-          shortDesc: 'Hour reports, statistics and customizable exports.',
+          shortDesc: 'Hours, interventions, compliance. Customizable PDF/Excel exports.',
           access: 'Administrators',
           features: [
             'Hour reports by period',
             'Intervention statistics',
             'Compliance reports',
-            'PDF and Excel exports',
+            'Customizable PDF and Excel exports',
             'Charts and visualizations'
-          ]
-        },
-        {
-          title: 'Settings',
-          shortDesc: 'General configuration and user management.',
-          access: 'Administrators',
-          features: [
-            'Organization configuration',
-            'Module settings',
-            'User management',
-            'Role assignment',
-            'Templates and customization'
           ]
         }
       ],
       highlights: [
-        { value: '14', label: 'Integrated modules' },
+        { value: '12', label: 'Integrated modules' },
         { value: '100%', label: 'Secure cloud' },
         { value: '24/7', label: 'Accessible anywhere' }
       ]
     },
 
-    // Strengths
+    // Strengths (8 official items)
     strengths: {
       title: 'Key Strengths',
       subtitle: 'What sets ProFireManager apart from other solutions.',
       items: [
         { icon: 'CheckCircle', title: 'All-in-one solution', desc: 'One tool for all operations' },
         { icon: 'Building', title: 'Multi-tenant', desc: 'Ideal for groups and regional municipalities' },
-        { icon: 'Zap', title: 'Automation', desc: 'Payroll calculations, rotations, alerts' },
-        { icon: 'Shield', title: 'Compliance', desc: 'DSI, inspections, certifications' },
-        { icon: 'Smartphone', title: 'Mobility', desc: 'Accessible anywhere, all devices' },
-        { icon: 'MapPin', title: 'Local support', desc: 'Developed in Canada, in French' }
+        { icon: 'Smartphone', title: 'Multi-platform', desc: 'Web, iOS, Android (PWA + native apps)' },
+        { icon: 'Fingerprint', title: 'Biometric auth', desc: 'Face ID / Touch ID on mobile' },
+        { icon: 'Bell', title: 'Push notifications', desc: 'Real-time alerts on all devices' },
+        { icon: 'MapPin', title: 'Local support', desc: 'Developed in Quebec, in French' },
+        { icon: 'Shield', title: 'DSI compliance', desc: 'Automated Fire Incident Declaration' },
+        { icon: 'Layers', title: 'Scalable', desc: 'Activate modules based on your needs' }
       ]
+    },
+
+    // Migration from Première Ligne
+    migration: {
+      badge: 'Painless migration',
+      title: 'Using Première Ligne? Migrate without losing anything.',
+      subtitle: 'Currently using Première Ligne? No problem — ProFireManager is 100% compatible.',
+      intro: 'We recover all your data:',
+      items: [
+        'Employee files and histories',
+        'Equipment and past inspections',
+        'Call cards and archived intervention reports',
+        'Prevention buildings and previous visits',
+        'Training and certifications',
+        'Payroll history'
+      ],
+      feeLabel: 'Complete transfer service',
+      feeValue: '$5,000 CAD',
+      feeDetail: 'Flat fee — taxes extra, one-time payment',
+      promise1: 'Your history stays intact. No data lost.',
+      promise2: 'Our team handles everything. You pick up where you left off.',
+      cta: 'Request a migration demo',
+      learnMore: 'Learn more about migration',
+      disclaimer: 'Première Ligne is a third-party brand mentioned for informational purposes only.',
+      badge100: '100% of data transferred'
+    },
+
+    // Migration Page (dedicated page)
+    migrationPage: {
+      hero: {
+        badge: 'Première Ligne → ProFireManager Migration',
+        title: 'Migrate from Première Ligne to ProFireManager without losing anything',
+        subtitle: 'ProFireManager recovers 100% of your data: employees, equipment, interventions, prevention, payroll. Flat fee of $5,000 CAD.',
+        cta: 'Request a migration demo'
+      },
+      whyTitle: 'Why migrate to ProFireManager?',
+      whyItems: [
+        { title: 'Modern solution', desc: 'Responsive web platform + native iOS and Android apps with biometric authentication (Face ID / Touch ID).' },
+        { title: 'All-in-one', desc: 'Personnel, interventions, PPE, payroll, training, prevention, planning — one tool for all your operations.' },
+        { title: 'DSI compliance', desc: 'Automated Fire Incident Declaration, electronic signature, false alarm billing.' },
+        { title: 'Push notifications', desc: 'Real-time mobile alerts for interventions, replacements and PPE expirations.' },
+        { title: 'Local support', desc: 'Developed in Quebec, in French, by and for Quebec fire departments.' },
+        { title: 'Multi-tenant', desc: 'Ideal for fire station groups and regional municipalities (MRCs).' }
+      ],
+      processTitle: 'Our 4-step migration process',
+      processSteps: [
+        { step: '1', title: 'Data audit', desc: 'Comprehensive analysis of your Première Ligne database and history.' },
+        { step: '2', title: 'Transfer plan', desc: 'Custom plan approved by your management before migration.' },
+        { step: '3', title: 'Secure migration', desc: 'Encrypted transfer of all your data to ProFireManager.' },
+        { step: '4', title: 'Validation & training', desc: 'Migrated data verification and initial admin training.' }
+      ],
+      includedTitle: 'What\'s included in the $5,000 CAD flat fee',
+      includedItems: [
+        'Recovery of 100% of your historical data',
+        'Custom mapping Première Ligne → ProFireManager',
+        'Encrypted and secure transfer',
+        'Data validation and reconciliation',
+        'Initial admin training (2h)',
+        'Dedicated support throughout migration',
+        'Detailed migration report',
+        'Data integrity guarantee'
+      ],
+      faqTitle: 'Frequently asked questions about migration',
+      faqItems: [
+        {
+          q: 'How long does a migration from Première Ligne take?',
+          a: 'Most migrations complete in 2 to 4 weeks, depending on data volume. Our team provides a precise schedule after the initial audit.'
+        },
+        {
+          q: 'Will my data be inaccessible during migration?',
+          a: 'No. You continue using Première Ligne throughout the migration. The switch to ProFireManager happens on an agreed date.'
+        },
+        {
+          q: 'What if some data cannot be migrated?',
+          a: 'Our process includes comprehensive mapping. In the rare case where certain custom fields cannot be transferred automatically, we offer a manual solution or secure archiving.'
+        },
+        {
+          q: 'Is the $5,000 CAD fee really flat?',
+          a: 'Yes. It is a one-time flat fee, taxes extra, regardless of data volume. No hidden charges.'
+        },
+        {
+          q: 'Can I keep my payroll history?',
+          a: 'Yes. Payroll history is fully included in the migration package.'
+        }
+      ],
+      ctaTitle: 'Ready to migrate to ProFireManager?',
+      ctaSubtitle: 'Let\'s discuss your project and get a precise timeline.',
+      ctaButton: 'Request a migration demo'
     },
 
     // Integrations

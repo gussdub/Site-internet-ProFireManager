@@ -40,9 +40,10 @@ const Pricing = () => {
           </p>
           
           {/* Billing Toggle */}
-          <div className="inline-flex items-center bg-gray-100 rounded-lg p-1 mb-8">
+          <div className="inline-flex items-center bg-gray-100 rounded-lg p-1 mb-8" data-testid="billing-toggle">
             <button
               onClick={() => setBillingCycle('monthly')}
+              data-testid="billing-monthly-btn"
               className={`px-6 py-2 rounded-md font-medium transition-all ${
                 billingCycle === 'monthly'
                   ? 'bg-white text-gray-900 shadow-sm'
@@ -53,6 +54,7 @@ const Pricing = () => {
             </button>
             <button
               onClick={() => setBillingCycle('annual')}
+              data-testid="billing-annual-btn"
               className={`px-6 py-2 rounded-md font-medium transition-all relative ${
                 billingCycle === 'annual'
                   ? 'bg-white text-gray-900 shadow-sm'
@@ -68,10 +70,11 @@ const Pricing = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
           {pricingData.tiers.map((tier, index) => (
             <Card
               key={index}
+              data-testid={`pricing-tier-${index}`}
               className={`relative border-2 ${
                 index === 1
                   ? 'border-[#D9072B] shadow-xl scale-105'
@@ -103,8 +106,21 @@ const Pricing = () => {
                     </p>
                   )}
                 </div>
+
+                {/* Setup Fee */}
+                <div className="border-t border-gray-200 pt-4 mb-6" data-testid={`setup-fee-${index}`}>
+                  <p className="text-xs uppercase tracking-wide text-gray-500 mb-1 font-semibold">
+                    + {pricingData.setupFeeLabel}
+                  </p>
+                  <p className="text-2xl font-bold text-gray-900">
+                    {tier.setupFee.toLocaleString(language === 'fr' ? 'fr-CA' : 'en-CA')} {pricingData.setupFeeCurrency}
+                  </p>
+                  <p className="text-xs text-gray-500 mt-1">{pricingData.setupFeeSuffix}</p>
+                </div>
+
                 <Button
                   onClick={scrollToContact}
+                  data-testid={`pricing-cta-${index}`}
                   className={`w-full ${
                     index === 1
                       ? 'bg-[#D9072B] hover:bg-[#B00623] text-white'
@@ -116,6 +132,13 @@ const Pricing = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Setup Fee Note */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <p className="text-sm text-gray-600 italic text-center bg-gray-50 rounded-lg p-4 border border-gray-200" data-testid="setup-fee-note">
+            {pricingData.setupFeeNote}
+          </p>
         </div>
 
         {/* Included Features */}
@@ -146,33 +169,6 @@ const Pricing = () => {
                 </div>
                 <span className="text-gray-700 font-medium">{pricingData.optionalModule}</span>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Special Offer */}
-        <div className="mt-16 max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl p-8 border-2 border-[#D9072B]">
-            <div className="text-center">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                {pricingData.offerTitle}
-              </h3>
-              <div className="space-y-3 mb-6">
-                {pricingData.offerItems.map((item, index) => (
-                  <p key={index} className="text-xl text-gray-700">
-                    <strong>{item}</strong>
-                  </p>
-                ))}
-              </div>
-              <p className="text-sm text-gray-600 mb-6">
-                {pricingData.offerValidity}
-              </p>
-              <Button
-                onClick={scrollToContact}
-                className="bg-[#D9072B] hover:bg-[#B00623] text-white px-8 py-6 text-lg font-semibold"
-              >
-                {pricingData.offerBtn}
-              </Button>
             </div>
           </div>
         </div>

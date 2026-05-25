@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Building, Zap, Shield, Smartphone, MapPin } from 'lucide-react';
+import { CheckCircle, Building, Zap, Shield, Smartphone, MapPin, Fingerprint, Bell, Layers } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../i18n/translations';
 
@@ -13,7 +13,10 @@ const Strengths = () => {
     Zap,
     Shield,
     Smartphone,
-    MapPin
+    MapPin,
+    Fingerprint,
+    Bell,
+    Layers
   };
 
   return (

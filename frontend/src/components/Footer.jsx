@@ -23,7 +23,8 @@ const Footer = () => {
       tutorials: 'tutoriels',
       support: 'support-technique',
       privacy: 'politique-de-confidentialite',
-      terms: 'conditions-utilisation'
+      terms: 'conditions-utilisation',
+      migration: 'migration-premiere-ligne'
     },
     en: {
       documentation: 'documentation',
@@ -31,7 +32,8 @@ const Footer = () => {
       tutorials: 'tutorials',
       support: 'technical-support',
       privacy: 'privacy-policy',
-      terms: 'terms-of-service'
+      terms: 'terms-of-service',
+      migration: 'migration-from-premiere-ligne'
     }
   };
 
@@ -89,6 +91,11 @@ const Footer = () => {
                 <li>
                   <button onClick={() => scrollToSection('pricing')} className="text-gray-400 text-sm hover:text-white transition-colors">
                     {t(language, 'nav.pricing')}
+                  </button>
+                </li>
+                <li>
+                  <button onClick={() => goToPage('migration')} className="text-gray-400 text-sm hover:text-white transition-colors" data-testid="footer-migration-link">
+                    {t(language, 'footer.migration')}
                   </button>
                 </li>
                 <li>
