@@ -27,7 +27,10 @@ const Contact = () => {
     setIsLoading(true);
     
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/contact`, {
+      // URL relative par défaut (fonction serverless Vercel sur le même domaine).
+      // Reste rétrocompatible si REACT_APP_BACKEND_URL est défini (ancien backend Emergent).
+      const backendUrl = process.env.REACT_APP_BACKEND_URL || '';
+      const response = await fetch(`${backendUrl}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
