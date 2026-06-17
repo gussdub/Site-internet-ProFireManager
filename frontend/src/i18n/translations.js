@@ -113,11 +113,11 @@ export const translations = {
     // Pricing
     pricing: {
       title: 'Tarification Simple et Transparente',
-      subtitle: 'Payez uniquement pour le nombre de pompiers actifs.',
+      subtitle: 'Payez uniquement pour le nombre de personnes actives.',
       monthly: 'Mensuel',
       annual: 'Annuel',
       discount: '-10%',
-      perFirefighter: '/pompier/mois',
+      perFirefighter: '/personne/mois',
       popular: 'Le plus populaire',
       tiers: [
         { name: '0 à 30 pompiers', count: 30, setupFee: 1500 },
@@ -149,7 +149,7 @@ export const translations = {
         'Support par email et mises à jour automatiques'
       ],
       optionalTitle: 'Module Optionnel',
-      optionalModule: 'Module Prévention : +3$/pompier/mois',
+      optionalModule: 'Module Prévention : +3$/personne/mois',
       setupFeeNote: 'Les frais de paramétrage couvrent : la configuration initiale de votre organisation, l\'import de vos employés et équipements, le paramétrage des équipes de garde, la configuration de la paie et des notifications, ainsi que la formation initiale de vos administrateurs. Frais uniques, payables au lancement. Prix en dollars canadiens, taxes en sus.'
     },
 
@@ -614,11 +614,11 @@ export const translations = {
     // Pricing
     pricing: {
       title: 'Simple and Transparent Pricing',
-      subtitle: 'Pay only for the number of active firefighters.',
+      subtitle: 'Pay only for the number of active people.',
       monthly: 'Monthly',
       annual: 'Annual',
       discount: '-10%',
-      perFirefighter: '/firefighter/month',
+      perFirefighter: '/person/month',
       popular: 'Most Popular',
       tiers: [
         { name: '0 to 30 firefighters', count: 30, setupFee: 1500 },
@@ -650,7 +650,7 @@ export const translations = {
         'Email support and automatic updates'
       ],
       optionalTitle: 'Optional Module',
-      optionalModule: 'Prevention Module: +$3/firefighter/month',
+      optionalModule: 'Prevention Module: +$3/person/month',
       setupFeeNote: 'Setup fees cover: initial configuration of your organization, import of your employees and equipment, configuration of guard teams, payroll and notification setup, and initial training of your administrators. One-time fee, payable at launch. Prices in Canadian dollars, taxes extra.'
     },
 

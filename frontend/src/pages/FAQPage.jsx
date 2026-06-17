@@ -24,7 +24,7 @@ const FAQPage = () => {
       {
         category: 'Tarification',
         questions: [
-          { q: 'Comment fonctionne la tarification ?', a: 'Tarification simple par pompier actif : 12$/mois (0-30), 20$/mois (31-50), 27$/mois (51+). Rabais de 10% en annuel.' },
+          { q: 'Comment fonctionne la tarification ?', a: 'Tarification simple par personne active : 12$/mois (0-30), 20$/mois (31-50), 27$/mois (51+). Rabais de 10% en annuel.' },
           { q: 'Y a-t-il des frais cachés ?', a: 'Non, aucun frais caché. Le module Prévention est optionnel.' }
         ]
       }

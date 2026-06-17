@@ -38,7 +38,7 @@ export const CATEGORY_PAGES = {
         },
         {
           "q": "Combien coûte ProFireManager ?",
-          "a": "La tarification débute à 12 $ CAD par pompier par mois (0 à 30 pompiers), 20 $ de 31 à 50, et 27 $ à partir de 51, avec un rabais de 10 % en facturation annuelle."
+          "a": "La tarification débute à 12 $ CAD par personne par mois (0 à 30 pompiers), 20 $ de 31 à 50, et 27 $ à partir de 51, avec un rabais de 10 % en facturation annuelle."
         },
         {
           "q": "Y a-t-il une application mobile pour les pompiers ?",
@@ -84,7 +84,7 @@ export const CATEGORY_PAGES = {
         },
         {
           "q": "How much does ProFireManager cost?",
-          "a": "Pricing starts at CAD $12 per firefighter per month (0 to 30 firefighters), $20 for 31 to 50, and $27 from 51 and up, with a 10% discount on annual billing."
+          "a": "Pricing starts at CAD $12 per person per month (0 to 30 firefighters), $20 for 31 to 50, and $27 from 51 and up, with a 10% discount on annual billing."
         },
         {
           "q": "Is there a mobile app for firefighters?",
@@ -193,7 +193,7 @@ export const CATEGORY_PAGES = {
   "paie-pompiers": {
     "fr": {
       "metaTitle": "Logiciel de paie pour pompiers | ProFireManager",
-      "metaDescription": "Calcul automatique de la paie selon les gardes, heures et interventions. Fin des feuilles de temps manuelles. Tarification dès 12 $/pompier/mois. Demandez une démo.",
+      "metaDescription": "Calcul automatique de la paie selon les gardes, heures et interventions. Fin des feuilles de temps manuelles. Tarification dès 12 $/personne/mois. Demandez une démo.",
       "badge": "Module paie intégré",
       "h1": "Logiciel de paie pour pompiers",
       "intro": "ProFireManager est un logiciel de paie pour pompiers qui calcule automatiquement la rémunération à partir des gardes, des heures travaillées et des interventions. Multi-taux horaires, primes de repas et périodes de paie personnalisables, avec export vers votre logiciel de paie externe. Fini les feuilles de temps remplies à la main.",
@@ -211,7 +211,7 @@ export const CATEGORY_PAGES = {
           "desc": "Générez des exports prêts pour vos logiciels de paie externes, avec codes de paie configurables par service. Vous gardez votre solution comptable actuelle et éliminez la double saisie."
         },
         {
-          "title": "Tarification transparente dès 12 $/pompier/mois",
+          "title": "Tarification transparente dès 12 $/personne/mois",
           "desc": "Prix public et sans surprise : 12 $ (0 à 30 pompiers), 20 $ (31 à 50), 27 $ (51 et plus), avec un rabais de 10 % en facturation annuelle. Vous payez selon la taille réelle de votre service."
         }
       ],
@@ -230,7 +230,7 @@ export const CATEGORY_PAGES = {
         },
         {
           "q": "Combien coûte le logiciel de paie pour pompiers ?",
-          "a": "La tarification est publique et débute à 12 $ CAD par pompier par mois pour 0 à 30 pompiers, 20 $ de 31 à 50, et 27 $ à partir de 51 pompiers. Un rabais de 10 % s'applique en facturation annuelle. La paie fait partie des 12 modules intégrés de la plateforme."
+          "a": "La tarification est publique et débute à 12 $ CAD par personne par mois pour 0 à 30 pompiers, 20 $ de 31 à 50, et 27 $ à partir de 51 pompiers. Un rabais de 10 % s'applique en facturation annuelle. La paie fait partie des 12 modules intégrés de la plateforme."
         }
       ],
       "ctaTitle": "Voyez le module paie en action",
@@ -239,7 +239,7 @@ export const CATEGORY_PAGES = {
     },
     "en": {
       "metaTitle": "Firefighter Payroll Software | ProFireManager",
-      "metaDescription": "Automatically calculate payroll from shifts, hours and calls. End manual timesheets. Transparent pricing from $12 CAD per firefighter per month. Request a demo.",
+      "metaDescription": "Automatically calculate payroll from shifts, hours and calls. End manual timesheets. Transparent pricing from $12 CAD per person per month. Request a demo.",
       "badge": "Integrated payroll module",
       "h1": "Firefighter payroll software",
       "intro": "ProFireManager is firefighter payroll software that automatically calculates pay from on-call shifts, hours worked and emergency calls. It supports multiple hourly rates, meal premiums and customizable pay periods, with exports to your external payroll software. No more timesheets filled out by hand.",
@@ -257,7 +257,7 @@ export const CATEGORY_PAGES = {
           "desc": "Generate exports ready for external payroll software, with pay codes you can configure per department. Keep your current accounting solution and eliminate double data entry."
         },
         {
-          "title": "Transparent pricing from $12/firefighter/month",
+          "title": "Transparent pricing from $12/person/month",
           "desc": "Public, no-surprise pricing: $12 (0 to 30 firefighters), $20 (31 to 50), $27 (51 and up), with a 10% discount on annual billing. You pay based on the actual size of your department."
         }
       ],
@@ -276,7 +276,7 @@ export const CATEGORY_PAGES = {
         },
         {
           "q": "How much does firefighter payroll software cost?",
-          "a": "Pricing is public and starts at $12 CAD per firefighter per month for 0 to 30 firefighters, $20 from 31 to 50, and $27 from 51 firefighters. A 10% discount applies to annual billing. Payroll is one of the 12 integrated modules on the platform."
+          "a": "Pricing is public and starts at $12 CAD per person per month for 0 to 30 firefighters, $20 from 31 to 50, and $27 from 51 firefighters. A 10% discount applies to annual billing. Payroll is one of the 12 integrated modules on the platform."
         }
       ],
       "ctaTitle": "See the payroll module in action",
@@ -384,15 +384,15 @@ export const CATEGORY_PAGES = {
       "metaDescription": "Logiciel de gestion des interventions (DSI) pour SSI du Québec : cartes d'appel, rapport DSI, signature électronique, suivi et historique. Demandez une démo.",
       "badge": "Module Interventions",
       "h1": "Logiciel de gestion des interventions (DSI) pour services de sécurité incendie",
-      "intro": "ProFireManager est un logiciel de gestion des interventions (DSI) conçu pour les services de sécurité incendie du Québec et du Canada. Il centralise les cartes d'appel, la rédaction du rapport DSI conforme aux normes du MSP, la signature électronique et le suivi complet de chaque intervention, du déploiement à l'archivage.",
+      "intro": "ProFireManager est un logiciel de gestion des interventions (DSI) conçu pour les services de sécurité incendie du Québec et du Canada. Il centralise les cartes d'appel, la rédaction du rapport DSI conforme aux normes du MSI, la signature électronique et le suivi complet de chaque intervention, du déploiement à l'archivage.",
       "benefits": [
         {
           "title": "Cartes d'appel centralisées",
           "desc": "Importez et traitez les cartes d'appel de votre centrale 911, ou créez une intervention manuellement. Adresse, appelant, chronologie, ressources et véhicules déployés sont regroupés au même endroit."
         },
         {
-          "title": "Rapport DSI conforme au MSP",
-          "desc": "Remplissez les champs requis pour la Déclaration de Sinistre Incendie : nature, cause probable, source de chaleur, matériau enflammé, pertes estimées, avertisseurs et gicleurs, avec export XML pour la transmission au MSP."
+          "title": "Rapport DSI conforme au MSI",
+          "desc": "Remplissez les champs requis pour la Déclaration de Sinistre Incendie : nature, cause probable, source de chaleur, matériau enflammé, pertes estimées, avertisseurs et gicleurs, avec export XML pour la transmission au MSI."
         },
         {
           "title": "Signature électronique et validation",
@@ -405,7 +405,7 @@ export const CATEGORY_PAGES = {
       ],
       "faq": [
         {
-          "q": "Le module est-il conforme aux exigences DSI du MSP au Québec ?",
+          "q": "Le module est-il conforme aux exigences DSI du MSI au Québec ?",
           "a": "Oui. Le rapport intègre les champs et tables de référence de la Déclaration de Sinistre Incendie (nature, cause, source de chaleur, matériau enflammé, catégorie de bâtiment) et permet l'export XML en vue de la transmission au ministère de la Sécurité publique."
         },
         {
@@ -430,15 +430,15 @@ export const CATEGORY_PAGES = {
       "metaDescription": "Fire incident management software (DSI) for Quebec fire departments: call cards, DSI report, e-signature, tracking and history. Request a demo today.",
       "badge": "Incidents Module",
       "h1": "Fire Incident Management Software (DSI) for Fire and Rescue Services",
-      "intro": "ProFireManager is a fire incident management software (DSI) built for fire and rescue services in Quebec and Canada. It centralizes call cards, DSI report writing aligned with Quebec MSP standards, electronic signature and full incident tracking, from deployment through to archiving.",
+      "intro": "ProFireManager is a fire incident management software (DSI) built for fire and rescue services in Quebec and Canada. It centralizes call cards, DSI report writing aligned with Quebec MSI standards, electronic signature and full incident tracking, from deployment through to archiving.",
       "benefits": [
         {
           "title": "Centralized call cards",
           "desc": "Import and process call cards from your 911 dispatch center, or create an incident manually. Address, caller, timeline, resources and deployed vehicles are gathered in one place."
         },
         {
-          "title": "MSP-aligned DSI report",
-          "desc": "Complete the fields required for the Fire Loss Declaration (DSI): nature, probable cause, heat source, first material ignited, estimated losses, smoke detectors and sprinklers, with XML export for transmission to the MSP."
+          "title": "MSI-aligned DSI report",
+          "desc": "Complete the fields required for the Fire Loss Declaration (DSI): nature, probable cause, heat source, first material ignited, estimated losses, smoke detectors and sprinklers, with XML export for transmission to the MSI."
         },
         {
           "title": "Electronic signature and validation",
@@ -451,7 +451,7 @@ export const CATEGORY_PAGES = {
       ],
       "faq": [
         {
-          "q": "Does the module comply with Quebec MSP DSI requirements?",
+          "q": "Does the module comply with Quebec MSI DSI requirements?",
           "a": "Yes. The report includes the fields and reference tables of the Fire Loss Declaration (nature, cause, heat source, first material ignited, building category) and supports XML export for transmission to the Ministry of Public Security."
         },
         {

@@ -89,7 +89,7 @@ const TermsModal = ({ isOpen, onClose }) => {
                 <h3 className="text-2xl font-bold text-gray-900">4. Abonnement et Paiement</h3>
               </div>
               <div className="space-y-4 text-gray-700">
-                <p><strong>4.1 Tarification :</strong> La tarification est basée sur le nombre de pompiers actifs dans votre organisation, facturée mensuellement ou annuellement.</p>
+                <p><strong>4.1 Tarification :</strong> La tarification est basée sur le nombre de personnes actives dans votre organisation, facturée mensuellement ou annuellement.</p>
                 <p><strong>4.2 Facturation :</strong> Les frais sont facturés au début de chaque période de facturation. Un rabais de 10% s'applique pour la facturation annuelle.</p>
                 <p><strong>4.3 Modification des tarifs :</strong> Nous nous réservons le droit de modifier nos tarifs avec un préavis de 30 jours.</p>
                 <p><strong>4.4 Défaut de paiement :</strong> En cas de défaut de paiement, l'accès au Service peut être suspendu après un délai de grâce de 15 jours.</p>
