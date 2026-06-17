@@ -16,7 +16,7 @@ export const translations = {
       badge: 'Solution canadienne pour services d\'incendie',
       title: 'Optimisez la gestion de votre',
       titleHighlight: 'service d\'incendie',
-      subtitle: 'ProFireManager centralise la gestion du personnel, des interventions, de la paie, des équipements et de la prévention dans une seule plateforme.',
+      subtitle: 'ProFireManager est le logiciel de gestion tout-en-un pour les services d\'incendie au Québec : personnel, interventions, paie, équipements et prévention dans une seule plateforme.',
       benefits: [
         'Gestion du personnel et des gardes',
         'Interventions et cartes d\'appel',
@@ -517,7 +517,7 @@ export const translations = {
       badge: 'Canadian solution for fire departments',
       title: 'Optimize the management of your',
       titleHighlight: 'fire department',
-      subtitle: 'ProFireManager centralizes personnel, interventions, payroll, equipment and fire prevention management in one platform.',
+      subtitle: 'ProFireManager is the all-in-one fire department management software for Quebec: personnel, interventions, payroll, equipment and fire prevention in one platform.',
       benefits: [
         'Personnel & shift management',
         'Interventions & call cards',
