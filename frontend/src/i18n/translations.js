@@ -120,9 +120,9 @@ export const translations = {
       perFirefighter: '/personne/mois',
       popular: 'Le plus populaire',
       tiers: [
-        { name: '0 à 30 pompiers', count: 30, setupFee: 1500 },
-        { name: '31 à 50 pompiers', count: 40, setupFee: 2500 },
-        { name: '51+ pompiers', count: 50, setupFee: 3500 }
+        { name: '0 à 30 personnes', count: 30, setupFee: 1500 },
+        { name: '31 à 50 personnes', count: 40, setupFee: 2500 },
+        { name: '51+ personnes', count: 50, setupFee: 3500 }
       ],
       billedAnnually: 'facturé annuellement',
       annualSavings: 'Facturé annuellement - Économie de 10%',
@@ -621,9 +621,9 @@ export const translations = {
       perFirefighter: '/person/month',
       popular: 'Most Popular',
       tiers: [
-        { name: '0 to 30 firefighters', count: 30, setupFee: 1500 },
-        { name: '31 to 50 firefighters', count: 40, setupFee: 2500 },
-        { name: '51+ firefighters', count: 50, setupFee: 3500 }
+        { name: '0 to 30 people', count: 30, setupFee: 1500 },
+        { name: '31 to 50 people', count: 40, setupFee: 2500 },
+        { name: '51+ people', count: 50, setupFee: 3500 }
       ],
       billedAnnually: 'billed annually',
       annualSavings: 'Billed annually - 10% savings',
