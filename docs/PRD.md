@@ -13,7 +13,7 @@ Build a professional, conversion-optimized **bilingual (FR/EN)** SaaS landing pa
 1. Fully bilingual (FR/EN) SaaS landing page (URL-based routing /fr, /en)
 2. Lead generation: working contact form via Resend → info@profiremanager.ca
 3. Display the **12 official modules** (Dashboard, Personnel, Assets, Interventions, Payroll, Schedule, Replacements, Training, Prevention, Availability, My PPE, Reports)
-4. **Pricing**: 3 tiers (12/20/27 $ CAD per firefighter/month) + setup fees (1500/2500/3500 $ CAD one-time)
+4. **Pricing**: 3 tiers (12/20/27 $ CAD per person/month) + setup fees (1500/2500/3500 $ CAD one-time)
 5. **Migration from Première Ligne**: dedicated section + dedicated page (5 000 $ CAD flat)
 6. SEO optimized for "logiciel pompier Québec", "alternative Première Ligne", etc.
 

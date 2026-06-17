@@ -28,7 +28,7 @@ const FAQModal = ({ isOpen, onClose }) => {
       questions: [
         {
           q: 'Comment fonctionne la tarification ?',
-          a: 'La tarification est simple et transparente : vous payez par pompier actif, par mois. Les tarifs dégressifs commencent à 12$/pompier/mois (0-30 pompiers), puis 20$/pompier/mois (31-50), et 27$/pompier/mois (51+). Un rabais de 10% est appliqué pour la facturation annuelle.'
+          a: 'La tarification est simple et transparente : vous payez par personne active, par mois. Les tarifs dégressifs commencent à 12$/personne/mois (0-30 pompiers), puis 20$/personne/mois (31-50), et 27$/personne/mois (51+). Un rabais de 10% est appliqué pour la facturation annuelle.'
         },
         {
           q: 'Y a-t-il des frais cachés ?',
@@ -66,7 +66,7 @@ const FAQModal = ({ isOpen, onClose }) => {
         },
         {
           q: 'Quel type de support est fourni ?',
-          a: 'Support par email inclus pour tous les abonnements avec temps de réponse sous 24h. Un support premium 24/7 est disponible en option (+5$/pompier/mois).'
+          a: 'Support par email inclus pour tous les abonnements avec temps de réponse sous 24h. Un support premium 24/7 est disponible en option (+5$/personne/mois).'
         },
         {
           q: 'Les données sont-elles isolées entre organisations ?',

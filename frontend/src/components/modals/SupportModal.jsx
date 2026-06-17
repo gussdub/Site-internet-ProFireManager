@@ -84,7 +84,7 @@ const SupportModal = ({ isOpen, onClose }) => {
                   <li>• Formation personnalisée incluse</li>
                 </ul>
                 <div className="text-sm opacity-90">
-                  <strong>+5$/pompier/mois</strong> en sus de votre abonnement actuel
+                  <strong>+5$/personne/mois</strong> en sus de votre abonnement actuel
                 </div>
               </div>
             </div>
