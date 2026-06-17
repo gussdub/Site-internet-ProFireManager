@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -9,6 +10,8 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { language } = useLanguage();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,11 +21,24 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const goHome = () => {
+    navigate(language === 'fr' ? '/fr' : '/en');
+    setIsMobileMenuOpen(false);
+  };
+
   const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
+    setIsMobileMenuOpen(false);
+    const onHome = location.pathname === '/fr' || location.pathname === '/en';
+    if (onHome) {
+      const element = document.getElementById(id);
+      if (element) element.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // Depuis une sous-page : revenir à l'accueil, puis défiler vers la section.
+      navigate(language === 'fr' ? '/fr' : '/en');
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
+      }, 120);
     }
   };
 
@@ -35,13 +51,17 @@ const Header = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-3">
+          <button
+            onClick={goHome}
+            className="flex items-center gap-3"
+            aria-label={language === 'fr' ? 'ProFireManager — accueil' : 'ProFireManager — home'}
+          >
             <img
               src="/assets/logos/logo-header.png"
               alt="ProFireManager - Logiciel de gestion pour services incendie"
               className="h-10 w-auto"
             />
-          </div>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">

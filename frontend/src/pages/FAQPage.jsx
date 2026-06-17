@@ -95,6 +95,24 @@ const FAQPage = () => {
           </div>
         </div>
       </div>
+
+      {/* FAQ JSON-LD pour les rich results Google et les citations IA */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: content.categories
+              .flatMap((c) => c.questions)
+              .map((item) => ({
+                '@type': 'Question',
+                name: item.q,
+                acceptedAnswer: { '@type': 'Answer', text: item.a },
+              })),
+          }),
+        }}
+      />
     </div>
   );
 };
