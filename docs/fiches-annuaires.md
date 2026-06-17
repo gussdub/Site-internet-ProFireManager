@@ -52,7 +52,7 @@ Formations & certifications · Prévention · Disponibilités · Rapports PDF/Ex
 Apps iOS/Android · Notifications push · Bilingue FR/EN · Multi-caserne (MRC)
 
 ## Tarification (à afficher — avantage vs ICO qui ne publie aucun prix)
-> À partir de 12 $ CAD / personne / mois. 3 niveaux : 12 $ (0-30 pompiers),
+> À partir de 12 $ CAD / personne / mois. 3 niveaux : 12 $ (0-30 personnes),
 > 20 $ (31-50), 27 $ (51+). Rabais de 10 % en facturation annuelle.
 
 ## Public cible

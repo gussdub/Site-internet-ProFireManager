@@ -38,7 +38,7 @@ export const CATEGORY_PAGES = {
         },
         {
           "q": "Combien coûte ProFireManager ?",
-          "a": "La tarification débute à 12 $ CAD par personne par mois (0 à 30 pompiers), 20 $ de 31 à 50, et 27 $ à partir de 51, avec un rabais de 10 % en facturation annuelle."
+          "a": "La tarification débute à 12 $ CAD par personne par mois (0 à 30 personnes), 20 $ de 31 à 50, et 27 $ à partir de 51, avec un rabais de 10 % en facturation annuelle."
         },
         {
           "q": "Y a-t-il une application mobile pour les pompiers ?",
@@ -84,7 +84,7 @@ export const CATEGORY_PAGES = {
         },
         {
           "q": "How much does ProFireManager cost?",
-          "a": "Pricing starts at CAD $12 per person per month (0 to 30 firefighters), $20 for 31 to 50, and $27 from 51 and up, with a 10% discount on annual billing."
+          "a": "Pricing starts at CAD $12 per person per month (0 to 30 people), $20 for 31 to 50, and $27 from 51 and up, with a 10% discount on annual billing."
         },
         {
           "q": "Is there a mobile app for firefighters?",
@@ -212,7 +212,7 @@ export const CATEGORY_PAGES = {
         },
         {
           "title": "Tarification transparente dès 12 $/personne/mois",
-          "desc": "Prix public et sans surprise : 12 $ (0 à 30 pompiers), 20 $ (31 à 50), 27 $ (51 et plus), avec un rabais de 10 % en facturation annuelle. Vous payez selon la taille réelle de votre service."
+          "desc": "Prix public et sans surprise : 12 $ (0 à 30 personnes), 20 $ (31 à 50), 27 $ (51 et plus), avec un rabais de 10 % en facturation annuelle. Vous payez selon la taille réelle de votre service."
         }
       ],
       "faq": [
@@ -230,7 +230,7 @@ export const CATEGORY_PAGES = {
         },
         {
           "q": "Combien coûte le logiciel de paie pour pompiers ?",
-          "a": "La tarification est publique et débute à 12 $ CAD par personne par mois pour 0 à 30 pompiers, 20 $ de 31 à 50, et 27 $ à partir de 51 pompiers. Un rabais de 10 % s'applique en facturation annuelle. La paie fait partie des 12 modules intégrés de la plateforme."
+          "a": "La tarification est publique et débute à 12 $ CAD par personne par mois pour 0 à 30 personnes, 20 $ de 31 à 50, et 27 $ à partir de 51 personnes. Un rabais de 10 % s'applique en facturation annuelle. La paie fait partie des 12 modules intégrés de la plateforme."
         }
       ],
       "ctaTitle": "Voyez le module paie en action",
@@ -258,7 +258,7 @@ export const CATEGORY_PAGES = {
         },
         {
           "title": "Transparent pricing from $12/person/month",
-          "desc": "Public, no-surprise pricing: $12 (0 to 30 firefighters), $20 (31 to 50), $27 (51 and up), with a 10% discount on annual billing. You pay based on the actual size of your department."
+          "desc": "Public, no-surprise pricing: $12 (0 to 30 people), $20 (31 to 50), $27 (51 and up), with a 10% discount on annual billing. You pay based on the actual size of your department."
         }
       ],
       "faq": [
@@ -276,7 +276,7 @@ export const CATEGORY_PAGES = {
         },
         {
           "q": "How much does firefighter payroll software cost?",
-          "a": "Pricing is public and starts at $12 CAD per person per month for 0 to 30 firefighters, $20 from 31 to 50, and $27 from 51 firefighters. A 10% discount applies to annual billing. Payroll is one of the 12 integrated modules on the platform."
+          "a": "Pricing is public and starts at $12 CAD per person per month for 0 to 30 people, $20 from 31 to 50, and $27 from 51 people. A 10% discount applies to annual billing. Payroll is one of the 12 integrated modules on the platform."
         }
       ],
       "ctaTitle": "See the payroll module in action",
@@ -406,7 +406,7 @@ export const CATEGORY_PAGES = {
       "faq": [
         {
           "q": "Le module est-il conforme aux exigences DSI du MSI au Québec ?",
-          "a": "Oui. Le rapport intègre les champs et tables de référence de la Déclaration de Sinistre Incendie (nature, cause, source de chaleur, matériau enflammé, catégorie de bâtiment) et permet l'export XML en vue de la transmission au ministère de la Sécurité publique."
+          "a": "Oui. Le rapport intègre les champs et tables de référence de la Déclaration de Sinistre Incendie (nature, cause, source de chaleur, matériau enflammé, catégorie de bâtiment) et permet l'export XML en vue de la transmission au ministère de la Sécurité intérieure."
         },
         {
           "q": "Peut-on importer automatiquement les cartes d'appel du 911 ?",

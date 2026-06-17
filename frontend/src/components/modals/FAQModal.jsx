@@ -28,7 +28,7 @@ const FAQModal = ({ isOpen, onClose }) => {
       questions: [
         {
           q: 'Comment fonctionne la tarification ?',
-          a: 'La tarification est simple et transparente : vous payez par personne active, par mois. Les tarifs dégressifs commencent à 12$/personne/mois (0-30 pompiers), puis 20$/personne/mois (31-50), et 27$/personne/mois (51+). Un rabais de 10% est appliqué pour la facturation annuelle.'
+          a: 'La tarification est simple et transparente : vous payez par personne active, par mois. Les tarifs dégressifs commencent à 12$/personne/mois (0-30 personnes), puis 20$/personne/mois (31-50), et 27$/personne/mois (51+). Un rabais de 10% est appliqué pour la facturation annuelle.'
         },
         {
           q: 'Y a-t-il des frais cachés ?',
