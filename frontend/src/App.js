@@ -13,12 +13,16 @@ import FAQPage from './pages/FAQPage';
 import TutorialsPage from './pages/TutorialsPage';
 import MigrationPage from './pages/MigrationPage';
 import { Toaster } from './components/ui/sonner';
+import { useSeo } from './seo/useSeo';
 
 // Route wrapper to sync URL language with context
 const LanguageRouteWrapper = ({ children }) => {
   const location = useLocation();
   const { language, changeLanguage } = useLanguage();
-  
+
+  // Applique le SEO par route (titre, description, canonical, langue)
+  useSeo();
+
   // Extract language from URL path
   const urlLang = location.pathname.startsWith('/en') ? 'en' : 'fr';
 

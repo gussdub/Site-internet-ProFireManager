@@ -14,24 +14,8 @@ const MigrationPage = () => {
 
   useEffect(() => {
     window.scrollTo({ top: 0 });
-    // Dynamic SEO update
-    const titleByLang = {
-      fr: 'Migrer de Première Ligne vers ProFireManager — Transfert 100 % des données',
-      en: 'Migrate from Première Ligne to ProFireManager — 100% Data Transfer'
-    };
-    const descByLang = {
-      fr: 'Vous utilisez Première Ligne ? ProFireManager récupère 100 % de vos données : employés, équipements, interventions, prévention. Forfait fixe 10 000 $ CAD.',
-      en: 'Using Première Ligne? ProFireManager recovers 100% of your data: employees, equipment, interventions, prevention. Flat fee of $10,000 CAD.'
-    };
-    const canonicalByLang = {
-      fr: 'https://www.profiremanager.com/fr/migration-premiere-ligne',
-      en: 'https://www.profiremanager.com/en/migration-from-premiere-ligne'
-    };
-    document.title = titleByLang[language];
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute('content', descByLang[language]);
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) canonical.setAttribute('href', canonicalByLang[language]);
+    // Le SEO (titre, description, canonical) est géré de façon centralisée par useSeo()
+    // selon la route — voir src/seo/seoConfig.js.
   }, [language]);
 
   const goHome = () => {
