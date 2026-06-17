@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../i18n/translations';
@@ -7,12 +7,21 @@ import { t } from '../i18n/translations';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const navigate = useNavigate();
+  const location = useLocation();
   const { language } = useLanguage();
 
   const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    const onHome = location.pathname === '/fr' || location.pathname === '/en';
+    if (onHome) {
+      const element = document.getElementById(id);
+      if (element) element.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // Depuis une sous-page : revenir à l'accueil puis défiler vers la section.
+      navigate(language === 'fr' ? '/fr' : '/en');
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
+      }, 120);
     }
   };
 
