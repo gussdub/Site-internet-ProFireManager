@@ -12,8 +12,10 @@ import DocumentationPage from './pages/DocumentationPage';
 import FAQPage from './pages/FAQPage';
 import TutorialsPage from './pages/TutorialsPage';
 import MigrationPage from './pages/MigrationPage';
+import CategoryLandingPage from './pages/CategoryLandingPage';
 import { Toaster } from './components/ui/sonner';
 import { useSeo } from './seo/useSeo';
+import { CATEGORY_ROUTES } from './seo/seoConfig';
 
 // Route wrapper to sync URL language with context
 const LanguageRouteWrapper = ({ children }) => {
@@ -70,6 +72,15 @@ function AppContent() {
           <Route path="/en/tutorials" element={<LanguageRouteWrapper><TutorialsPage /></LanguageRouteWrapper>} />
           <Route path="/en/migration-from-premiere-ligne" element={<LanguageRouteWrapper><MigrationPage /></LanguageRouteWrapper>} />
           
+          {/* Pages de catégorie (SEO) — FR + EN, générées depuis CATEGORY_ROUTES */}
+          {Object.entries(CATEGORY_ROUTES).map(([path, { key }]) => (
+            <Route
+              key={path}
+              path={path}
+              element={<LanguageRouteWrapper><CategoryLandingPage pageKey={key} /></LanguageRouteWrapper>}
+            />
+          ))}
+
           {/* Catch all */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

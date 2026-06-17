@@ -42,6 +42,30 @@ const Footer = () => {
     window.scrollTo(0, 0);
   };
 
+  const goToPath = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
+
+  // Liens internes vers les pages de catégorie (SEO).
+  const categoryLinks = language === 'fr'
+    ? [
+        { label: 'Gestion de caserne', path: '/fr/logiciel-gestion-caserne' },
+        { label: 'Horaire de garde', path: '/fr/logiciel-horaire-garde-pompiers' },
+        { label: 'Paie des pompiers', path: '/fr/logiciel-paie-pompiers' },
+        { label: 'Inspection des EPI (NFPA)', path: '/fr/logiciel-inspection-epi-nfpa' },
+        { label: 'Gestion des interventions', path: '/fr/logiciel-gestion-interventions-dsi' },
+        { label: 'Remplacement de gardes', path: '/fr/logiciel-remplacement-garde-pompiers' },
+      ]
+    : [
+        { label: 'Fire station management', path: '/en/fire-station-management-software' },
+        { label: 'Firefighter scheduling', path: '/en/firefighter-scheduling-software' },
+        { label: 'Firefighter payroll', path: '/en/firefighter-payroll-software' },
+        { label: 'PPE inspection (NFPA)', path: '/en/ppe-inspection-software-nfpa' },
+        { label: 'Incident management', path: '/en/fire-incident-management-software' },
+        { label: 'Shift replacement', path: '/en/firefighter-shift-replacement-software' },
+      ];
+
   return (
     <footer className="bg-gray-900 text-white py-10">
       <div className="container mx-auto px-6">
@@ -73,7 +97,7 @@ const Footer = () => {
           </div>
 
           {/* Links Section */}
-          <div className="flex gap-16">
+          <div className="flex flex-wrap gap-x-16 gap-y-8">
             {/* Navigation */}
             <div>
               <h3 className="text-sm font-bold mb-3 text-white">{t(language, 'footer.navigation')}</h3>
@@ -130,6 +154,23 @@ const Footer = () => {
                     {t(language, 'footer.technicalSupport')}
                   </button>
                 </li>
+              </ul>
+            </div>
+
+            {/* Solutions (pages de catégorie) */}
+            <div>
+              <h3 className="text-sm font-bold mb-3 text-white">Solutions</h3>
+              <ul className="space-y-2">
+                {categoryLinks.map((link) => (
+                  <li key={link.path}>
+                    <button
+                      onClick={() => goToPath(link.path)}
+                      className="text-gray-400 text-sm hover:text-white transition-colors text-left"
+                    >
+                      {link.label}
+                    </button>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

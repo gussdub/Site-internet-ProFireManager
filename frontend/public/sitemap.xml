@@ -142,4 +142,102 @@
         <priority>0.9</priority>
     </url>
     
+    <!-- Pages de catégorie (SEO) -->
+    <url>
+        <loc>https://www.profiremanager.com/fr/logiciel-gestion-caserne</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/logiciel-gestion-caserne"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/fire-station-management-software"/>
+        <lastmod>2026-06-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.profiremanager.com/en/fire-station-management-software</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/logiciel-gestion-caserne"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/fire-station-management-software"/>
+        <lastmod>2026-06-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.profiremanager.com/fr/logiciel-horaire-garde-pompiers</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/logiciel-horaire-garde-pompiers"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/firefighter-scheduling-software"/>
+        <lastmod>2026-06-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.profiremanager.com/en/firefighter-scheduling-software</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/logiciel-horaire-garde-pompiers"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/firefighter-scheduling-software"/>
+        <lastmod>2026-06-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.profiremanager.com/fr/logiciel-paie-pompiers</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/logiciel-paie-pompiers"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/firefighter-payroll-software"/>
+        <lastmod>2026-06-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.profiremanager.com/en/firefighter-payroll-software</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/logiciel-paie-pompiers"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/firefighter-payroll-software"/>
+        <lastmod>2026-06-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.profiremanager.com/fr/logiciel-inspection-epi-nfpa</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/logiciel-inspection-epi-nfpa"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/ppe-inspection-software-nfpa"/>
+        <lastmod>2026-06-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.profiremanager.com/en/ppe-inspection-software-nfpa</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/logiciel-inspection-epi-nfpa"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/ppe-inspection-software-nfpa"/>
+        <lastmod>2026-06-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.profiremanager.com/fr/logiciel-gestion-interventions-dsi</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/logiciel-gestion-interventions-dsi"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/fire-incident-management-software"/>
+        <lastmod>2026-06-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.profiremanager.com/en/fire-incident-management-software</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/logiciel-gestion-interventions-dsi"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/fire-incident-management-software"/>
+        <lastmod>2026-06-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.profiremanager.com/fr/logiciel-remplacement-garde-pompiers</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/logiciel-remplacement-garde-pompiers"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/firefighter-shift-replacement-software"/>
+        <lastmod>2026-06-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.profiremanager.com/en/firefighter-shift-replacement-software</loc>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.profiremanager.com/fr/logiciel-remplacement-garde-pompiers"/>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.profiremanager.com/en/firefighter-shift-replacement-software"/>
+        <lastmod>2026-06-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
 </urlset>

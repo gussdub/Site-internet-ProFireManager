@@ -3,6 +3,8 @@
 // langue du document. Le hook useSeo (voir useSeo.js) l'applique pour chaque route.
 // Pour une nouvelle page : ajouter simplement une entrée ici.
 
+import { CATEGORY_PAGES } from '../content/categoryPages';
+
 export const SITE_URL = 'https://www.profiremanager.com';
 
 // Clé = pathname exact de la route (sans barre oblique finale).
@@ -116,6 +118,31 @@ export const SEO_BY_PATH = {
       'Using Première Ligne? ProFireManager recovers 100% of your data: employees, equipment, interventions, prevention. Flat fee of $10,000 CAD.',
   },
 };
+
+// --- Pages de catégorie (SEO) ---
+// Mapping pathname -> { clé de contenu, langue }. Réutilisé par App.js (routage) et le sitemap.
+export const CATEGORY_ROUTES = {
+  '/fr/logiciel-gestion-caserne': { key: 'gestion-caserne', lang: 'fr-CA', l: 'fr' },
+  '/en/fire-station-management-software': { key: 'gestion-caserne', lang: 'en-CA', l: 'en' },
+  '/fr/logiciel-horaire-garde-pompiers': { key: 'horaire-garde', lang: 'fr-CA', l: 'fr' },
+  '/en/firefighter-scheduling-software': { key: 'horaire-garde', lang: 'en-CA', l: 'en' },
+  '/fr/logiciel-paie-pompiers': { key: 'paie-pompiers', lang: 'fr-CA', l: 'fr' },
+  '/en/firefighter-payroll-software': { key: 'paie-pompiers', lang: 'en-CA', l: 'en' },
+  '/fr/logiciel-inspection-epi-nfpa': { key: 'inspection-epi-nfpa', lang: 'fr-CA', l: 'fr' },
+  '/en/ppe-inspection-software-nfpa': { key: 'inspection-epi-nfpa', lang: 'en-CA', l: 'en' },
+  '/fr/logiciel-gestion-interventions-dsi': { key: 'gestion-interventions', lang: 'fr-CA', l: 'fr' },
+  '/en/fire-incident-management-software': { key: 'gestion-interventions', lang: 'en-CA', l: 'en' },
+  '/fr/logiciel-remplacement-garde-pompiers': { key: 'remplacement-gardes', lang: 'fr-CA', l: 'fr' },
+  '/en/firefighter-shift-replacement-software': { key: 'remplacement-gardes', lang: 'en-CA', l: 'en' },
+};
+
+// Génère les entrées SEO des pages de catégorie depuis leur contenu (zéro duplication).
+Object.entries(CATEGORY_ROUTES).forEach(([path, { key, lang, l }]) => {
+  const c = CATEGORY_PAGES[key] && CATEGORY_PAGES[key][l];
+  if (c) {
+    SEO_BY_PATH[path] = { lang, title: c.metaTitle, description: c.metaDescription };
+  }
+});
 
 // Retourne l'entrée SEO pour un pathname donné (barre oblique finale ignorée).
 export function getSeoForPath(pathname) {
