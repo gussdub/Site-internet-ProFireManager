@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
-import { Mail, Phone, Clock, Loader2 } from 'lucide-react';
+import { Mail, Phone, Clock, Loader2, Check } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../i18n/translations';
@@ -12,6 +12,7 @@ const Contact = () => {
   const { language } = useLanguage();
   const contactData = t(language, 'contact');
   const [isLoading, setIsLoading] = useState(false);
+  const [isSent, setIsSent] = useState(false);
   
   const [formData, setFormData] = useState({
     name: '',
@@ -63,6 +64,10 @@ const Contact = () => {
         pompiers: '',
         message: ''
       });
+
+      // Confirmation visuelle sur le bouton, puis retour à l'état normal.
+      setIsSent(true);
+      setTimeout(() => setIsSent(false), 4000);
     } catch (error) {
       console.error('Contact form error:', error);
       toast({
@@ -198,13 +203,22 @@ const Contact = () => {
 
                 <Button
                   type="submit"
-                  disabled={isLoading}
-                  className="w-full bg-[#D9072B] hover:bg-[#B00623] text-white py-6 text-lg font-semibold disabled:opacity-50"
+                  disabled={isLoading || isSent}
+                  className={`w-full text-white py-6 text-lg font-semibold transition-colors ${
+                    isSent
+                      ? 'bg-green-600 hover:bg-green-600 disabled:opacity-100'
+                      : 'bg-[#D9072B] hover:bg-[#B00623] disabled:opacity-50'
+                  }`}
                 >
                   {isLoading ? (
                     <>
                       <Loader2 className="mr-2 h-5 w-5 animate-spin" />
                       {language === 'fr' ? 'Envoi en cours...' : 'Sending...'}
+                    </>
+                  ) : isSent ? (
+                    <>
+                      <Check className="mr-2 h-5 w-5" />
+                      {language === 'fr' ? 'Demande envoyée' : 'Request sent'}
                     </>
                   ) : (
                     contactData.send
